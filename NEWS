@@ -1,0 +1,714 @@
+Beta Release 0.7.1 (26 September, 2008)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Version 0.7.0 does not work with reads >63bp at all. I overlooked two
+lines of codes which assume reads are 63bp or shorter. Now I have fixed
+the bug and tested it on simulated long reads. It seems to work fine. I
+am sorry for this obvious bug. No other things are changed since 0.7.0.
+
+(0.7.1: 26 September 2008, r672)
+
+
+
+Beta Release 0.7.0 (21 September, 2008)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Since this release, MAQ can accept reads no longer than 127bp, instead
+of 63bp in the previous version. This is achieved at the cost of 18%
+slower speed and 16% more peak memory usage. The .map alignment format
+is also changed accordingly, which means the new format is NOT
+compatible with the old format. I will shortly put a converter on the
+MAQ website so that you can convert your alignment done by 0.6.x to the
+new format without redoing the alignment. In addition, you can choose to
+revert to the 63bp version by configure with "--enable-shortreads", but
+this is not recommende.
+
+Furthermore, the NovoCraft developers have implemented a converter that
+converts the NovoCraft alignment format to MAQ's .map format. I
+incorporated their codes into MAQ. NovoCraft can find short indels with
+single-ended reads and have most of major features of MAQ. It is also
+fast and well developed. NovoCraft is a good alternative to MAQ.
+
+In additional to the major changes, here are the other notable changes,
+only a few:
+
+ * Improved progress report in maq map. Someone is using MAQ to align
+   reads to millions of contigs. The resulting stderr output is even
+   larger than the alignment itself. Now contig names will not be
+   printed.
+
+ * Fixed a segfault in Smith-Waterman alignment. I have not pinpointed
+   the line that causes the segfault, but I guess this is caused by a
+   rare out-of-boundary event. Anyway, the segfault seems to go away
+   after enforcing the boundary check.
+
+Probably MAQ will never go to 0.8.0. Although it is cheap to make MAQ
+align reads up to 255bp, I am not going to do that. When reads go longer
+and longer, MAQ's power will be reduced due to its inability to find
+short indels on single ended reads. I am still experimenting novel
+algorithms for long reads, and BWA, which has been made public, is the
+unfinished product. Although BWA has not been fully developed into a
+comprehensive package like MAQ, it shows the potential to do ultra-fast
+gapped alignment on long reads. The current BWA does global alignment
+(w.r.t reads) for a few hundreds bp of reads by taking first few tens of
+bp as seed. You can find more information on the MAQ website.
+
+(0.7.0: 21 September 2008, r669)
+
+
+
+Beta Release 0.6.8 (27 July, 2008)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Most of new features in this release are mainly designed for the 1000
+genome project. For other users, the most obvious change is a bug fix in
+the assemble command. Fixing this bug reduces error dependency
+coefficient from 0.93 to 0.85. The SNP accuracy remains similar to the
+previous version.
+
+Other notable changes include:
+
+ * Formally changed the license to GPL version 3.
+
+ * Added mapvalidate command, which checks whether an alignment file is
+   corrupted. The mapmerge command also does some sanity check when
+   merging alignments.
+
+ * Support generating GLF format (for the 1000 Genome Project). Codes
+   for manipulating GLF files are available in SVN now.
+
+ * The mapcheck command can optionally dump additional information for
+   quality recalibration (for the 1000 Genome Project).
+
+ * Fixed a potential bug in indelpe.cc (thank Vaughn for reporting the
+   bug).
+
+ * Fixed a potential compiling error in assopt.c (thank Jason for the
+   bug report).
+
+ * Only dump unmapped reads with `maq map -u'.
+
+ * Added more online documentation about how to call SNPs for SOLiD data
+   and to call SNPs from pooled samples.
+
+(0.6.8: 27 July 2008, r651)
+
+
+
+Beta Release 0.6.7 (23 June, 2008)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+As promised, MAQ now works with reads from Illumina's long insert-size
+libraries and with reads from samples by pooling multiple
+individuals/strains together. Also in this release, unmapped reads with
+their mates mapped are also stored in the .map alignment file. This
+strategy helps users who do local assembly to find structural
+variations.
+
+Other notable changes are:
+
+ * In indelpe, fixed a bug about the position of an insertion.
+   Previously, the output position is 1bp-away from the true position.
+
+ * In indelpe, output addition information about indels, which also
+   helps to tell whether the indel is homozygous or heterozygous.
+
+ * In SNPfilter, integrated the consensus quality filter. Previously,
+   this has to be done with an awk command.
+
+ * In SNPfilter and easyrun, improved the consensus quality filter. This
+   is particularly important for SNP calling on pooled samples.
+
+ * Added command to detect correputed .map files.
+
+ * In mapcheck, optionally output additional information for mapping
+   based quality calibration.
+
+(0.6.7: 23 June 2008, r631)
+
+
+
+Beta Release 0.6.6 (27 April, 2008)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Two new features are added to this release. First, cns2fq now gives
+regions where maq believes SNPs can be called confidentially. Second,
+maq can optionally dump all perfect or 1-mismatch hits to a separate
+file. Maq cannot make use of information of multiple hits, but I can see
+outputing these hits may help people who do expressional profiling.
+
+No bugs are fixed in this release and therefore people do not need to
+update unless using the new features.
+
+In the next release, maq will support read alignment for Illumina's long
+insert-size library which has different read orientation for a read
+pair. I will also try to implement a SNP caller for pooled sample.
+
+(0.6.6: 27 April 2008, r602)
+
+
+
+Beta Release 0.6.5 (28 March, 2008)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+This is mainly a bug fix release.
+
+ * Fixed bug: read names longer than 35 characters will not be stored in
+   the alignment file. Command rmdup for PE data will also be affected
+   when reads have no names. Short read names will not cause any
+   problems. This bug is specific to 0.6.4.
+
+ * Fixed bug: reference shorter than 3bp will cause malformed consensus
+   file. This bug is specific to 0.6.4.
+
+ * Fixed bug: potential memory violation in indelsoa. This rare bug
+   affects all 0.6.x series.
+
+ * Fixed bug: potential memory violation in simulate when the reference
+   is short. This bug is rare if reference sequences are all long. All
+   0.6.x will be affected.
+
+In addition to the bug fixes, I also finished SOLiD support in this
+release. A new script solid2fastq.pl is introduced to convert SOLiD read
+format to FASTQ format accepted by maq. Furthermore, maq is able to
+convert color alignment to nucleotide alignment with inferred nucleotide
+base qualities. Nucleotide consensus and SNPs can be generated with
+assemble in the standard way. There are still some room left for further
+improvement. I will work on it in future.
+
+Another change is in the new release, the insert size of a read pair is
+measured between the 1st cycle of both reads in the pair, no matter
+whether they are mapped as a proper pair or not. Defining insert size in
+this way may be more conceptually consistent. Note that this change will
+not affect properly aligned Solexa reads at all, but will slightly
+affect SOLiD PE reads.
+
+I am really sorry for these bugs in maq and hope the new version is more
+stable.
+
+(0.6.5: 28 March 2008, r578)
+
+
+
+Beta Release 0.6.4 (15 March, 2008)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Maq is now 90% faster on human alignment. This acceleraion is partly
+achieved by extensive code optimization and partly by using 28bp seed,
+instead of 24bp in previous versions, in the alignment. As both the
+Sanger Inst. and Illumina company have greatly improved the data
+quality, using 28bp seed does not affect the final SNP accuracy. If
+users still intend to use 24bp seed like before, they should compile maq
+with "./configure --enable-slowmap". The online binaries are compilied
+with 28bp seed.
+
+It is important to note that Illumina/Solexa sequencing may produce many
+false polyA at the edges of a tile. These polyA artefacts may greatly
+increase the running time of maq. Users are advised to remove these
+artefacts with their own scripts before alignment. For the moment maq
+does not provide a general functionality for filtering polyA.
+
+From this version, the names of a pair of reads can be different at the
+tailing "/1" or "/2". For example, "read0001/1" and "read0001/2" are
+allowed for a read pair. In this way, the two reads in a pair can be
+discriminated in the mapview output.
+
+Another important change is the consensus calling model. I noticed a
+theoretical flaw in the statistical model behind. The sequencing errors
+seem to be more independent when I fixed the flaw and therefore the
+error dependency coefficient is increased to 0.93 by default. The final
+SNP accuracy is about the same as the previous version.
+
+I also improved the SOLiD support in this version. A script is provided
+for converting SOLiD colour reads to the maq fastq. Mate-pair SOLiD
+reads can also be correctly aligned. For a SOLiD read pair, the correct
+orientation should be F3_reverse-R3_reverse or R3_forward-F3_forward. I
+did not know this before.
+
+Other notable changes include:
+
+ * Assemble now calculates minimum neighbouring quality in the 7bp
+   window surrounding the current position. SNPfilter will filter
+   unreliable SNPs based on the information. This idea is inspired by
+   NQS (Neighbourhood Quality Standard).
+
+ * Optionally store mismatching positions in .map file. The trade-off is
+   the maximum read length is 55bp when this option is switched on.
+
+ * Fixed an ever existing bug in PE alignment. Now about 1% more
+   properly aligned pairs can be found.
+
+ * Added paf_utils.pl script. This script parses soap, eland, rmap and
+   maq alignment formats to the same format. It also presents an example
+   about how to read/write maq's binary .map format with Perl.
+
+ * Added support for converting Bustard output (_prb.txt and _seq.txt)
+   in fq_all2std.pl. However, users should avoid using Bustard output at
+   best. Gerald output is always better.
+
+ * "Alternative mapping quality" in mapview is now the lower SE mapping
+   quality of the two ends. Previously this does not stand for properly
+   paired reads.
+
+ * Filter polyA in reads, only for data generated by the Sanger
+   Institute. Note that maq can be several times SLOWER if there are a
+   lot of polyA artefacts in the reads.
+
+ * Pileup can optionally output base position on the read.
+
+ * Maq now trims long adapter contamination before alignment and trims
+   short adapter contamination after the alignment.
+
+ * Submap now works as a filter on .map file. Users should always
+   extract the reads in a region with maqindex in the maqview package.
+
+ * Updated mapstat command.
+
+ * Fixed a bug in easyrun about relative paths.
+
+ * Fixed a bug in fasta2csfasta.
+
+ * Fixed a rare bug in calculating the distance of a pair.
+
+ * Fixed a rare bug in determining the boundary of Smith-Waterman
+   alignment.
+
+ * Added asub, a generic script for submitting array jobs on LSF/SGE.
+   Added maq_sanger.pl, a script for running maq at the Sanger Inst.
+
+I will work on variants calling for multiple samples and further improve
+SOLiD support in future versions. To find the latest development of maq,
+please check out:
+
+  svn co https://maq.svn.sourceforge.net/svnroot/maq/branches/lh3/maq
+
+(0.6.4: 15 March 2008, r537)
+
+
+
+Beta Release 0.6.3 (3 January, 2008)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Again, most changes happened in auxilliary commands. Simulation and Perl
+scripts were improved a lot.
+
+Changes and bug fixes include:
+
+ * Added diploid simulation mode. Given a haploid reference sequence,
+   maq can generate a diploid sequence and add variants to both
+   haploids.
+
+ * In 'easyrun', automatically input split FASTQ. Users do not need to
+   split the input by themselves.
+
+ * Paired end reads can be used with 'easyrun'.
+
+ * Added 'snpreg' command, which roughly calculates the size of regions
+   where SNPs can be called.
+
+ * Added 'simucns' command, which evaluates the accuracy of consensus
+   mapping qualities from simulated read alignment.
+
+ * Addd 'demo' command to maq.pl. It demonstrates how to simulate reads,
+   to use easyrun and to evaluate the result with maq_eval.pl.
+
+ * In 'maq map', set flag 18 for a read whose mate mapped with the
+   Smith-Waterman algorithm as paired.
+
+Maq has several companion scripts and consists of many commands, but not
+all of them are well documented. I will gradually improve the
+documentations, especially those useful to endusers. In addition, not
+all maq functionalities are fully optimized. Advanced users may want to
+implement in their own ways. I would also like to improve Maq if you
+have better ideas.
+
+(0.6.3: 3 January 2008, r466)
+
+
+
+Beta Release 0.6.2 (23 November, 2007)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Most changes in this release happened in auxilliary commands instead of
+key commands. Except for random factors, the 0.6.2 alignment and
+consensus should be almost identical to those resultant from 0.6.1. 
+
+Other changes and bug fixes include:
+
+ * Added an option to dump unmapped reads to a separate file. Users can
+   study why these reads cannot be aligned.
+
+ * Implemented `export2maq' commands which converts Illumina's in-house
+   Export format to maq's ".maq" binary format. Genotype calling is
+   supported because the Export format contains mapping qualities of
+   reads.
+
+ * Implemented `eland2maq' command which convert alignments in an Eland
+   output to Maq's ".map" format. Genotype calling is not defected due
+   to the lack of qualities.
+
+ * Made `indelsoa' command available to end users. This command
+   implements a state-of-art homozygous break point detector for
+   single-end reads. However, this command mainly aims to faciliate SNP
+   filtering around break points instead of finding all the indels. The
+   `indelpe' command always works better.
+
+ * Made most of commands recognize `-' as the standard input or standard
+   output. This may help stream-based pipeline.
+
+ * Restored the `-m' option in `pileup' and `assemble' commands. Some
+   users regard this to be useful.
+
+ * Added fq_all2std.pl, a script to convert various read formats to the
+   standard/Sanger FASTQ format.
+
+ * Improved the rules in filtering SNPs and allowed to filter out SNPs
+   beside potential indel sites.
+
+ * Fixed a bug again in bisulfite alignment mode. This is to meet a
+   user's request. I have not tried it on real data.
+
+ * Added functionalities to evaluate indels in maq_eval.pl.
+
+ * Improved `fastq2bfq' command in both maq and maq.pl to make them
+   easier to use.
+
+ * Fixed a weird compiling error for some powperpc64-linux machines.
+
+(0.6.2: 23 November 2007, r428)
+
+
+
+Beta Release 0.6.1 (3 October, 2007)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+This is mainly a bugfix release. All of the bugs are minor or happen
+rarely. End users may not observe obvious changes in their results. You
+do not really need to re-align the reads with this version unless you
+feel uncomfortable with any trivial bugs.
+
+The changes and bug fixes include:
+
+ * In this release, a read is mapped to the position where the sum of
+   quality values of mismatched bases is approximately minimum.
+
+ * Zero quality will be changed to one in `fastq2bfq'. This is because
+   zero-quality bases will be regarded as `N' in alignment.
+
+ * Fixed a bug in adapter trimming. The preious version does not work
+   properly.
+
+ * Fixed a very rare bug in `assemble' and `pileup'. It may lead to
+   false zero depth at some sites (about 1 in 1,000,000 sites).
+
+ * Fixed a bug for bisulfite alignment mode. This mode has not been
+   thoroughly tested, though.
+
+(0.6.1: 3 October 2007, r333)
+
+
+
+Beta Release 0.6.0 (5 September, 2007)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+This is a release with several bleeding-edge modifications which
+jeopardized the stability of maq. Thorough testing has been done to make
+sure maq works properly and that is why this release is delayed.
+
+In this new release, maq allows more mismatches after the first 24bp of
+a read. Trimming low-quality 3'-end of reads is usually not necessary
+any more. In particular, maq does not recommend to trim reads
+recursively because this will affect the accuracy of mapping qualities.
+
+Furthermore, since this release, maq is able to find short indels with
+paired end (PE) reads. As Illumina's PE protocol will become standard in
+the near future, this indel detector will play its role.
+
+Other notable changes include:
+
+ * Changed ".map" binary format. The number of mismatches of the second
+   best hit is replaced by the sum of errors of the best hit. The
+   distance between the pair now equals to the outer distance. Reads
+   with indels are also stored in the ".map" files. The mapview output
+   is changed accordingly.
+
+ * Added the number of 0- and 1-mismatch hits to the mapview output.
+
+ * Rewrote rmdup command. This command now keeps all abnormal pairs as
+   well as reads with indels.
+
+ * Made simulate command generate reads on both strands. Previously
+   read1 always come from the forward strand and read2 from the reverse
+   strand.
+
+ * Allowed to change the average MAF for heterozygous sites. This may
+   help for pooled sample, but it has not been evaluated.
+
+ * Improved 3'-adapter trimming. Fully contaiminated reads can be
+   detected now.
+
+In this release, I am trying to stablize the alignment part and hope the
+alignment file generated by maq-0.6.0 can be compatible with later
+releases. Furthermore, maq is moving towards the first formal release
+1.0.0. In the near future, I will also try to stablize the entire code
+instead of testing new features frequently.
+
+(0.6.0: 5 September 2007, r249)
+
+
+
+Beta Release 0.5.1 (31 July, 2007)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+All the notable changes include:
+
+ * Bugfix in `map': fixed a bug which will lead to wrong alignment when
+   two similar regions having identical coordinates but on different
+   references. This bug can be dated back to the first piece of codes of
+   maq.
+
+ * Bugfix in `map' paired end alignment: fixed a bug which will lead to
+   wrong alignment when there are two good hits in a small region.
+
+ * New feature `simulate': a sophisticated paired end read simulator has
+   been implemented. It builds an order-one Markov chain and trains
+   parameters from real read data. The simulator is able to generate
+   reads with quality distribution quite similar to real ones. In
+   addition, three parameter sets will be provided with Maq. Endusers
+   can simulate realistic reads even without any real data.
+
+ * New feature `rmdup': remove read pairs with identical outer
+   coordinates. Doing this may improve the SNP accuracy in practice.
+
+ * Since this release, the main documentation will be maintained in a
+   man page. PDF version will also come with Maq distributions.
+
+(0.5.1: 31 July 2007, r213)
+
+
+
+Beta Release 0.5.0 (13 July, 2007)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+From this release, this program is formally renamed as `maq', which
+stands for Mapping and Assembly with Qualities. The version number still
+follows the previous series.
+
+In addition to the name of the program, another major change in this
+release is the format of the maq alignment file. In response to the
+request of several users, read names will be stored in the alignment
+file. The mapview output is also revised accordingly.
+
+Other notable changes and bug fixes in this release include:
+
+ * Bugfix in `maq.pl': follow symbolic links.
+
+ * New feature `maq_plot.pl': plot read depth and abnormal read pairs
+   along the reference.
+
+ * New feature in `maq.pl': `SNPfilter' command to rule out unreliable
+   SNPs.
+
+ * New feature in `maq.pl': more analyses added to `easyrun'.
+
+(0.5.0: 13 July 2007, r171)
+
+
+
+Beta Release 0.4.3 (4 July, 2007)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+In this new release, several bugs are fixed and a number of minor
+features are implemented.
+
+ * Bugfix in 'mapass2.pl easyrun': fixed bugs when multiple read files
+   are provided on the command line.
+
+ * New feature: allow to use single-end mapping quality in several
+   commands. By default, mapass2 will use paired end mapping qualities
+   if reads are paired. However, I found this quality is sometimes
+   overestimated. It is good to check what the difference between the
+   results of the two type of mapping qualities.
+
+ * Bugfix in 'mapcheck': fixed an integer overflow and skipped 'N'
+   regions in calculating the average depth.
+
+ * Bugfix in paired end alignment: fixed wrong coordinates for 0.03% or
+   paired reads. Single end alignment will not be affected.
+
+ * New feature in 'match': when '-N' is flagged, more alignment
+   information will be dumped to the stderr.
+
+(0.4.3: 4 July 2007, r148)
+
+
+
+Beta Release 0.4.2 (21 June, 2007)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Several people were asking me to output the name of each mapped
+read. Now here it is. You can tune this feature on by:
+
+  mapass2 match -N out.map ref.bfa reads.bfq 2>out.log
+
+The read name, reference seqname, position, strand, paired mapping
+quality, single mapping quality and mismatched bases will be printed on
+stderr. This option `-N' should only be used in debugging. It will cost
+more memory and diskspace as well.
+
+That is all. People who do not need this feature can stick to 0.4.1.
+
+(0.4.2: 21 June 2007, r130)
+
+
+
+Beta Release 0.4.1 (17 June, 2007)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+This is mainly a bug fix release. All users are recommended to
+update. New features and bug fixes include:
+
+ * New command `sol2sanger': convert Solexa FASTQ to Sanger/standard
+   FASTQ format. The difference between the two formats is how the
+   qualities are scaled.
+
+ * New command `bfq2fastq': convert mapass' binary FASTQ format to
+   standard FASTQ.
+
+ * Bugfix in `cns2win': fixed wrong report when chr is not specified on
+   the command line.
+
+ * Bugfix in `mapcheck': complemented bases on the reverse strand.
+
+(0.4.1: 17 June 2007, r124)
+
+
+
+Beta Release 0.4.0 (15 May, 2007)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+One week after the last release, 0.4.0 comes out. Several improvements
+make this release different from the previous ones:
+
+ * New consensus base calling model. Although updating model frequently
+   happens in the development of mapass2, this one is different. It is
+   the first model that can satisfy me. All previous models make me feel
+   uncomfortable in a way or another. However, good theory does not
+   always mean better performance. The new model only improve the
+   accuracy by less than 1 percent.
+
+ * Preliminary functions to process SOLiD data. This is the first the
+   release that is able to process AB SOLiD data. The current strategy
+   cannot fully make use of all the colour information that is unique to
+   SOLiD data, but it is good enough to study the strength and weakness
+   of SOLiD data. I may improve these functions when SOLiD becomes more
+   stable. It is being improved.
+
+ * Use of the GNU build systems. Mapass2 is better compiled with 64bit
+   support. The GNU build systems make this easier. Apple universal
+   binaries can be compiled, too. Although I still quite like to write
+   Makefile by myself, I think to use a more sophisticated method is the
+   right way to go. This is the first time I have tried this.
+
+ * Considerable codes clean up and minor improvements in assembling
+   related parts.
+
+Beginning with this release, I will probably not release mapass2 so
+frequently as what happened in the past three weeks. Although I am not
+entirely satisfied with the accuracy of current performance, I am happy
+with the whole theory behind and the practical usefulness of mapass2. I
+am sure mapass2 is one of the best softwares to map and assemble short
+reads.
+
+(0.4.0: 15 May 2007, r114)
+
+
+
+Beta Release 0.3.1 (9 May, 2007)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+This is a release with minor revisions. The consensus calling model is
+modified slightly which, unfortunately, decreases the accuracy by about
+1%. However, I will stick to it anyway because it is more concise and
+correct in theory. Actually, there is a bug when I was implementing the
+old model.
+
+Other changes include:
+
+ * Add `subpos' command: extract a required subset from .cns file
+
+ * Improve `pileup' output by making it more informative and allowing to
+   extract a required subset.
+
+ * Fix two bugs: one in k-small and the other in `mapcheck'. These are
+   trivial, though.
+
+(0.3.1: 9 May 2007, r94)
+
+
+
+Beta Release 0.3.0 (3 May, 2007)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+A new release comes out. Consensus calling model has been improved a
+little.  Read-pair quality can be calculated more precisely. More
+commands are added to facilitate subsequent analyses. Detailed
+improvements and fixes are:
+
+ * Alternative model for consensus base calling. The new model does not
+   outperform the old one, but it tend to be more correct in theory and
+   more flexible.
+
+ * Improved model for read-pair quality. This fixes possible
+   overestimation when a pair can be mapped to several places with
+   correct orientation and distance. Note that the default parameter
+   should be adjusted in some cases. For chrX data, I suggest to apply
+   "-t 0.8".
+
+ * Reference based consesus calling (RBCC). Call the consensus based on
+   dbSNP information. Adjust the prior at the dbSNP sites. This is kind
+   of cheating, but it does help to improve the final SNP calls.
+
+ * Informative mapcheck. Command 'mapcheck' now outputs more
+   information. It is also integrated to 'mapass2.pl'.
+
+ * Fastq2bfq in batch mode. This function converts or organizes all the
+   fastq files in a directory. 'farm-run.pl' script can be easily
+   applied to the resultant directory structure.
+
+ * A few bug fixes.
+
+(0.3.0: 3 May 2007, r86)
+
+
+
+Beta Release 0.2.1 (23 April, 2007)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+This is mainly a bug fix release. The previous version cannot give
+correct results when there are two or more reference sequences. I am
+sorry for this obvious bug. Further improvements include:
+
+ * Add `mapcheck' command. This command counts observed substitutions on
+   reads with respect to the reference. It helps to check the systematic
+   bias conatined in reads.
+
+ * Consensus can be assembled from one sequence. Previously, all the
+   consensus must be assembled together.
+
+(0.2.1: 23 April 2007, r67)
+
+
+
+Beta Release 0.2.0 (22 April, 2007)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+This is the first release of mapass2, a program that maps
+Illumina/Solexa reads to the reference and calls the consensus. This
+program has been tested on real large-scale data. It is one of the few
+softwares that is able to handle these huge amount of data efficiently
+and accurately.
+
+(0.2.0: 22 April 2007, r60)
+
+

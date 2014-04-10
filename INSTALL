@@ -1,0 +1,11 @@
+
+There are two ways to compile maq. The first way is to use the GNU
+building systems. Simply type './configure; make; make install' to
+compile and to install maq. Three executables 'maq', 'maq.pl' and
+'farm-run.pl' will be copied to '/usr/local/bin' by default.
+
+Alternatively, one could compile with 'make -f Makefile.generic' and
+manually copy the three executables to the destination directory.
+Modification to 'Makefile.generic' is sometimes needed for different
+architectures.
+

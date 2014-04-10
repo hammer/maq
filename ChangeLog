@@ -1,0 +1,4187 @@
+------------------------------------------------------------------------
+r666 | lh3lh3 | 2008-09-21 20:31:54 +0100 (Sun, 21 Sep 2008) | 2 lines
+Changed paths:
+   M /branches/lh3/maq/ChangeLog
+   M /branches/lh3/maq/Makefile.generic
+   M /branches/lh3/maq/configure.ac
+   M /branches/lh3/maq/eland2maq.cc
+
+updated novo2maq
+
+------------------------------------------------------------------------
+r665 | lh3lh3 | 2008-09-17 13:09:01 +0100 (Wed, 17 Sep 2008) | 3 lines
+Changed paths:
+   M /branches/lh3/maq/scripts/fq_all2std.pl
+
+ * fq_all2std.pl-0.1.7
+ * convert fastq to .seq+.qual format
+
+------------------------------------------------------------------------
+r662 | lh3lh3 | 2008-09-08 14:09:02 +0100 (Mon, 08 Sep 2008) | 3 lines
+Changed paths:
+   M /branches/lh3/maq/Makefile.generic
+   M /branches/lh3/maq/configure.ac
+   M /branches/lh3/maq/simulate.c
+
+ * maq-0.6.8-5
+ * fixed a flaw in simulate.c
+
+------------------------------------------------------------------------
+r661 | lh3lh3 | 2008-09-04 22:44:59 +0100 (Thu, 04 Sep 2008) | 5 lines
+Changed paths:
+   M /branches/lh3/maq/ChangeLog
+   M /branches/lh3/maq/Makefile.generic
+   M /branches/lh3/maq/configure.ac
+   M /branches/lh3/maq/dword.hh
+   M /branches/lh3/maq/eland2maq.cc
+   M /branches/lh3/maq/indel_pe.cc
+   M /branches/lh3/maq/maqmap.h
+   M /branches/lh3/maq/match.cc
+   M /branches/lh3/maq/match.hh
+   M /branches/lh3/maq/match_aux.cc
+   M /branches/lh3/maq/sort_mapping.cc
+
+ * maq-0.6.8-4
+ * support long reads and this is the default. It works on toy examples.
+   Further testing is needed.
+ * Fixed a bug in novo2maq
+
+------------------------------------------------------------------------
+r660 | lh3lh3 | 2008-09-04 20:01:44 +0100 (Thu, 04 Sep 2008) | 4 lines
+Changed paths:
+   M /branches/lh3/maq/Makefile.generic
+   M /branches/lh3/maq/configure.ac
+   M /branches/lh3/maq/indel_pe.cc
+   M /branches/lh3/maq/stdaln.c
+   M /branches/lh3/maq/stdaln.h
+
+ * maq-0.6.8-3
+ * apparently fixed a segfault in indelpe
+ * reduce debugging information in indelpe
+
+------------------------------------------------------------------------
+r659 | lh3lh3 | 2008-08-27 09:25:33 +0100 (Wed, 27 Aug 2008) | 4 lines
+Changed paths:
+   M /branches/lh3/maq/Makefile.generic
+   M /branches/lh3/maq/bfa.c
+   M /branches/lh3/maq/bfa.h
+   M /branches/lh3/maq/configure.ac
+   M /branches/lh3/maq/indel_pe.cc
+   M /branches/lh3/maq/match.cc
+
+ * maq-0.6.8-2
+ * map: better stats
+ * indelpe: better boundary check, but it still segfaults
+
+------------------------------------------------------------------------
+r657 | lh3lh3 | 2008-08-19 09:53:26 +0100 (Tue, 19 Aug 2008) | 9 lines
+Changed paths:
+   M /branches/lh3/maq/Makefile.generic
+   M /branches/lh3/maq/configure.ac
+   M /branches/lh3/maq/eland2maq.cc
+   M /branches/lh3/maq/indel_pe.cc
+   M /branches/lh3/maq/main.c
+   M /branches/lh3/maq/main.h
+   M /branches/lh3/maq/match.cc
+   M /branches/lh3/maq/match.hh
+   M /branches/lh3/maq/match_aux.cc
+   M /branches/lh3/maq/scripts/asub
+   M /branches/lh3/maq/scripts/fq_all2std.pl
+
+ * maq-0.6.8-1
+ * map: added -W to disable Smith-Waterman alignment. It segfaults for
+   Aylwyn's alignment and I have not figured out the cause.
+ * Added novo2map to convert novocraft alignment to .map, provided by Colin.
+ * fq_all2std.pl: added std2sol to convert Sanger fastq to Solexa fastq
+ * asub-0.1.5: added -M to set maximum memory on Sanger's farm; added -n
+   to specify the maximum cores for parallel jobs
+
+
+------------------------------------------------------------------------
+r651 | lh3lh3 | 2008-07-27 17:07:44 +0100 (Sun, 27 Jul 2008) | 2 lines
+Changed paths:
+   M /branches/lh3/maq/Makefile.generic
+   M /branches/lh3/maq/NEWS
+   M /branches/lh3/maq/configure.ac
+   M /branches/lh3/maq/maq.pod
+
+Release maq-0.6.8
+
+------------------------------------------------------------------------
+r648 | lh3lh3 | 2008-07-27 13:38:43 +0100 (Sun, 27 Jul 2008) | 2 lines
+Changed paths:
+   M /branches/lh3/maq/maq.pod
+
+update man page
+
+------------------------------------------------------------------------
+r647 | lh3lh3 | 2008-07-27 00:19:13 +0100 (Sun, 27 Jul 2008) | 3 lines
+Changed paths:
+   M /branches/lh3/maq/ChangeLog
+   M /branches/lh3/maq/Makefile.generic
+   M /branches/lh3/maq/assopt.c
+   M /branches/lh3/maq/configure.ac
+
+ * maq-0.6.8-9
+ * fixed a potential compiling error in assopt.c
+
+------------------------------------------------------------------------
+r646 | lh3lh3 | 2008-07-24 15:46:31 +0100 (Thu, 24 Jul 2008) | 4 lines
+Changed paths:
+   M /branches/lh3/maq/COPYING
+   M /branches/lh3/maq/ChangeLog
+   M /branches/lh3/maq/Makefile.generic
+   M /branches/lh3/maq/configure.ac
+   M /branches/lh3/maq/indel_pe.cc
+
+ * maq-0.6.7-8
+ * fixed a potential bug in indel_pe.cc
+ * change COPYING to GPLv3
+
+------------------------------------------------------------------------
+r645 | lh3lh3 | 2008-07-24 15:45:47 +0100 (Thu, 24 Jul 2008) | 2 lines
+Changed paths:
+   M /branches/lh3/maq/scripts/maq_plot.pl
+
+use /usr/bin/perl instead of /usr/local/bin/perl
+
+------------------------------------------------------------------------
+r644 | lh3lh3 | 2008-07-24 15:45:08 +0100 (Thu, 24 Jul 2008) | 3 lines
+Changed paths:
+   M /branches/lh3/maq/scripts/maq_sanger.pl
+
+ * maq_sanger.pl-0.1.16
+ * support .fq 
+
+------------------------------------------------------------------------
+r643 | lh3lh3 | 2008-07-16 10:08:41 +0100 (Wed, 16 Jul 2008) | 3 lines
+Changed paths:
+   M /branches/lh3/maq/Makefile.generic
+   M /branches/lh3/maq/configure.ac
+   M /branches/lh3/maq/mapcheck.cc
+
+ * maq-0.6.7-7
+ * mapcheck: fixed a bug caused by previous modification
+
+------------------------------------------------------------------------
+r642 | lh3lh3 | 2008-07-16 09:51:40 +0100 (Wed, 16 Jul 2008) | 3 lines
+Changed paths:
+   M /branches/lh3/maq/Makefile.generic
+   M /branches/lh3/maq/configure.ac
+   M /branches/lh3/maq/mapcheck.cc
+
+ * maq-0.6.7-6
+ * mapcheck: fixed a bug in the last modification
+
+------------------------------------------------------------------------
+r641 | lh3lh3 | 2008-07-15 15:16:52 +0100 (Tue, 15 Jul 2008) | 7 lines
+Changed paths:
+   M /branches/lh3/maq/Makefile.generic
+   M /branches/lh3/maq/configure.ac
+   M /branches/lh3/maq/mapcheck.cc
+   M /branches/lh3/maq/scripts/maq_sanger.pl
+   M /branches/lh3/maq/scripts/paf_utils.pl
+
+ * paf_utils.pl-0.3.2
+ * partially support novoalign/novopaired
+ * maq_sanger.pl-0.1.15
+ * dump unmapped reads
+ * maq-0.6.7-5
+ * filter out know polymorphic positions
+
+------------------------------------------------------------------------
+r640 | lh3lh3 | 2008-06-29 09:58:27 +0100 (Sun, 29 Jun 2008) | 3 lines
+Changed paths:
+   M /branches/lh3/maq/Makefile.generic
+   M /branches/lh3/maq/configure.ac
+   M /branches/lh3/maq/sort_mapping.cc
+
+ * maq-0.6.7-4
+ * map: only dump unmapped reads
+
+------------------------------------------------------------------------
+r637 | lh3lh3 | 2008-06-26 13:57:37 +0100 (Thu, 26 Jun 2008) | 3 lines
+Changed paths:
+   M /branches/lh3/maq/Makefile.generic
+   M /branches/lh3/maq/configure.ac
+   M /branches/lh3/maq/glfgen.cc
+
+ * maq-0.6.7-3
+ * fixed a memory leak
+
+------------------------------------------------------------------------
+r635 | lh3lh3 | 2008-06-25 20:36:31 +0100 (Wed, 25 Jun 2008) | 3 lines
+Changed paths:
+   M /branches/lh3/maq/Makefile.generic
+   M /branches/lh3/maq/assopt.c
+   M /branches/lh3/maq/configure.ac
+
+ * maq-0.6.7-2
+ * assemble: change default -t to 0.85
+
+------------------------------------------------------------------------
+r634 | lh3lh3 | 2008-06-25 17:02:41 +0100 (Wed, 25 Jun 2008) | 2 lines
+Changed paths:
+   A /branches/lh3/glf
+   A /branches/lh3/glf/Makefile
+   A /branches/lh3/glf/glf.c
+   A /branches/lh3/glf/glf.h
+   A /branches/lh3/glf/glf_main.c
+   A /branches/lh3/glf/izlib
+   A /branches/lh3/glf/izlib/Makefile
+   A /branches/lh3/glf/izlib/adler32.c
+   A /branches/lh3/glf/izlib/compress.c
+   A /branches/lh3/glf/izlib/crc32.c
+   A /branches/lh3/glf/izlib/crc32.h
+   A /branches/lh3/glf/izlib/deflate.c
+   A /branches/lh3/glf/izlib/deflate.h
+   A /branches/lh3/glf/izlib/gzio.c
+   A /branches/lh3/glf/izlib/infback.c
+   A /branches/lh3/glf/izlib/inffast.c
+   A /branches/lh3/glf/izlib/inffast.h
+   A /branches/lh3/glf/izlib/inffixed.h
+   A /branches/lh3/glf/izlib/inflate.c
+   A /branches/lh3/glf/izlib/inflate.h
+   A /branches/lh3/glf/izlib/inftrees.c
+   A /branches/lh3/glf/izlib/inftrees.h
+   A /branches/lh3/glf/izlib/izio.c
+   A /branches/lh3/glf/izlib/izlib.h
+   A /branches/lh3/glf/izlib/trees.c
+   A /branches/lh3/glf/izlib/trees.h
+   A /branches/lh3/glf/izlib/uncompr.c
+   A /branches/lh3/glf/izlib/zconf.h
+   A /branches/lh3/glf/izlib/zindex.c
+   A /branches/lh3/glf/izlib/zlib.h
+   A /branches/lh3/glf/izlib/zran.c
+   A /branches/lh3/glf/izlib/zutil.c
+   A /branches/lh3/glf/izlib/zutil.h
+   A /branches/lh3/glf/stdhash
+   A /branches/lh3/glf/stdhash/Makefile
+   A /branches/lh3/glf/stdhash/simple_test.c
+   A /branches/lh3/glf/stdhash/stdhash.hh
+   A /branches/lh3/glf/stdhash/stdhash_test.cc
+   A /branches/lh3/glf/stdhash/stdhashc.cc
+   A /branches/lh3/glf/stdhash/stdhashc.h
+   M /branches/lh3/maq/configure.ac
+
+utilities for .glz format
+
+------------------------------------------------------------------------
+r633 | lh3lh3 | 2008-06-25 15:20:49 +0100 (Wed, 25 Jun 2008) | 5 lines
+Changed paths:
+   M /branches/lh3/maq/Makefile.am
+   M /branches/lh3/maq/Makefile.generic
+   M /branches/lh3/maq/assemble.cc
+   A /branches/lh3/maq/glf.h
+   A /branches/lh3/maq/glfgen.cc
+   M /branches/lh3/maq/main.c
+   M /branches/lh3/maq/main.h
+
+ * maq-0.6.7-1
+ * add glfgen
+ * fixed a bug in assemble
+ * the default parameters should be updated due to that bug!!!
+
+------------------------------------------------------------------------
+r630 | lh3lh3 | 2008-06-23 15:03:02 +0100 (Mon, 23 Jun 2008) | 2 lines
+Changed paths:
+   M /branches/lh3/maq/NEWS
+   M /branches/lh3/maq/maq.pod
+
+Release maq-0.6.7
+
+------------------------------------------------------------------------
+r629 | lh3lh3 | 2008-06-23 14:48:36 +0100 (Mon, 23 Jun 2008) | 3 lines
+Changed paths:
+   M /branches/lh3/maq/ChangeLog
+   M /branches/lh3/maq/maq.pod
+
+ * update ChangeLog and maq.pod
+ * prepare to release maq-0.6.7
+
+------------------------------------------------------------------------
+r628 | lh3lh3 | 2008-06-23 14:47:15 +0100 (Mon, 23 Jun 2008) | 6 lines
+Changed paths:
+   M /branches/lh3/maq/scripts/maq.pl
+
+ * maq.pl-0.4.7
+ * SNPfilter: also filter on consensus quality
+ * easyrun: change for SNPfilter. cns.filter.snp is now a symbolic link to
+   cns.final.snp
+ * easyrun: do not apply splitread by default
+
+------------------------------------------------------------------------
+r627 | lh3lh3 | 2008-06-23 14:45:15 +0100 (Mon, 23 Jun 2008) | 3 lines
+Changed paths:
+   M /branches/lh3/maq/scripts/maq_eval.pl
+
+ * maq_eval.pl-0.1.11
+ * geno: print lines where genotyping calls a hom, but maq calls differently
+
+------------------------------------------------------------------------
+r626 | lh3lh3 | 2008-06-17 15:54:06 +0100 (Tue, 17 Jun 2008) | 4 lines
+Changed paths:
+   M /branches/lh3/maq/Makefile.am
+   M /branches/lh3/maq/Makefile.generic
+   A /branches/lh3/maq/break_pair.c
+   M /branches/lh3/maq/configure.ac
+   M /branches/lh3/maq/main.c
+   M /branches/lh3/maq/main.h
+   M /branches/lh3/maq/mapcheck.cc
+
+ * maq-0.6.6-14
+ * add breakpair: for David's script
+ * mapcheck: output the count of qualities - also for David's script
+
+------------------------------------------------------------------------
+r625 | lh3lh3 | 2008-06-17 14:46:26 +0100 (Tue, 17 Jun 2008) | 5 lines
+Changed paths:
+   M /branches/lh3/maq/scripts/maq.pl
+
+ * maq.pl-0.4.6
+ * SNPfilter: improve indel filter, as maq always puts the indel at the
+   beginning of a homopolymer run
+ * easyrun: allow to skip splitread indel detection
+
+------------------------------------------------------------------------
+r624 | lh3lh3 | 2008-06-17 14:43:52 +0100 (Tue, 17 Jun 2008) | 3 lines
+Changed paths:
+   M /branches/lh3/maq/scripts/maq_eval.pl
+
+ * maq_eval.pl-0.1.10
+ * improve the evaluation of indelpe
+
+------------------------------------------------------------------------
+r623 | lh3lh3 | 2008-06-06 14:05:20 +0100 (Fri, 06 Jun 2008) | 4 lines
+Changed paths:
+   M /branches/lh3/maq/scripts/maq.pl
+
+ * maq.pl-0.4.4
+ * indelpe: fix a bug in parsing command-line options
+ * indelpe: change the default options
+
+------------------------------------------------------------------------
+r622 | lh3lh3 | 2008-06-05 20:54:14 +0100 (Thu, 05 Jun 2008) | 5 lines
+Changed paths:
+   M /branches/lh3/maq/Makefile.generic
+   M /branches/lh3/maq/assemble.h
+   M /branches/lh3/maq/configure.ac
+   M /branches/lh3/maq/get_pos.c
+   M /branches/lh3/maq/indel_call.cc
+   M /branches/lh3/maq/merge.cc
+   M /branches/lh3/maq/scripts/maq.pl
+
+ * maq-0.6.6-13
+ * indelpe: output number of mismatches of reads mapped without indels
+ * maq.pl-0.4.3
+ * filter based on this information
+
+------------------------------------------------------------------------
+r621 | lh3lh3 | 2008-05-30 00:04:55 +0100 (Fri, 30 May 2008) | 7 lines
+Changed paths:
+   M /branches/lh3/maq/Makefile.generic
+   M /branches/lh3/maq/assemble.h
+   M /branches/lh3/maq/configure.ac
+   M /branches/lh3/maq/get_pos.c
+   M /branches/lh3/maq/indel_call.cc
+   M /branches/lh3/maq/main.c
+   M /branches/lh3/maq/main.h
+   M /branches/lh3/maq/maqmap.c
+   M /branches/lh3/maq/merge.cc
+   M /branches/lh3/maq/scripts/maq.pl
+
+ * maq-0.6.6-11
+ * indelpe: output indel bases
+ * mapmerge: detect corrupted .map files
+ * add mapvalidate: detect correpted .map files
+ * maq.pl
+ * add indelpe: correct counts for homopolymer runs
+
+------------------------------------------------------------------------
+r620 | lh3lh3 | 2008-05-24 10:06:20 +0100 (Sat, 24 May 2008) | 5 lines
+Changed paths:
+   M /branches/lh3/maq/Makefile.generic
+   M /branches/lh3/maq/assemble.h
+   M /branches/lh3/maq/configure.ac
+   M /branches/lh3/maq/get_pos.c
+   M /branches/lh3/maq/indel_call.cc
+   M /branches/lh3/maq/indel_pe.cc
+
+ * maq-0.6.6-10
+ * fixed bug in map: positions for insertions are shifted by 1bp
+ * output more information about indel
+ * have NOT tested yet
+
+------------------------------------------------------------------------
+r619 | lh3lh3 | 2008-05-23 12:40:03 +0100 (Fri, 23 May 2008) | 7 lines
+Changed paths:
+   M /branches/lh3/maq/Makefile.generic
+   M /branches/lh3/maq/configure.ac
+   M /branches/lh3/maq/match.cc
+   M /branches/lh3/maq/sort_mapping.cc
+   M /branches/lh3/maq/submap.c
+
+ * maq-0.6.6-9
+ * also put unmapped reads in a pair in the alignment file. it will get
+   a flag 192
+ * fix a bug in submap
+ * map: give an error when -n 0 is used
+
+
+------------------------------------------------------------------------
+r618 | lh3lh3 | 2008-05-21 15:14:57 +0100 (Wed, 21 May 2008) | 3 lines
+Changed paths:
+   M /branches/lh3/maq/scripts/maq.pl
+
+ * maq.pl-0.4.2
+ * change filters for splitread indels
+
+------------------------------------------------------------------------
+r617 | lh3lh3 | 2008-05-19 11:58:17 +0100 (Mon, 19 May 2008) | 5 lines
+Changed paths:
+   M /branches/lh3/maq/Makefile.generic
+   M /branches/lh3/maq/configure.ac
+   M /branches/lh3/maq/match.cc
+   M /branches/lh3/maq/scripts/maq_sanger.pl
+   M /branches/lh3/maq/sort_mapping.cc
+
+ * maq-0.6.6-8
+ * map: fix a bug for alignment on Illumina long insert-size library
+ * maq_sanger.pl-0.1.14
+ * support long insert library
+
+------------------------------------------------------------------------
+r616 | lh3lh3 | 2008-05-18 23:56:48 +0100 (Sun, 18 May 2008) | 3 lines
+Changed paths:
+   M /branches/lh3/maq/Makefile.generic
+   M /branches/lh3/maq/configure.ac
+   M /branches/lh3/maq/match.cc
+   M /branches/lh3/maq/match.hh
+   M /branches/lh3/maq/match_aux.cc
+   M /branches/lh3/maq/sort_mapping.cc
+
+ * maq-0.6.6-7
+ * map: option to output pair-2-diff flag (for splitread ONLY)
+
+------------------------------------------------------------------------
+r615 | lh3lh3 | 2008-05-18 23:55:09 +0100 (Sun, 18 May 2008) | 7 lines
+Changed paths:
+   M /branches/lh3/maq/scripts/maq.pl
+
+ * maq.pl-0.4.1
+ * easyrun: more options for parameter tuning
+ * SNPfilter: filter for splitread indels
+ * SNPfilter: change default indel window to 5
+ * SNPfilter: remove the hidden filter
+ * easyrun: filter for splitread indels
+
+------------------------------------------------------------------------
+r614 | lh3lh3 | 2008-05-18 18:31:38 +0100 (Sun, 18 May 2008) | 3 lines
+Changed paths:
+   M /branches/lh3/maq/scripts/maq.pl
+
+ * maq.pl-0.4.0
+ * splitread: find short indels by SplitRead (VERY SLOW)
+
+------------------------------------------------------------------------
+r613 | lh3lh3 | 2008-05-17 16:00:09 +0100 (Sat, 17 May 2008) | 3 lines
+Changed paths:
+   M /branches/lh3/maq/ChangeLog
+   M /branches/lh3/maq/Makefile.generic
+   M /branches/lh3/maq/configure.ac
+   M /branches/lh3/maq/match.cc
+   M /branches/lh3/maq/scripts/maq.pl
+
+ * maq-0.6.6-6
+ * reduce the minimum read length to 12
+
+------------------------------------------------------------------------
+r612 | lh3lh3 | 2008-05-17 13:56:45 +0100 (Sat, 17 May 2008) | 3 lines
+Changed paths:
+   M /branches/lh3/maq/scripts/maq.pl
+
+ * maq.pl-0.3.13
+ * sv: fix a bug
+
+------------------------------------------------------------------------
+r611 | lh3lh3 | 2008-05-14 22:37:24 +0100 (Wed, 14 May 2008) | 5 lines
+Changed paths:
+   M /branches/lh3/maq/Makefile.generic
+   M /branches/lh3/maq/configure.ac
+   M /branches/lh3/maq/scripts/maq.pl
+   M /branches/lh3/maq/sort_mapping.cc
+
+ * maq.pl-0.3.13
+ * change default quality cut-off to 40
+ * maq-0.6.6-5
+ * map: long insert-size seems to work
+
+------------------------------------------------------------------------
+r610 | lh3lh3 | 2008-05-14 17:11:00 +0100 (Wed, 14 May 2008) | 13 lines
+Changed paths:
+   M /branches/lh3/maq/Makefile.generic
+   M /branches/lh3/maq/assemble.cc
+   M /branches/lh3/maq/assopt.c
+   M /branches/lh3/maq/aux_utils.c
+   M /branches/lh3/maq/configure.ac
+   M /branches/lh3/maq/scripts/maq.pl
+
+ * maq-0.6.6-4
+ * assemble: fix a minor bug since 0.6.4, which may affect a small fraction
+   of SNP calls.
+ * assemble: a tiny fix for approximation
+ * assemble: add independent model, but it does not work well at all (maybe
+   another bug?).
+ * assemble: output debugging information
+ * cns2snp/cns2view: output base2, base3 and qual2
+ * map: long insert-size codes have not been tested at all
+ * maq.pl-0.3.12
+ * easyrun: add more options
+ * easyrun: change consensus quality filter to (I think) the correct way
+
+------------------------------------------------------------------------
+r609 | lh3lh3 | 2008-05-11 19:57:27 +0100 (Sun, 11 May 2008) | 3 lines
+Changed paths:
+   M /branches/lh3/maq/Makefile.generic
+   M /branches/lh3/maq/configure.ac
+   M /branches/lh3/maq/indel_pe.cc
+   M /branches/lh3/maq/match.cc
+   M /branches/lh3/maq/match.hh
+   M /branches/lh3/maq/sort_mapping.cc
+
+ * maq-0.6.6-3
+ * initial codes for Illumina long insert library, not tested at all
+
+------------------------------------------------------------------------
+r608 | lh3lh3 | 2008-05-05 21:32:46 +0100 (Mon, 05 May 2008) | 3 lines
+Changed paths:
+   M /branches/lh3/maq/Makefile.generic
+   M /branches/lh3/maq/NEWS
+   M /branches/lh3/maq/assemble.cc
+   M /branches/lh3/maq/assemble.h
+   M /branches/lh3/maq/assopt.c
+   M /branches/lh3/maq/configure.ac
+
+ * maq-0.6.6-2
+ * initial codes for pooled sample, which apparently work but not tested.
+
+------------------------------------------------------------------------
+r607 | lh3lh3 | 2008-05-01 10:55:49 +0100 (Thu, 01 May 2008) | 5 lines
+Changed paths:
+   M /branches/lh3/maq/scripts/maq_eval.pl
+   M /branches/lh3/maq/scripts/maq_post.pl
+
+ * maq_eval.pl-0.1.8
+ * fix a bug when length >2Gbp
+ * maq_post.pl-0.1.2
+ * fix a bug when hapmap2.snp is not present
+
+------------------------------------------------------------------------
+r606 | lh3lh3 | 2008-04-30 14:04:41 +0100 (Wed, 30 Apr 2008) | 3 lines
+Changed paths:
+   A /branches/lh3/maq/scripts/maq_post.pl
+   M /branches/lh3/maq/scripts/maq_sanger.pl
+
+ * add maq_post.pl: post process the maq alignment (for Sanger only)
+ * remove aln.map.touch in the end
+
+------------------------------------------------------------------------
+r601 | lh3lh3 | 2008-04-27 19:52:12 +0100 (Sun, 27 Apr 2008) | 2 lines
+Changed paths:
+   M /branches/lh3/maq/FUTURES
+   M /branches/lh3/maq/Makefile.generic
+   M /branches/lh3/maq/NEWS
+   M /branches/lh3/maq/configure.ac
+   M /branches/lh3/maq/maq.pod
+
+Release maq-0.6.6
+
+------------------------------------------------------------------------
+r600 | lh3lh3 | 2008-04-27 19:24:25 +0100 (Sun, 27 Apr 2008) | 4 lines
+Changed paths:
+   M /branches/lh3/maq/Makefile.generic
+   M /branches/lh3/maq/configure.ac
+   M /branches/lh3/maq/maq.pod
+   M /branches/lh3/maq/match.cc
+
+ * maq-0.6.5-3
+ * map: fix a bug in dumping multi-hit
+ * add "map -H/-C" to manual page
+
+------------------------------------------------------------------------
+r597 | lh3lh3 | 2008-04-22 23:19:43 +0100 (Tue, 22 Apr 2008) | 4 lines
+Changed paths:
+   M /branches/lh3/maq/Makefile.generic
+   M /branches/lh3/maq/assemble.h
+   M /branches/lh3/maq/configure.ac
+   M /branches/lh3/maq/mapcheck.cc
+   M /branches/lh3/maq/match.cc
+   M /branches/lh3/maq/match.hh
+   M /branches/lh3/maq/match_aux.cc
+   M /branches/lh3/maq/read.cc
+   M /branches/lh3/maq/read.h
+
+ * maq-0.6.5-2
+ * add <unistd.h> to mapcheck.cc
+ * output multiple 01-mismatch hits
+
+------------------------------------------------------------------------
+r596 | lh3lh3 | 2008-04-22 21:57:19 +0100 (Tue, 22 Apr 2008) | 2 lines
+Changed paths:
+   M /branches/lh3/maq/scripts/maq_eval.pl
+
+trivial...
+
+------------------------------------------------------------------------
+r595 | lh3lh3 | 2008-04-22 13:10:32 +0100 (Tue, 22 Apr 2008) | 3 lines
+Changed paths:
+   M /branches/lh3/maq/scripts/maq_eval.pl
+
+ * maq_eval.pl-0.1.7
+ * print out wrong SNPs for mono sites
+
+------------------------------------------------------------------------
+r593 | lh3lh3 | 2008-04-20 22:03:15 +0100 (Sun, 20 Apr 2008) | 4 lines
+Changed paths:
+   M /branches/lh3/maq/Makefile.generic
+   M /branches/lh3/maq/aux_utils.c
+   M /branches/lh3/maq/configure.ac
+   M /branches/lh3/maq/simulate.c
+
+ * maq-0.6.5-1
+ * spot a bug in simulate.c. not fixed, yet
+ * non-SNPable regions are masked as lowcase letters
+
+------------------------------------------------------------------------
+r592 | lh3lh3 | 2008-04-20 22:01:49 +0100 (Sun, 20 Apr 2008) | 3 lines
+Changed paths:
+   M /branches/lh3/maq/scripts/maq_sanger.pl
+
+ * maq_sanger.pl-0.1.12
+ * allow to set maximum read length
+
+------------------------------------------------------------------------
+r590 | lh3lh3 | 2008-04-19 21:58:27 +0100 (Sat, 19 Apr 2008) | 4 lines
+Changed paths:
+   M /branches/lh3/maq/scripts/maq_sanger.pl
+
+ * maq_sanger.pl-0.1.11
+ * remove read name filtering
+ * support alignment for reads in Solexa fastq format
+
+------------------------------------------------------------------------
+r589 | lh3lh3 | 2008-04-19 20:29:15 +0100 (Sat, 19 Apr 2008) | 4 lines
+Changed paths:
+   M /branches/lh3/maq/scripts/maq_sanger.pl
+
+ * maq_sanger.pl-0.1.10
+ * add gzip support
+ * filtering read names (NOT use that!)
+
+------------------------------------------------------------------------
+r588 | lh3lh3 | 2008-04-19 20:25:54 +0100 (Sat, 19 Apr 2008) | 3 lines
+Changed paths:
+   M /branches/lh3/maq/scripts/maq.pl
+
+ * maq.pl-0.3.11
+ * support .gz files in cat2pair
+
+------------------------------------------------------------------------
+r587 | lh3lh3 | 2008-04-18 19:34:32 +0100 (Fri, 18 Apr 2008) | 2 lines
+Changed paths:
+   M /branches/lh3/maq/scripts/maq_sanger.pl
+
+fix a bug
+
+------------------------------------------------------------------------
+r586 | lh3lh3 | 2008-04-12 00:01:50 +0100 (Sat, 12 Apr 2008) | 4 lines
+Changed paths:
+   M /branches/lh3/maq/scripts/asub
+
+ * asub-0.1.3
+ * add job dependency for SGE (have not tested yet)
+ * add instructions
+
+------------------------------------------------------------------------
+r585 | lh3lh3 | 2008-04-12 00:01:04 +0100 (Sat, 12 Apr 2008) | 3 lines
+Changed paths:
+   M /branches/lh3/maq/scripts/maq_sanger.pl
+
+ * maq_sanger.pl-0.1.8
+ * change default parameters
+
+------------------------------------------------------------------------
+r581 | lh3lh3 | 2008-04-01 22:48:26 +0100 (Tue, 01 Apr 2008) | 2 lines
+Changed paths:
+   M /branches/lh3/maq/NEWS
+
+clarifying some ambiguous point
+
+------------------------------------------------------------------------
+r580 | lh3lh3 | 2008-04-01 22:10:33 +0100 (Tue, 01 Apr 2008) | 4 lines
+Changed paths:
+   M /branches/lh3/maq/scripts/fq_all2std.pl
+   M /branches/lh3/maq/scripts/maq.pl
+
+ * fq_all2std.pl-0.1.6
+ * maq.pl-0.3.10
+ * for convert the latest Illumina data
+
+------------------------------------------------------------------------
+r577 | lh3lh3 | 2008-03-28 23:26:11 +0000 (Fri, 28 Mar 2008) | 2 lines
+Changed paths:
+   M /branches/lh3/maq/ChangeLog
+   M /branches/lh3/maq/Makefile.generic
+   M /branches/lh3/maq/NEWS
+   M /branches/lh3/maq/configure.ac
+   M /branches/lh3/maq/maq.pod
+
+Release maq-0.6.5
+
+------------------------------------------------------------------------
+r576 | lh3lh3 | 2008-03-28 22:17:11 +0000 (Fri, 28 Mar 2008) | 5 lines
+Changed paths:
+   M /branches/lh3/maq/ChangeLog
+   M /branches/lh3/maq/Makefile.generic
+   M /branches/lh3/maq/assemble.cc
+   M /branches/lh3/maq/configure.ac
+
+ * maq-0.6.4-9
+ * assemble: fix a bug when reference is shorter than 3bp
+ * update ChangeLog
+ * prepare to release maq-0.6.5
+
+------------------------------------------------------------------------
+r575 | lh3lh3 | 2008-03-28 22:12:40 +0000 (Fri, 28 Mar 2008) | 3 lines
+Changed paths:
+   M /branches/lh3/maq/scripts/paf_utils.pl
+
+ * paf_utils.pl-0.3.1
+ * output normodds score if available
+
+------------------------------------------------------------------------
+r574 | lh3lh3 | 2008-03-27 13:02:07 +0000 (Thu, 27 Mar 2008) | 4 lines
+Changed paths:
+   M /branches/lh3/maq/Makefile.generic
+   M /branches/lh3/maq/configure.ac
+   M /branches/lh3/maq/csmap2ntmap.cc
+   M /branches/lh3/maq/simulate.c
+
+ * maq-0.6.4-8
+ * fix a critical bug in csmap2nt
+ * fix a potential memory violation in simulate. Thank Zamin Iqbal.
+
+------------------------------------------------------------------------
+r572 | lh3lh3 | 2008-03-26 23:06:33 +0000 (Wed, 26 Mar 2008) | 5 lines
+Changed paths:
+   M /branches/lh3/maq/ChangeLog
+   M /branches/lh3/maq/Makefile.generic
+   M /branches/lh3/maq/configure.ac
+   M /branches/lh3/maq/csmap2ntmap.cc
+
+ * maq-0.6.4-7
+ * csmap2nt: remove the last color (this will not affect the result)
+ * update ChangeLog
+ * prepare to do the final test before release
+
+------------------------------------------------------------------------
+r570 | lh3lh3 | 2008-03-26 11:22:10 +0000 (Wed, 26 Mar 2008) | 8 lines
+Changed paths:
+   M /branches/lh3/maq/Makefile.generic
+   M /branches/lh3/maq/configure.ac
+   M /branches/lh3/maq/rmdup.cc
+   M /branches/lh3/maq/sort_mapping.cc
+
+ * maq-0.6.4-6
+ * pair-dist is now the distance between 5'-end of the read. SOLiD distance
+   will be affected.
+ * the new distance may avoid potential inconsistency in previous version
+ * for SOLiD, use PE mapping quality if there are 3 or fewer mismatches
+ * in rmdup, avoid discarding some read pairs. However, it may still drop
+   some read pairs with very short insert size.
+
+------------------------------------------------------------------------
+r569 | lh3lh3 | 2008-03-25 22:16:43 +0000 (Tue, 25 Mar 2008) | 3 lines
+Changed paths:
+   M /branches/lh3/maq/Makefile.generic
+   M /branches/lh3/maq/configure.ac
+   M /branches/lh3/maq/indel_soa.cc
+
+ * maq-0.6.4-5
+ * fix a potential memory violation indelsoa
+
+------------------------------------------------------------------------
+r568 | lh3lh3 | 2008-03-25 15:28:11 +0000 (Tue, 25 Mar 2008) | 4 lines
+Changed paths:
+   M /branches/lh3/maq/Makefile.generic
+   M /branches/lh3/maq/configure.ac
+   M /branches/lh3/maq/csmap2ntmap.cc
+
+ * maq-0.6.4-4
+ * use dynamic programming to decode the nucleotide sequence. DP is more robust
+   and consistent.
+
+------------------------------------------------------------------------
+r563 | lh3lh3 | 2008-03-25 13:08:06 +0000 (Tue, 25 Mar 2008) | 3 lines
+Changed paths:
+   M /branches/lh3/maq/Makefile.generic
+   M /branches/lh3/maq/configure.ac
+   M /branches/lh3/maq/csmap2ntmap.cc
+   A /branches/lh3/maq-nt (from /branches/lh3/maq-xp:468)
+   D /branches/lh3/maq-xp
+
+ * maq (unfinished changes)
+ * rename maq-xp as maq-nt
+
+------------------------------------------------------------------------
+r559 | lh3lh3 | 2008-03-24 22:06:29 +0000 (Mon, 24 Mar 2008) | 3 lines
+Changed paths:
+   M /branches/lh3/maq/scripts/maq.pl
+
+ * maq.pl-0.3.9
+ * add "-n" to SNPfilter
+
+------------------------------------------------------------------------
+r558 | lh3lh3 | 2008-03-24 21:59:50 +0000 (Mon, 24 Mar 2008) | 3 lines
+Changed paths:
+   M /branches/lh3/maq/scripts/maq_eval.pl
+
+ * maq_eval.pl-0.1.6
+ * improve geno
+
+------------------------------------------------------------------------
+r557 | lh3lh3 | 2008-03-24 20:33:32 +0000 (Mon, 24 Mar 2008) | 3 lines
+Changed paths:
+   M /branches/lh3/maq/scripts/maq.pl
+
+ * maq.pl-0.3.8
+ * add a hidden parameter to SNPfilter
+
+------------------------------------------------------------------------
+r554 | lh3lh3 | 2008-03-23 21:02:23 +0000 (Sun, 23 Mar 2008) | 5 lines
+Changed paths:
+   M /branches/lh3/maq/Makefile.am
+   M /branches/lh3/maq/Makefile.generic
+   M /branches/lh3/maq/assemble.cc
+   M /branches/lh3/maq/configure.ac
+   A /branches/lh3/maq/csmap2ntmap.cc
+   M /branches/lh3/maq/indel_call.cc
+   M /branches/lh3/maq/indel_soa.cc
+   M /branches/lh3/maq/main.c
+   M /branches/lh3/maq/main.h
+   M /branches/lh3/maq/mapcheck.cc
+   M /branches/lh3/maq/pileup.cc
+
+ * maq-0.6.4-2
+ * fix potential memory leak in assemble, pileup, indelpe, indelsoa, mapcheck
+ * add csmap2nt, which converts cs .map file to nt .map file
+   now SOLiD support has been accompished
+
+------------------------------------------------------------------------
+r553 | lh3lh3 | 2008-03-23 16:07:24 +0000 (Sun, 23 Mar 2008) | 6 lines
+Changed paths:
+   M /branches/lh3/maq/Makefile.generic
+   M /branches/lh3/maq/configure.ac
+   M /branches/lh3/maq/scripts/paf_utils.pl
+   M /branches/lh3/maq/sort_mapping.cc
+
+ * paf_utils.pl-0.3.0
+ * add parser for shrimp
+ * fix various bugs
+ * maq-0.6.4-1
+ * fix a bug related to long read names
+
+------------------------------------------------------------------------
+r549 | lh3lh3 | 2008-03-21 14:33:14 +0000 (Fri, 21 Mar 2008) | 2 lines
+Changed paths:
+   M /branches/lh3/maq/scripts/solid2fastq.pl
+   A /branches/lh3/raf
+   A /branches/lh3/raf/Makefile
+   A /branches/lh3/raf/btree.c
+   A /branches/lh3/raf/btree.h
+   A /branches/lh3/raf/raf.c
+   A /branches/lh3/raf/raf.h
+   A /branches/lh3/raf/raf_index.c
+   A /branches/lh3/raf/raf_index.h
+   A /branches/lh3/raf/raf_main.c
+   A /branches/lh3/raf/stdhash
+   A /branches/lh3/raf/stdhash/stdhash.hh
+   A /branches/lh3/raf/stdhash/stdhashc.cc
+   A /branches/lh3/raf/stdhash/stdhashc.h
+   A /branches/lh3/raf/zrlib
+   A /branches/lh3/raf/zrlib/Makefile
+   A /branches/lh3/raf/zrlib/adler32.c
+   A /branches/lh3/raf/zrlib/compress.c
+   A /branches/lh3/raf/zrlib/crc32.c
+   A /branches/lh3/raf/zrlib/crc32.h
+   A /branches/lh3/raf/zrlib/deflate.c
+   A /branches/lh3/raf/zrlib/deflate.h
+   A /branches/lh3/raf/zrlib/gzio.c
+   A /branches/lh3/raf/zrlib/infback.c
+   A /branches/lh3/raf/zrlib/inffast.c
+   A /branches/lh3/raf/zrlib/inffast.h
+   A /branches/lh3/raf/zrlib/inffixed.h
+   A /branches/lh3/raf/zrlib/inflate.c
+   A /branches/lh3/raf/zrlib/inflate.h
+   A /branches/lh3/raf/zrlib/inftrees.c
+   A /branches/lh3/raf/zrlib/inftrees.h
+   A /branches/lh3/raf/zrlib/trees.c
+   A /branches/lh3/raf/zrlib/trees.h
+   A /branches/lh3/raf/zrlib/uncompr.c
+   A /branches/lh3/raf/zrlib/zconf.h
+   A /branches/lh3/raf/zrlib/zlib.h
+   A /branches/lh3/raf/zrlib/zrio.c
+   A /branches/lh3/raf/zrlib/zrio.h
+   A /branches/lh3/raf/zrlib/zrio_main.c
+   A /branches/lh3/raf/zrlib/zutil.c
+   A /branches/lh3/raf/zrlib/zutil.h
+
+This is Jue's maqindex, but C interface has been changed by me.
+
+------------------------------------------------------------------------
+r545 | lh3lh3 | 2008-03-16 19:57:55 +0000 (Sun, 16 Mar 2008) | 2 lines
+Changed paths:
+   A /branches/lh3/maq/scripts/solid2fastq.pl
+
+convert SOLiD read format to fastq
+
+------------------------------------------------------------------------
+r536 | lh3lh3 | 2008-03-15 11:51:08 +0000 (Sat, 15 Mar 2008) | 2 lines
+Changed paths:
+   M /branches/lh3/maq/ChangeLog
+   M /branches/lh3/maq/Makefile.generic
+   M /branches/lh3/maq/NEWS
+   M /branches/lh3/maq/configure.ac
+
+Release maq-0.6.4
+
+------------------------------------------------------------------------
+r535 | lh3lh3 | 2008-03-15 11:03:40 +0000 (Sat, 15 Mar 2008) | 3 lines
+Changed paths:
+   M /branches/lh3/maq/scripts/maq.pl
+
+ * maq.pl-0.3.7
+ * fixed a bug in path recognization
+
+------------------------------------------------------------------------
+r534 | lh3lh3 | 2008-03-15 11:02:36 +0000 (Sat, 15 Mar 2008) | 3 lines
+Changed paths:
+   M /branches/lh3/maq/scripts/maq_sanger.pl
+
+ * maq_sanger.pl-0.1.6
+ * fix a bug
+
+------------------------------------------------------------------------
+r533 | lh3lh3 | 2008-03-14 23:26:02 +0000 (Fri, 14 Mar 2008) | 4 lines
+Changed paths:
+   M /branches/lh3/maq/scripts/paf_utils.pl
+
+ * paf_utils.pl-0.2.1
+ * improve the parser
+ * add instructions
+
+------------------------------------------------------------------------
+r532 | lh3lh3 | 2008-03-14 21:38:01 +0000 (Fri, 14 Mar 2008) | 3 lines
+Changed paths:
+   M /branches/lh3/maq/scripts/paf_utils.pl
+
+ * paf_utils.pl-0.2.0
+ * convert .mapview file to .map
+
+------------------------------------------------------------------------
+r531 | lh3lh3 | 2008-03-14 12:52:21 +0000 (Fri, 14 Mar 2008) | 3 lines
+Changed paths:
+   M /branches/lh3/maq/Makefile.generic
+   M /branches/lh3/maq/configure.ac
+   M /branches/lh3/maq/subsnp.cc
+
+ * maq-0.6.3-34
+ * snpreg: also filter on the neighbouring quality
+
+------------------------------------------------------------------------
+r530 | lh3lh3 | 2008-03-14 10:36:28 +0000 (Fri, 14 Mar 2008) | 3 lines
+Changed paths:
+   M /branches/lh3/maq/scripts/fq_all2std.pl
+
+ * fq_all2std.pl-0.1.5
+ * change for latest Illumina format
+
+------------------------------------------------------------------------
+r529 | lh3lh3 | 2008-03-13 23:54:17 +0000 (Thu, 13 Mar 2008) | 6 lines
+Changed paths:
+   M /branches/lh3/maq/maq.pod
+   M /branches/lh3/maq/scripts/maq.pl
+   M /branches/lh3/maq/scripts/maq_sanger.pl
+
+ * maq.pl-0.3.6
+ * change default -D in SNPfilter
+ * maq_sanger.pl-0.1.5
+ * skip directories
+ * update documentations
+
+------------------------------------------------------------------------
+r528 | lh3lh3 | 2008-03-12 23:18:08 +0000 (Wed, 12 Mar 2008) | 4 lines
+Changed paths:
+   M /branches/lh3/maq/Makefile.generic
+   M /branches/lh3/maq/configure.ac
+   M /branches/lh3/maq/match.cc
+
+ * maq-0.6.3-33
+ * Contradictary to my intuition, use 24bit in indexing is faster than 25bit
+   indexing. Probably due to the cache efficiency (again)...
+
+------------------------------------------------------------------------
+r527 | lh3lh3 | 2008-03-12 21:26:59 +0000 (Wed, 12 Mar 2008) | 3 lines
+Changed paths:
+   M /branches/lh3/maq/Makefile.generic
+   M /branches/lh3/maq/configure.ac
+   M /branches/lh3/maq/match.cc
+
+ * maq-0.6.3-32
+ * further improve cache efficiency a bit
+
+------------------------------------------------------------------------
+r526 | lh3lh3 | 2008-03-12 15:09:55 +0000 (Wed, 12 Mar 2008) | 2 lines
+Changed paths:
+   M /branches/lh3/maq/configure.ac
+
+fix a bug in configure
+
+------------------------------------------------------------------------
+r525 | lh3lh3 | 2008-03-12 14:58:16 +0000 (Wed, 12 Mar 2008) | 6 lines
+Changed paths:
+   M /branches/lh3/maq/Makefile.generic
+   M /branches/lh3/maq/configure.ac
+   M /branches/lh3/maq/match.cc
+   M /branches/lh3/maq/match.hh
+   M /branches/lh3/maq/match_aux.cc
+
+ * maq-0.6.3-31
+ * change macro _LONGSEED to _FASTMAP
+ * in `fastmap' mode, seed_length=28, max_mismatch=3 and index_length=25
+ * attempt to reduce the cache misses to the retrieval of seq->*
+ * from this veersion, only seed length is at most 32bp
+
+------------------------------------------------------------------------
+r524 | lh3lh3 | 2008-03-11 23:57:58 +0000 (Tue, 11 Mar 2008) | 3 lines
+Changed paths:
+   M /branches/lh3/maq/Makefile.generic
+   M /branches/lh3/maq/configure.ac
+   M /branches/lh3/maq/match.cc
+   M /branches/lh3/maq/match.hh
+   M /branches/lh3/maq/match_aux.cc
+
+ * maq-0.6.3-30
+ * further improve cache efficiency a bit
+
+------------------------------------------------------------------------
+r523 | lh3lh3 | 2008-03-11 19:37:50 +0000 (Tue, 11 Mar 2008) | 3 lines
+Changed paths:
+   M /branches/lh3/maq/Makefile.generic
+   M /branches/lh3/maq/configure.ac
+   M /branches/lh3/maq/match.cc
+   M /branches/lh3/maq/match.hh
+
+ * maq-0.6.3-29
+ * add macro to use longer seed
+
+------------------------------------------------------------------------
+r522 | lh3lh3 | 2008-03-10 09:44:10 +0000 (Mon, 10 Mar 2008) | 3 lines
+Changed paths:
+   M /branches/lh3/maq/ChangeLog
+   M /branches/lh3/maq/Makefile.generic
+   M /branches/lh3/maq/configure.ac
+   M /branches/lh3/maq/submap.c
+
+ * maq-0.6.3-28
+ * submap now acts as a filter for .map file
+
+------------------------------------------------------------------------
+r521 | lh3lh3 | 2008-03-07 11:07:48 +0000 (Fri, 07 Mar 2008) | 6 lines
+Changed paths:
+   M /branches/lh3/maq/Makefile.generic
+   M /branches/lh3/maq/configure.ac
+   M /branches/lh3/maq/fastq2bfq.c
+   M /branches/lh3/maq/match.cc
+   M /branches/lh3/maq/match.hh
+   M /branches/lh3/maq/match_aux.cc
+   M /branches/lh3/maq/sort_mapping.cc
+
+ * maq-0.6.3-27
+ * fix a bug in "maq map -N"
+ * replace dw_shrink with a bit-shift function
+ * a bit code clean up
+ * attempt to improve the cache efficiency a bit (little effect though)
+
+------------------------------------------------------------------------
+r520 | lh3lh3 | 2008-03-07 08:53:22 +0000 (Fri, 07 Mar 2008) | 2 lines
+Changed paths:
+   M /branches/lh3/maq/ChangeLog
+   M /branches/lh3/maq/Makefile.generic
+   M /branches/lh3/maq/configure.ac
+   M /branches/lh3/maq/match.cc
+   M /branches/lh3/maq/match.hh
+   M /branches/lh3/maq/match_aux.cc
+   M /branches/lh3/maq/sort_mapping.cc
+
+ * maq-0.6.3-26
+
+------------------------------------------------------------------------
+r519 | lh3lh3 | 2008-03-06 20:31:19 +0000 (Thu, 06 Mar 2008) | 3 lines
+Changed paths:
+   M /branches/lh3/maq/scripts/paf_utils.pl
+
+ * paf_utils.pl-0.1.3
+ * add parser for rmap
+
+------------------------------------------------------------------------
+r518 | lh3lh3 | 2008-03-06 20:30:36 +0000 (Thu, 06 Mar 2008) | 3 lines
+Changed paths:
+   M /branches/lh3/maq/scripts/maq_sanger.pl
+
+ * maq_sanger.pl-0.1.4
+ * fix a bug about the path of asub
+
+------------------------------------------------------------------------
+r517 | lh3lh3 | 2008-03-04 21:12:00 +0000 (Tue, 04 Mar 2008) | 3 lines
+Changed paths:
+   M /branches/lh3/maq/Makefile.generic
+   M /branches/lh3/maq/configure.ac
+   M /branches/lh3/maq/indel_pe.cc
+
+ * maq-0.6.3-25
+ * indel-pe apprarently works for SOLiD
+
+------------------------------------------------------------------------
+r516 | lh3lh3 | 2008-03-04 20:42:33 +0000 (Tue, 04 Mar 2008) | 4 lines
+Changed paths:
+   M /branches/lh3/maq/Makefile.generic
+   M /branches/lh3/maq/configure.ac
+   M /branches/lh3/maq/sort_mapping.cc
+
+ * maq-0.6.3-24
+ * for SOLiD: "add pair afterward" now works
+ * wait, I am going to add gapped alignment for SOLiD
+
+------------------------------------------------------------------------
+r515 | lh3lh3 | 2008-03-04 20:24:26 +0000 (Tue, 04 Mar 2008) | 4 lines
+Changed paths:
+   M /branches/lh3/maq/ChangeLog
+   M /branches/lh3/maq/Makefile.generic
+   M /branches/lh3/maq/configure.ac
+   M /branches/lh3/maq/dword.hh
+   M /branches/lh3/maq/match_aux.cc
+
+ * maq-0.6.3-23
+ * fix an ever existing bug. it is a typo actually...
+ * wait, I will improve the part for SOLiD a bit later...
+
+------------------------------------------------------------------------
+r514 | lh3lh3 | 2008-03-04 16:02:25 +0000 (Tue, 04 Mar 2008) | 6 lines
+Changed paths:
+   M /branches/lh3/maq/Makefile.generic
+   M /branches/lh3/maq/configure.ac
+   M /branches/lh3/maq/indel_pe.cc
+   M /branches/lh3/maq/match.cc
+   M /branches/lh3/maq/scripts/maq_sanger.pl
+   M /branches/lh3/maq/sort_mapping.cc
+
+ * maq-0.6.3-22
+ * fix a rare bug about minus insert size for ungapped alignment
+ * fix a rare bug about extensive insert size for gapped alignment
+ * maq_sanger.pl-0.1.4
+ * add resource request by default
+
+------------------------------------------------------------------------
+r513 | lh3lh3 | 2008-03-03 15:36:15 +0000 (Mon, 03 Mar 2008) | 5 lines
+Changed paths:
+   M /branches/lh3/maq/scripts/fq_all2std.pl
+   M /branches/lh3/maq/scripts/maq_sanger.pl
+
+ * fq_all2std.pl-0.1.4
+ * export2xxx: change for the latest export format
+ * maq_sanger.pl-0.1.3
+ * add an example
+
+------------------------------------------------------------------------
+r512 | lh3lh3 | 2008-03-03 11:01:57 +0000 (Mon, 03 Mar 2008) | 5 lines
+Changed paths:
+   M /branches/lh3/maq/Makefile.generic
+   M /branches/lh3/maq/configure.ac
+   M /branches/lh3/maq/indel_pe.cc
+   M /branches/lh3/maq/match.cc
+   M /branches/lh3/maq/read.cc
+
+ * maq-0.6.3-21
+ * skip Smith-Waterman alignment if too few reads get mapped in pairs.
+ * abort (instead of segfault) if all the reads are full of "N".
+ * filtering polyA for single end reads now works
+
+------------------------------------------------------------------------
+r511 | lh3lh3 | 2008-03-03 10:57:16 +0000 (Mon, 03 Mar 2008) | 2 lines
+Changed paths:
+   M /branches/lh3/maq/scripts/maq_sanger.pl
+
+maq_sanger.pl now works with single end data from the Sanger Inst.
+
+------------------------------------------------------------------------
+r510 | lh3lh3 | 2008-03-02 10:51:57 +0000 (Sun, 02 Mar 2008) | 4 lines
+Changed paths:
+   M /branches/lh3/maq/Makefile.generic
+   M /branches/lh3/maq/configure.ac
+   M /branches/lh3/maq/match.cc
+   M /branches/lh3/maq/scripts/maq_sanger.pl
+
+ * maq-0.6.3-20
+ * fix a stupid bug caused by the last modification
+ * improve maq_sanger.pl
+
+------------------------------------------------------------------------
+r509 | lh3lh3 | 2008-03-01 23:02:25 +0000 (Sat, 01 Mar 2008) | 3 lines
+Changed paths:
+   A /branches/lh3/maq/scripts/asub
+   A /branches/lh3/maq/scripts/maq_sanger.pl
+
+ * asub: array-sub
+ * maq_sanger.pl: do alignment in batch, for Sanger Inst's format ONLY
+
+------------------------------------------------------------------------
+r508 | lh3lh3 | 2008-03-01 22:33:01 +0000 (Sat, 01 Mar 2008) | 2 lines
+Changed paths:
+   M /branches/lh3/maq/Makefile.generic
+   M /branches/lh3/maq/configure.ac
+   M /branches/lh3/maq/match.cc
+
+a bug in SOLiD PE alignment
+
+------------------------------------------------------------------------
+r507 | lh3lh3 | 2008-03-01 17:10:28 +0000 (Sat, 01 Mar 2008) | 5 lines
+Changed paths:
+   M /branches/lh3/maq/Makefile.generic
+   M /branches/lh3/maq/assemble.cc
+   M /branches/lh3/maq/configure.ac
+   M /branches/lh3/maq/match.cc
+   M /branches/lh3/maq/sort_mapping.cc
+
+ * maq-0.6.3-18
+ * assemble: change default -t to 0.93
+ * map: for SOLiD reads, the correct orientation is:
+   FF-read2-read1 or RR-read1-read2
+
+------------------------------------------------------------------------
+r506 | lh3lh3 | 2008-03-01 17:08:23 +0000 (Sat, 01 Mar 2008) | 5 lines
+Changed paths:
+   M /branches/lh3/maq/scripts/maq.pl
+   M /branches/lh3/maq/scripts/paf_utils.pl
+
+ * paf_utils.pl-0.1.2
+ * loose the criterion for a correct alignment (SOAP is troublesome)
+ * maq.pl-0.3.5
+ * filter on neighboring qualities
+
+------------------------------------------------------------------------
+r505 | lh3lh3 | 2008-03-01 00:09:05 +0000 (Sat, 01 Mar 2008) | 5 lines
+Changed paths:
+   M /branches/lh3/maq/ChangeLog
+   M /branches/lh3/maq/Makefile.generic
+   M /branches/lh3/maq/assopt.c
+   M /branches/lh3/maq/configure.ac
+   M /branches/lh3/maq/match_aux.cc
+
+ * maq-0.6.3-17
+ * mapstat: set the maximum mapQ as 99
+ * update ChangeLog
+ * fix a theoretical flaw in assemble. the accuracy affected little.
+
+------------------------------------------------------------------------
+r504 | lh3lh3 | 2008-02-29 13:31:26 +0000 (Fri, 29 Feb 2008) | 5 lines
+Changed paths:
+   M /branches/lh3/maq/scripts/fq_all2std.pl
+   M /branches/lh3/maq/scripts/paf_utils.pl
+
+ * paf_utils.pl-0.1.1
+ * print wrong alignment on demand
+ * fq_all2std.pl-0.1.3
+ * convert Bustard output (_prb.txt and _seq.txt) to fastq
+
+------------------------------------------------------------------------
+r503 | lh3lh3 | 2008-02-27 23:37:39 +0000 (Wed, 27 Feb 2008) | 4 lines
+Changed paths:
+   M /branches/lh3/maq/Makefile.generic
+   M /branches/lh3/maq/assemble.cc
+   M /branches/lh3/maq/aux_utils.c
+   M /branches/lh3/maq/configure.ac
+   M /branches/lh3/maq/subsnp.cc
+
+ * maq-0.6.3-16
+ * calclate minimum neighbouring quality for each site
+ * cns2snp/subpos are revised accordingly
+
+------------------------------------------------------------------------
+r502 | lh3lh3 | 2008-02-27 22:17:53 +0000 (Wed, 27 Feb 2008) | 4 lines
+Changed paths:
+   M /branches/lh3/maq/Makefile.generic
+   M /branches/lh3/maq/assemble.cc
+   M /branches/lh3/maq/configure.ac
+
+ * maq-0.6.3.-15
+ * fix a theoretical error in `assemble'
+ * the performance is quite close to the previous version
+
+------------------------------------------------------------------------
+r501 | lh3lh3 | 2008-02-25 14:42:28 +0000 (Mon, 25 Feb 2008) | 4 lines
+Changed paths:
+   M /branches/lh3/maq/scripts/maq_eval.pl
+   D /branches/lh3/maq/scripts/parse_aln.pl
+
+ * maq_eval.pl-0.1.5
+ * add a less used hidden command for estimating FP. only for my own use.
+ * parse_aln.pl has been renamed as saf_utils.pl
+
+------------------------------------------------------------------------
+r500 | lh3lh3 | 2008-02-25 11:39:29 +0000 (Mon, 25 Feb 2008) | 2 lines
+Changed paths:
+   A /branches/lh3/maq/scripts/paf_utils.pl (from /branches/lh3/maq/scripts/saf_utils.pl:499)
+   D /branches/lh3/maq/scripts/saf_utils.pl
+
+rename saf_utils.pl as paf_utils.pl
+
+------------------------------------------------------------------------
+r499 | lh3lh3 | 2008-02-25 11:38:57 +0000 (Mon, 25 Feb 2008) | 2 lines
+Changed paths:
+   M /branches/lh3/maq/scripts/saf_utils.pl
+
+prepare to rename as paf_utils.pl
+
+------------------------------------------------------------------------
+r498 | lh3lh3 | 2008-02-25 11:22:07 +0000 (Mon, 25 Feb 2008) | 2 lines
+Changed paths:
+   D /branches/lh3/maq/scripts/gaf_utils.pl
+   A /branches/lh3/maq/scripts/saf_utils.pl (from /branches/lh3/maq/scripts/gaf_utils.pl:497)
+
+rename gaf_utils.pl to saf_utils.pl
+
+------------------------------------------------------------------------
+r497 | lh3lh3 | 2008-02-25 11:21:20 +0000 (Mon, 25 Feb 2008) | 2 lines
+Changed paths:
+   M /branches/lh3/maq/scripts/gaf_utils.pl
+
+prepare to rename it as saf_utils.pl
+
+------------------------------------------------------------------------
+r496 | lh3lh3 | 2008-02-22 16:09:01 +0000 (Fri, 22 Feb 2008) | 2 lines
+Changed paths:
+   A /branches/lh3/maq/scripts/gaf_utils.pl (from /branches/lh3/maq/scripts/parse_aln.pl:495)
+
+rename parse_aln.pl to gaf_utils.pl
+
+------------------------------------------------------------------------
+r495 | lh3lh3 | 2008-02-21 23:41:44 +0000 (Thu, 21 Feb 2008) | 3 lines
+Changed paths:
+   M /branches/lh3/maq/scripts/parse_aln.pl
+
+ * uaf converter for maq
+ * improve evaluation
+
+------------------------------------------------------------------------
+r494 | lh3lh3 | 2008-02-21 22:32:50 +0000 (Thu, 21 Feb 2008) | 3 lines
+Changed paths:
+   D /branches/lh3/maq/scripts/mapview.pl
+   A /branches/lh3/maq/scripts/parse_aln.pl
+
+ * convert parse_aln.pl to UAF alignment format
+ * move mapview.pl to parse_aln.pl
+
+------------------------------------------------------------------------
+r493 | lh3lh3 | 2008-02-21 20:28:08 +0000 (Thu, 21 Feb 2008) | 3 lines
+Changed paths:
+   M /branches/lh3/maq/Makefile.generic
+   M /branches/lh3/maq/configure.ac
+   M /branches/lh3/maq/pileup.cc
+
+ * maq-0.6.3-14
+ * output base position on the read (for pileup)
+
+------------------------------------------------------------------------
+r492 | lh3lh3 | 2008-02-21 10:45:56 +0000 (Thu, 21 Feb 2008) | 3 lines
+Changed paths:
+   M /branches/lh3/maq/Makefile.generic
+   M /branches/lh3/maq/configure.ac
+   M /branches/lh3/maq/match.cc
+   M /branches/lh3/maq/match_aux.cc
+   M /branches/lh3/maq/read.cc
+   M /branches/lh3/maq/read.h
+   M /branches/lh3/maq/scripts/maq.pl
+
+ * maq-0.6.3-13
+ * trim long adapter contaminations before alignment
+
+------------------------------------------------------------------------
+r491 | lh3lh3 | 2008-02-19 10:26:44 +0000 (Tue, 19 Feb 2008) | 4 lines
+Changed paths:
+   M /branches/lh3/maq/Makefile.generic
+   M /branches/lh3/maq/configure.ac
+   M /branches/lh3/maq/fasta2bfa.c
+   M /branches/lh3/maq/simulate.c
+
+ * maq-0.6.3-12
+ * fix a bug in fasta2csfa: missing new line
+ * more error output for simulate.c
+
+------------------------------------------------------------------------
+r490 | lh3lh3 | 2008-02-17 15:48:53 +0000 (Sun, 17 Feb 2008) | 5 lines
+Changed paths:
+   M /branches/lh3/maq/Makefile.generic
+   M /branches/lh3/maq/assemble.h
+   M /branches/lh3/maq/configure.ac
+   M /branches/lh3/maq/mapcheck.cc
+
+ * maq-0.6.3-11
+ * improve comments a bit
+ * mapcheck: remove unused codes which never correctly worked
+ * mapcheck: more stat
+
+------------------------------------------------------------------------
+r489 | lh3lh3 | 2008-02-17 14:33:25 +0000 (Sun, 17 Feb 2008) | 5 lines
+Changed paths:
+   M /branches/lh3/maq/Makefile.generic
+   M /branches/lh3/maq/configure.ac
+   M /branches/lh3/maq/match_aux.cc
+   M /branches/lh3/maq/scripts/maq.pl
+
+ * maq-0.6.3-10
+ * mapstat: output error rate
+ * maq.pl-0.3.4
+ * cat2pair: modified by "maq catfilter"
+
+------------------------------------------------------------------------
+r488 | lh3lh3 | 2008-02-16 19:29:21 +0000 (Sat, 16 Feb 2008) | 2 lines
+Changed paths:
+   M /branches/lh3/maq/read.cc
+
+no change, actually
+
+------------------------------------------------------------------------
+r487 | lh3lh3 | 2008-02-16 19:10:49 +0000 (Sat, 16 Feb 2008) | 2 lines
+Changed paths:
+   M /branches/lh3/maq/read.cc
+
+remove debug codes in read.cc
+
+------------------------------------------------------------------------
+r486 | lh3lh3 | 2008-02-16 19:07:42 +0000 (Sat, 16 Feb 2008) | 3 lines
+Changed paths:
+   M /branches/lh3/maq/Makefile.generic
+   M /branches/lh3/maq/configure.ac
+   M /branches/lh3/maq/main.c
+   M /branches/lh3/maq/main.h
+   M /branches/lh3/maq/read.cc
+
+ * maq-0.6.3-9
+ * filter for continous A. Only work for Sanger's PE cat format
+
+------------------------------------------------------------------------
+r485 | lh3lh3 | 2008-02-14 11:46:11 +0000 (Thu, 14 Feb 2008) | 3 lines
+Changed paths:
+   M /branches/lh3/maq/Makefile.generic
+   M /branches/lh3/maq/configure.ac
+   M /branches/lh3/maq/main.c
+   M /branches/lh3/maq/match_aux.cc
+
+ * maq-0.6.3-8
+ * update mapstat command
+
+------------------------------------------------------------------------
+r484 | lh3lh3 | 2008-02-13 16:02:19 +0000 (Wed, 13 Feb 2008) | 3 lines
+Changed paths:
+   M /branches/lh3/maq/scripts/fq_all2std.pl
+
+ * fq_all2std.pl-0.1.2
+ * add support for SOLiD read format
+
+------------------------------------------------------------------------
+r483 | lh3lh3 | 2008-02-13 12:52:26 +0000 (Wed, 13 Feb 2008) | 6 lines
+Changed paths:
+   M /branches/lh3/maq/Makefile.generic
+   M /branches/lh3/maq/configure.ac
+   M /branches/lh3/maq/rmdup.cc
+   M /branches/lh3/maq/scripts/maq.pl
+
+ * maq.pl-0.3.3
+ * cat2pair: discriminate the two ends with "/1" and "/2"
+ * improve fastq2bfq
+ * maq-0.6.3-7
+ * rmdup now records the number of checked pairs and removed pairs
+
+------------------------------------------------------------------------
+r482 | lh3lh3 | 2008-02-06 10:04:54 +0000 (Wed, 06 Feb 2008) | 3 lines
+Changed paths:
+   M /branches/lh3/maq/Makefile.generic
+   M /branches/lh3/maq/configure.ac
+   M /branches/lh3/maq/maqmap.c
+
+ * maq-0.6.3-6
+ * fixed a neglectable bug in mapview
+
+------------------------------------------------------------------------
+r481 | lh3lh3 | 2008-02-04 22:21:27 +0000 (Mon, 04 Feb 2008) | 2 lines
+Changed paths:
+   M /branches/lh3/maq/scripts/fq_all2std.pl
+
+add /[12] when converting export format
+
+------------------------------------------------------------------------
+r480 | lh3lh3 | 2008-02-04 20:29:26 +0000 (Mon, 04 Feb 2008) | 5 lines
+Changed paths:
+   M /branches/lh3/maq/ChangeLog
+   M /branches/lh3/maq/Makefile.generic
+   M /branches/lh3/maq/configure.ac
+   M /branches/lh3/maq/read.cc
+   M /branches/lh3/maq/rmdup.cc
+   M /branches/lh3/maq/simulate.c
+   M /branches/lh3/maq/sort_mapping.cc
+
+ * maq-0.6.3-5
+ * update ChangeLog
+ * recognize "@read1/1" for the first read and "@read1/2" for the second
+ * simulation/rmdup/map are all modified accordingly
+
+------------------------------------------------------------------------
+r479 | lh3lh3 | 2008-02-04 20:21:47 +0000 (Mon, 04 Feb 2008) | 2 lines
+Changed paths:
+   M /branches/lh3/maq/scripts/maq_plot.pl
+
+maq_plot.pl: make a bit better plot
+
+------------------------------------------------------------------------
+r478 | lh3lh3 | 2008-01-28 21:47:06 +0000 (Mon, 28 Jan 2008) | 3 lines
+Changed paths:
+   M /branches/lh3/maq/Makefile.generic
+   M /branches/lh3/maq/configure.ac
+   M /branches/lh3/maq/indel_pe.cc
+
+ * maq-0.6.3-4
+ * completely disable indelpe for SOLiD reads. It needs a lot of coding.
+
+------------------------------------------------------------------------
+r477 | lh3lh3 | 2008-01-28 21:29:38 +0000 (Mon, 28 Jan 2008) | 5 lines
+Changed paths:
+   M /branches/lh3/maq/Makefile.generic
+   M /branches/lh3/maq/aux_utils.c
+   M /branches/lh3/maq/configure.ac
+   M /branches/lh3/maq/maqmap.c
+   M /branches/lh3/maq/match.cc
+   M /branches/lh3/maq/match.hh
+   M /branches/lh3/maq/match_aux.cc
+   M /branches/lh3/maq/sort_mapping.cc
+
+ * maq-0.6.3-3
+ * store mismatch positions in .map file, at the cost of shorter read length
+ * fix a bug in cns2win
+ * mapview support for showing mismatch positions
+
+------------------------------------------------------------------------
+r473 | lh3lh3 | 2008-01-25 14:52:36 +0000 (Fri, 25 Jan 2008) | 5 lines
+Changed paths:
+   M /branches/lh3/maq/Makefile.generic
+   M /branches/lh3/maq/configure.ac
+   M /branches/lh3/maq/sort_mapping.cc
+
+ * maq-0.6.3-2
+ * change the meaning of "alternative mapping quality". Now it means: the
+   lower SE mapping quality of the two ends (previously not)
+ * have not tested, but I think I cannot be wrong... (hope I am right)
+
+------------------------------------------------------------------------
+r472 | lh3lh3 | 2008-01-23 20:00:55 +0000 (Wed, 23 Jan 2008) | 3 lines
+Changed paths:
+   M /branches/lh3/maq/Makefile.generic
+   M /branches/lh3/maq/configure.ac
+   M /branches/lh3/maq/indel_pe.cc
+   M /branches/lh3/maq/match.cc
+   M /branches/lh3/maq/sort_mapping.cc
+
+ * maq-0.6.3-1
+ * SOLiD PE reads are mapped as FF or RR, not FR
+
+------------------------------------------------------------------------
+r471 | lh3lh3 | 2008-01-23 11:02:20 +0000 (Wed, 23 Jan 2008) | 2 lines
+Changed paths:
+   M /branches/lh3/maq/scripts/mapview.pl
+
+fix a minor error in reading the data
+
+------------------------------------------------------------------------
+r470 | lh3lh3 | 2008-01-18 20:00:23 +0000 (Fri, 18 Jan 2008) | 2 lines
+Changed paths:
+   A /branches/lh3/maq/scripts/mapview.pl
+
+mapview.pl: parsing .map file with Perl
+
+------------------------------------------------------------------------
+r469 | lh3lh3 | 2008-01-18 10:12:35 +0000 (Fri, 18 Jan 2008) | 6 lines
+Changed paths:
+   M /branches/lh3/maq/scripts/farm-run.pl
+   M /branches/lh3/maq/scripts/maq.pl
+
+ * farm-run.pl-0.1.3
+ * do not remove "/nfs" on the PATH
+ * maq.pl-0.3.2
+ * recognize relative path in easyrun
+ * improve SNPfilter (thanks, Nathan)
+
+------------------------------------------------------------------------
+r465 | lh3lh3 | 2008-01-03 20:31:33 +0000 (Thu, 03 Jan 2008) | 2 lines
+Changed paths:
+   M /branches/lh3/maq/Makefile.generic
+   M /branches/lh3/maq/NEWS
+   M /branches/lh3/maq/configure.ac
+
+Release maq-0.6.3
+
+------------------------------------------------------------------------
+r463 | lh3lh3 | 2007-12-23 09:37:02 +0000 (Sun, 23 Dec 2007) | 3 lines
+Changed paths:
+   M /branches/lh3/maq/Makefile.generic
+   M /branches/lh3/maq/NEWS
+   M /branches/lh3/maq/configure.ac
+   M /branches/lh3/maq/pileup.cc
+
+ * maq-0.6.2-16
+ * '-m' in "pileup" works. (fixed a bug)
+
+------------------------------------------------------------------------
+r462 | lh3lh3 | 2007-12-19 12:36:50 +0000 (Wed, 19 Dec 2007) | 2 lines
+Changed paths:
+   M /branches/lh3/maq/ChangeLog
+   M /branches/lh3/maq/NEWS
+   M /branches/lh3/maq/maq.pod
+
+update documentations
+
+------------------------------------------------------------------------
+r461 | lh3lh3 | 2007-12-18 11:43:28 +0000 (Tue, 18 Dec 2007) | 4 lines
+Changed paths:
+   M /branches/lh3/maq/Makefile.generic
+   M /branches/lh3/maq/configure.ac
+   M /branches/lh3/maq/fasta2bfa.c
+   M /branches/lh3/maq/main.c
+   M /branches/lh3/maq/main.h
+   M /branches/lh3/maq/simulate.c
+   M /branches/lh3/maq/subsnp.cc
+
+ * maq-0.6.2-15
+ * add "simucns" command to evaluate the consensus accuracy
+ * add haploid support to "simulate"
+
+------------------------------------------------------------------------
+r460 | lh3lh3 | 2007-12-18 11:41:14 +0000 (Tue, 18 Dec 2007) | 3 lines
+Changed paths:
+   M /branches/lh3/maq/scripts/maq.pl
+
+ * maq.pl-0.3.0
+ * add haploid and single-end mode to "demo"
+
+------------------------------------------------------------------------
+r459 | lh3lh3 | 2007-12-18 03:24:47 +0000 (Tue, 18 Dec 2007) | 3 lines
+Changed paths:
+   M /branches/lh3/maq/Makefile.generic
+   M /branches/lh3/maq/configure.ac
+   M /branches/lh3/maq/maqmap.c
+
+ * maq-0.6.2-14
+ * in mapview, output brief information (no sequences and qualities) 
+
+------------------------------------------------------------------------
+r458 | lh3lh3 | 2007-12-18 03:23:32 +0000 (Tue, 18 Dec 2007) | 3 lines
+Changed paths:
+   M /branches/lh3/maq/scripts/maq.pl
+
+ * maq.pl-0.3.0
+ * add codes to detect structural variations
+
+------------------------------------------------------------------------
+r457 | lh3lh3 | 2007-12-11 20:54:32 +0000 (Tue, 11 Dec 2007) | 4 lines
+Changed paths:
+   M /branches/lh3/maq/Makefile.generic
+   M /branches/lh3/maq/configure.ac
+   M /branches/lh3/maq/indel_pe.cc
+   M /branches/lh3/maq/match.cc
+   M /branches/lh3/maq/sort_mapping.cc
+
+ * maq-0.6.2-13
+ * take reads mapped with Smith-Waterman as paired
+ * I am not sure whether this is the right to do, though.
+
+------------------------------------------------------------------------
+r456 | lh3lh3 | 2007-12-11 20:28:42 +0000 (Tue, 11 Dec 2007) | 4 lines
+Changed paths:
+   M /branches/lh3/maq/Makefile.generic
+   M /branches/lh3/maq/configure.ac
+   M /branches/lh3/maq/pair_stat.cc
+   M /branches/lh3/maq/scripts/maq_plot.pl
+
+ * maq-0.6.2-12
+ * show abnormal pairs
+ * plotting abnormal pairs works again
+
+------------------------------------------------------------------------
+r455 | lh3lh3 | 2007-12-10 11:51:08 +0000 (Mon, 10 Dec 2007) | 4 lines
+Changed paths:
+   M /branches/lh3/maq/rmdup.cc
+
+ * maq-0.6.2-11
+ * a typo in previous check in
+ * still name it as 0.6.2-11
+
+------------------------------------------------------------------------
+r454 | lh3lh3 | 2007-12-10 11:48:56 +0000 (Mon, 10 Dec 2007) | 4 lines
+Changed paths:
+   M /branches/lh3/maq/Makefile.generic
+   M /branches/lh3/maq/configure.ac
+   M /branches/lh3/maq/read.cc
+   M /branches/lh3/maq/rmdup.cc
+
+ * maq-0.6.2-11
+ * avoid potential missing hits (a minor bug)
+ * rmdup now recognizes "-"
+
+------------------------------------------------------------------------
+r453 | lh3lh3 | 2007-12-10 11:26:49 +0000 (Mon, 10 Dec 2007) | 3 lines
+Changed paths:
+   M /branches/lh3/maq/Makefile.generic
+   M /branches/lh3/maq/configure.ac
+   M /branches/lh3/maq/match.cc
+
+ * maq-0.6.2-10
+ * increase the randomness of the seed
+
+------------------------------------------------------------------------
+r452 | lh3lh3 | 2007-12-09 12:05:15 +0000 (Sun, 09 Dec 2007) | 3 lines
+Changed paths:
+   M /branches/lh3/maq/Makefile.generic
+   M /branches/lh3/maq/configure.ac
+   M /branches/lh3/maq/match.cc
+
+ * 0.6.2-9
+ * change back to random seed, which actually is more robust
+
+------------------------------------------------------------------------
+r450 | lh3lh3 | 2007-12-06 21:47:19 +0000 (Thu, 06 Dec 2007) | 6 lines
+Changed paths:
+   M /branches/lh3/maq/scripts/maq.pl
+   M /branches/lh3/maq/scripts/maq_eval.pl
+
+ * maq.pl-0.2.0
+ * easyrun now works PE reads
+ * add 'demo' for simulation+easyrun+maq_eval
+ * maq_eval.pl-0.1.4
+ * increase robustness
+
+------------------------------------------------------------------------
+r443 | lh3lh3 | 2007-12-06 15:32:05 +0000 (Thu, 06 Dec 2007) | 4 lines
+Changed paths:
+   M /branches/lh3/maq/ChangeLog
+   M /branches/lh3/maq/Makefile.generic
+   M /branches/lh3/maq/configure.ac
+   M /branches/lh3/maq/maq.pod
+   M /branches/lh3/maq/match.cc
+   M /branches/lh3/maq/pair_stat.cc
+
+ * maq-0.6.2-8
+ * in map, change back to the previous way to score a hit
+ * in paircov, add "count non-N region" and remove some useless codes
+
+------------------------------------------------------------------------
+r442 | lh3lh3 | 2007-12-05 14:26:22 +0000 (Wed, 05 Dec 2007) | 6 lines
+Changed paths:
+   M /branches/lh3/maq/Makefile.generic
+   M /branches/lh3/maq/aux_utils.c
+   M /branches/lh3/maq/configure.ac
+   M /branches/lh3/maq/main.c
+   M /branches/lh3/maq/main.h
+   M /branches/lh3/maq/match.cc
+   M /branches/lh3/maq/pair_stat.cc
+   M /branches/lh3/maq/subsnp.cc
+
+ * maq-0.6.2-7
+ * LaDeana Hillier finally persuaded me that mismatches should be counted
+   in scoring a hit. I do that now.
+ * `paircov' now works again, which also finds absolute break points
+ * `snpreg' now moves to subsnp.cc. It can also filter SNPs now.
+
+------------------------------------------------------------------------
+r441 | lh3lh3 | 2007-12-03 11:48:43 +0000 (Mon, 03 Dec 2007) | 4 lines
+Changed paths:
+   M /branches/lh3/maq/Makefile.generic
+   M /branches/lh3/maq/aux_utils.c
+   M /branches/lh3/maq/configure.ac
+   M /branches/lh3/maq/match.cc
+
+ * maq-0.6.2-6
+ * snpreg: output SNP-callable regions given different quality threshold
+ * map: use fixed seed to random numbers
+
+------------------------------------------------------------------------
+r440 | lh3lh3 | 2007-12-03 11:46:58 +0000 (Mon, 03 Dec 2007) | 4 lines
+Changed paths:
+   M /branches/lh3/maq/scripts/maq_eval.pl
+
+ * maq_eval.pl-0.1.3
+ * in indelsoa, filter SNPs
+ * in indelpe, output FN and FP
+
+------------------------------------------------------------------------
+r439 | lh3lh3 | 2007-12-01 16:14:38 +0000 (Sat, 01 Dec 2007) | 3 lines
+Changed paths:
+   M /branches/lh3/maq/scripts/maq_eval.pl
+
+ * maq_eval.pl-0.1.2
+ * evaluate genotyping sites
+
+------------------------------------------------------------------------
+r438 | lh3lh3 | 2007-11-30 12:34:24 +0000 (Fri, 30 Nov 2007) | 3 lines
+Changed paths:
+   M /branches/lh3/maq/scripts/maq.pl
+
+ * maq.pl-0.1.10
+ * change the option names in SNPfilter
+
+------------------------------------------------------------------------
+r437 | lh3lh3 | 2007-11-29 15:10:28 +0000 (Thu, 29 Nov 2007) | 3 lines
+Changed paths:
+   M /branches/lh3/maq/ChangeLog
+   M /branches/lh3/maq/Makefile.generic
+   M /branches/lh3/maq/aux_utils.c
+   M /branches/lh3/maq/configure.ac
+   M /branches/lh3/maq/main.c
+   M /branches/lh3/maq/main.h
+
+ * maq-0.6.2-5
+ * add "snpreg" command: calculate regions where SNP can be called
+
+------------------------------------------------------------------------
+r436 | lh3lh3 | 2007-11-26 13:09:15 +0000 (Mon, 26 Nov 2007) | 3 lines
+Changed paths:
+   M /branches/lh3/maq/scripts/maq.pl
+
+ * maq.pl-0.1.9
+ * in easyrun, fix a typo caused by the last revision
+
+------------------------------------------------------------------------
+r435 | lh3lh3 | 2007-11-26 09:53:29 +0000 (Mon, 26 Nov 2007) | 3 lines
+Changed paths:
+   M /branches/lh3/maq/Makefile.generic
+   M /branches/lh3/maq/configure.ac
+   M /branches/lh3/maq/fastq2bfq.c
+
+ * maq-0.6.2-4
+ * in fastq2bfq, avoid generating empty files
+
+------------------------------------------------------------------------
+r434 | lh3lh3 | 2007-11-26 09:52:22 +0000 (Mon, 26 Nov 2007) | 3 lines
+Changed paths:
+   M /branches/lh3/maq/scripts/maq.pl
+
+ * maq.pl-0.1.8
+ * in easyrun, split the input fastq to smaller files if necessary
+
+------------------------------------------------------------------------
+r433 | lh3lh3 | 2007-11-25 23:19:38 +0000 (Sun, 25 Nov 2007) | 3 lines
+Changed paths:
+   M /branches/lh3/maq/Makefile.generic
+   M /branches/lh3/maq/configure.ac
+   M /branches/lh3/maq/simulate.c
+
+ * maq-0.6.3
+ * fix a stupid bug in simulation
+
+------------------------------------------------------------------------
+r432 | lh3lh3 | 2007-11-25 23:01:03 +0000 (Sun, 25 Nov 2007) | 4 lines
+Changed paths:
+   M /branches/lh3/maq/Makefile.generic
+   M /branches/lh3/maq/configure.ac
+   M /branches/lh3/maq/simulate.c
+
+ * maq-0.6.2-2
+ * make coordinate more accurate, but cannot be absolutely accurate
+ * improve simustat to tolerate indel alignment 
+
+------------------------------------------------------------------------
+r430 | lh3lh3 | 2007-11-25 21:07:18 +0000 (Sun, 25 Nov 2007) | 4 lines
+Changed paths:
+   M /branches/lh3/maq/Makefile.generic
+   M /branches/lh3/maq/configure.ac
+   M /branches/lh3/maq/simulate.c
+
+ * maq-0.6.2-1
+ * simulate reads for diploid reference
+ * known bug: the coordinate of some reads is wrong.
+
+------------------------------------------------------------------------
+r427 | lh3lh3 | 2007-11-23 22:19:15 +0000 (Fri, 23 Nov 2007) | 2 lines
+Changed paths:
+   M /branches/lh3/maq/ChangeLog
+   M /branches/lh3/maq/Makefile.generic
+   M /branches/lh3/maq/NEWS
+   M /branches/lh3/maq/configure.ac
+   M /branches/lh3/maq/maq.pod
+
+Release maq-0.6.2
+
+------------------------------------------------------------------------
+r426 | lh3lh3 | 2007-11-23 17:17:47 +0000 (Fri, 23 Nov 2007) | 3 lines
+Changed paths:
+   M /branches/lh3/maq/Makefile.generic
+   M /branches/lh3/maq/configure.ac
+   M /branches/lh3/maq/eland2maq.cc
+
+ * maq-0.6.1-18
+ * export2maq: fix a bug in converting base qualities
+
+------------------------------------------------------------------------
+r425 | lh3lh3 | 2007-11-23 16:03:21 +0000 (Fri, 23 Nov 2007) | 4 lines
+Changed paths:
+   M /branches/lh3/maq/ChangeLog
+   M /branches/lh3/maq/Makefile.generic
+   M /branches/lh3/maq/NEWS
+   M /branches/lh3/maq/configure.ac
+   M /branches/lh3/maq/eland2maq.cc
+   M /branches/lh3/maq/main.c
+   M /branches/lh3/maq/main.h
+
+ * maq-0.6.1-17
+ * convert Solexa's export format to maq's .map format
+ * add NEWS and prepare to release maq-0.6.2
+
+------------------------------------------------------------------------
+r424 | lh3lh3 | 2007-11-19 16:30:56 +0000 (Mon, 19 Nov 2007) | 3 lines
+Changed paths:
+   M /branches/lh3/maq/Makefile.generic
+   M /branches/lh3/maq/assopt.c
+   M /branches/lh3/maq/configure.ac
+   M /branches/lh3/maq/mapcheck.cc
+
+ * maq-0.6.1-15
+ * fix a compiling error for some powerpc64-linux
+
+------------------------------------------------------------------------
+r422 | lh3lh3 | 2007-11-19 09:33:41 +0000 (Mon, 19 Nov 2007) | 3 lines
+Changed paths:
+   M /branches/lh3/maq/scripts/fq_all2std.pl
+
+ * fq_all2std.pl-0.1.1
+ * fix a bug for "export" format
+
+------------------------------------------------------------------------
+r420 | lh3lh3 | 2007-11-18 23:16:49 +0000 (Sun, 18 Nov 2007) | 3 lines
+Changed paths:
+   M /branches/lh3/maq/scripts/maq.pl
+
+ * maq.pl-0.1.1
+ * for Solexa's new export format
+
+------------------------------------------------------------------------
+r419 | lh3lh3 | 2007-11-18 23:16:02 +0000 (Sun, 18 Nov 2007) | 3 lines
+Changed paths:
+   M /branches/lh3/maq/scripts/farm-run.pl
+
+ * farm-run.pl-0.12
+ * correct uname for a Linux machine
+
+------------------------------------------------------------------------
+r418 | lh3lh3 | 2007-11-16 10:19:35 +0000 (Fri, 16 Nov 2007) | 3 lines
+Changed paths:
+   M /branches/lh3/maq/scripts/maq.pl
+
+ * maq.pl-0.1.6
+ * fastq2bfq: for Solexa's new "export" format
+
+------------------------------------------------------------------------
+r417 | lh3lh3 | 2007-11-16 10:11:59 +0000 (Fri, 16 Nov 2007) | 3 lines
+Changed paths:
+   A /branches/lh3/maq/scripts/fq_all2std.pl
+
+ * fq_all2std.pl-0.1.0
+ * script for converting between various formats
+
+------------------------------------------------------------------------
+r414 | lh3lh3 | 2007-11-15 10:01:48 +0000 (Thu, 15 Nov 2007) | 3 lines
+Changed paths:
+   M /branches/lh3/maq/ChangeLog
+   M /branches/lh3/maq/Makefile.generic
+   M /branches/lh3/maq/configure.ac
+   M /branches/lh3/maq/match.cc
+
+ * maq-0.6.1-15
+ * fix a bug related to max_err10
+
+------------------------------------------------------------------------
+r411 | lh3lh3 | 2007-11-08 15:48:01 +0000 (Thu, 08 Nov 2007) | 3 lines
+Changed paths:
+   M /branches/lh3/maq/Makefile.generic
+   M /branches/lh3/maq/assemble.cc
+   M /branches/lh3/maq/aux_utils.c
+   M /branches/lh3/maq/configure.ac
+   M /branches/lh3/maq/pileup.cc
+
+ * 0.6.1-14
+ * allow to use "-" in many more commands
+
+------------------------------------------------------------------------
+r410 | lh3lh3 | 2007-11-08 10:40:14 +0000 (Thu, 08 Nov 2007) | 3 lines
+Changed paths:
+   M /branches/lh3/maq/ChangeLog
+   M /branches/lh3/maq/Makefile.generic
+   M /branches/lh3/maq/assemble.cc
+   M /branches/lh3/maq/configure.ac
+
+ * 0.6.1-13
+ * allow to use "-" in "assemble"
+
+------------------------------------------------------------------------
+r401 | lh3lh3 | 2007-11-01 15:50:37 +0000 (Thu, 01 Nov 2007) | 3 lines
+Changed paths:
+   M /branches/lh3/maq/scripts/maq.pl
+
+ * maq.pl-0.1.5
+ * sorry, fix another bug
+
+------------------------------------------------------------------------
+r400 | lh3lh3 | 2007-11-01 15:20:52 +0000 (Thu, 01 Nov 2007) | 3 lines
+Changed paths:
+   M /branches/lh3/maq/Makefile.generic
+   M /branches/lh3/maq/configure.ac
+   M /branches/lh3/maq/indel_pe.cc
+
+ * maq-0.6.1-12
+ * fix a bug in indelpe (caused by previous debugging codes)
+
+------------------------------------------------------------------------
+r399 | lh3lh3 | 2007-11-01 15:20:00 +0000 (Thu, 01 Nov 2007) | 4 lines
+Changed paths:
+   M /branches/lh3/maq/scripts/maq.pl
+
+ * maq.pl-0.1.4
+ * fix a bug in fastq2bfq
+ * improve cat2pair
+
+------------------------------------------------------------------------
+r395 | lh3lh3 | 2007-10-31 15:22:40 +0000 (Wed, 31 Oct 2007) | 3 lines
+Changed paths:
+   M /branches/lh3/maq/scripts/maq.pl
+
+ * maq.pl-0.1.3
+ * improve fastq2bfq powered by the new 'maq fastq2bfq'
+
+------------------------------------------------------------------------
+r394 | lh3lh3 | 2007-10-31 11:59:10 +0000 (Wed, 31 Oct 2007) | 3 lines
+Changed paths:
+   M /branches/lh3/maq/Makefile.generic
+   M /branches/lh3/maq/configure.ac
+   M /branches/lh3/maq/fastq2bfq.c
+
+ * 0.6.1-11
+ * improve fastq2bfq command
+
+------------------------------------------------------------------------
+r393 | lh3lh3 | 2007-10-31 11:13:12 +0000 (Wed, 31 Oct 2007) | 4 lines
+Changed paths:
+   M /branches/lh3/maq/ChangeLog
+   M /branches/lh3/maq/Makefile.generic
+   M /branches/lh3/maq/configure.ac
+   M /branches/lh3/maq/match.cc
+   M /branches/lh3/maq/match.hh
+   M /branches/lh3/maq/match_aux.cc
+
+ * maq-0.6.1-10
+ * allow to change max_err10 on the command-line
+ * set the minimum length of reads to 16bp, instead of 20bp
+
+------------------------------------------------------------------------
+r392 | lh3lh3 | 2007-10-31 11:10:57 +0000 (Wed, 31 Oct 2007) | 4 lines
+Changed paths:
+   M /branches/lh3/maq/scripts/maq.pl
+
+ * maq.pl-0.1.2
+ * allow to set the maximum read depth in SNPfilter
+ * improve fastq2bfq a bit
+
+------------------------------------------------------------------------
+r384 | lh3lh3 | 2007-10-30 09:35:43 +0000 (Tue, 30 Oct 2007) | 4 lines
+Changed paths:
+   M /branches/lh3/maq/Makefile.generic
+   M /branches/lh3/maq/configure.ac
+   M /branches/lh3/maq/indel_pe.cc
+   M /branches/lh3/maq/maq.pod
+
+ * 0.6.1-9
+ * update documentations
+ * fix a bug in indelpe
+
+------------------------------------------------------------------------
+r379 | lh3lh3 | 2007-10-29 09:23:46 +0000 (Mon, 29 Oct 2007) | 3 lines
+Changed paths:
+   M /branches/lh3/maq/scripts/maq_eval.pl
+
+ * maq_eval.pl-0.1.1
+ * better evaluation for indelsoa
+
+------------------------------------------------------------------------
+r378 | lh3lh3 | 2007-10-28 21:59:46 +0000 (Sun, 28 Oct 2007) | 2 lines
+Changed paths:
+   M /branches/lh3/maq/maq.pod
+
+explain SNPfilter and indelsoa
+
+------------------------------------------------------------------------
+r377 | lh3lh3 | 2007-10-28 20:59:40 +0000 (Sun, 28 Oct 2007) | 6 lines
+Changed paths:
+   M /branches/lh3/maq/Makefile.generic
+   M /branches/lh3/maq/aux_utils.c
+   M /branches/lh3/maq/configure.ac
+   M /branches/lh3/maq/indel_soa.cc
+   M /branches/lh3/maq/main.c
+
+ * maq-0.6.1-8
+ * make indelsoa public
+ * indelsoa should be able to work with multiple references (not tested)
+ * output an alternative score in indelsoa
+ * change a threshold in aux_utils.c
+
+------------------------------------------------------------------------
+r376 | lh3lh3 | 2007-10-28 20:53:07 +0000 (Sun, 28 Oct 2007) | 4 lines
+Changed paths:
+   M /branches/lh3/maq/scripts/maq.pl
+
+ * maq.pl-0.1.1
+ * change the SNPfilter for indelsoa (left+right-across>=3 && across<=1)
+ * in easyrun, indelsoa-filtered SNPs become the default.
+
+------------------------------------------------------------------------
+r375 | lh3lh3 | 2007-10-28 18:32:51 +0000 (Sun, 28 Oct 2007) | 6 lines
+Changed paths:
+   M /branches/lh3/maq/scripts/maq.pl
+
+ * maq.pl-0.1.0
+ * improve `SNPfilter' command
+ * improve `gwhich()'
+ * improve `easyrun' command
+ * add `statmap' command (previously known as `stat_err.pl'))
+
+------------------------------------------------------------------------
+r374 | lh3lh3 | 2007-10-28 15:54:01 +0000 (Sun, 28 Oct 2007) | 2 lines
+Changed paths:
+   M /branches/lh3/maq/scripts/maq_eval.pl
+
+put indel evaluation in the script
+
+------------------------------------------------------------------------
+r373 | lh3lh3 | 2007-10-26 22:25:20 +0100 (Fri, 26 Oct 2007) | 4 lines
+Changed paths:
+   M /branches/lh3/maq/Makefile.generic
+   M /branches/lh3/maq/configure.ac
+   M /branches/lh3/maq/eland2maq.cc
+   M /branches/lh3/maq/main.c
+   M /branches/lh3/maq/maq.pod
+
+ * 0.6.1-7
+ * change the default quality to 25
+ * update the documentation
+
+------------------------------------------------------------------------
+r372 | lh3lh3 | 2007-10-26 22:23:08 +0100 (Fri, 26 Oct 2007) | 2 lines
+Changed paths:
+   M /branches/lh3/maq/scripts/maq.pl
+
+change the SNP filter
+
+------------------------------------------------------------------------
+r371 | lh3lh3 | 2007-10-26 14:29:54 +0100 (Fri, 26 Oct 2007) | 3 lines
+Changed paths:
+   M /branches/lh3/maq/Makefile.generic
+   M /branches/lh3/maq/configure.ac
+   M /branches/lh3/maq/match.cc
+   M /branches/lh3/maq/match.hh
+   M /branches/lh3/maq/match_aux.cc
+   M /branches/lh3/maq/sort_mapping.cc
+
+ * 0.6.1-6
+ * dump unmapped reads to a separate file
+
+------------------------------------------------------------------------
+r370 | lh3lh3 | 2007-10-26 12:51:09 +0100 (Fri, 26 Oct 2007) | 3 lines
+Changed paths:
+   M /branches/lh3/maq/Makefile.generic
+   M /branches/lh3/maq/configure.ac
+   M /branches/lh3/maq/match.cc
+   M /branches/lh3/maq/match.hh
+   M /branches/lh3/maq/match_aux.cc
+   M /branches/lh3/maq/sort_mapping.cc
+
+ * 0.6.1-5
+ * dump unmapped reads and poorly mapped reads
+
+------------------------------------------------------------------------
+r369 | lh3lh3 | 2007-10-26 11:12:12 +0100 (Fri, 26 Oct 2007) | 3 lines
+Changed paths:
+   M /branches/lh3/maq/ChangeLog
+   M /branches/lh3/maq/Makefile.generic
+   M /branches/lh3/maq/assemble.cc
+   M /branches/lh3/maq/assemble.h
+   M /branches/lh3/maq/assopt.c
+   M /branches/lh3/maq/configure.ac
+   M /branches/lh3/maq/get_pos.c
+   M /branches/lh3/maq/main.c
+   M /branches/lh3/maq/mapcheck.cc
+   M /branches/lh3/maq/pileup.cc
+
+ * 0.6.1-4
+ * bring back 'assemble/pileup -m' to meet users' request
+
+------------------------------------------------------------------------
+r361 | lh3lh3 | 2007-10-13 22:13:01 +0100 (Sat, 13 Oct 2007) | 5 lines
+Changed paths:
+   M /branches/lh3/maq/Makefile.am
+   M /branches/lh3/maq/Makefile.generic
+   M /branches/lh3/maq/configure.ac
+   M /branches/lh3/maq/eland2maq.cc
+   M /branches/lh3/maq/match.cc
+   M /branches/lh3/maq/read.cc
+
+ * 0.6.1-3
+ * fix the bug in methy_mode
+ * eland2maq now works properly
+ * allow G->A alignment in methy_mode
+
+------------------------------------------------------------------------
+r360 | lh3lh3 | 2007-10-13 14:22:57 +0100 (Sat, 13 Oct 2007) | 3 lines
+Changed paths:
+   M /branches/lh3/maq/Makefile.generic
+   M /branches/lh3/maq/configure.ac
+   A /branches/lh3/maq/eland2maq.cc
+   M /branches/lh3/maq/main.c
+   M /branches/lh3/maq/main.h
+   M /branches/lh3/maq/maqmap.h
+
+ * 0.6.1-2
+ * add eland2maq: convert eland output to maq alignment
+
+------------------------------------------------------------------------
+r347 | lh3lh3 | 2007-10-10 16:01:58 +0100 (Wed, 10 Oct 2007) | 3 lines
+Changed paths:
+   M /branches/lh3/maq/Makefile.generic
+   M /branches/lh3/maq/configure.ac
+   M /branches/lh3/maq/match.cc
+
+ * 0.6.1-1
+ * fix a bug in methylation alignment
+
+------------------------------------------------------------------------
+r332 | lh3lh3 | 2007-10-03 20:55:06 +0100 (Wed, 03 Oct 2007) | 2 lines
+Changed paths:
+   M /branches/lh3/maq/ChangeLog
+   M /branches/lh3/maq/FUTURES
+   M /branches/lh3/maq/Makefile.generic
+   M /branches/lh3/maq/NEWS
+   M /branches/lh3/maq/configure.ac
+
+Release maq-0.6.1
+
+------------------------------------------------------------------------
+r328 | lh3lh3 | 2007-10-02 13:38:41 +0100 (Tue, 02 Oct 2007) | 3 lines
+Changed paths:
+   M /branches/lh3/maq/ChangeLog
+   M /branches/lh3/maq/Makefile.generic
+   M /branches/lh3/maq/configure.ac
+   M /branches/lh3/maq/read.cc
+
+ * 0.6.0-6
+ * fix a bug for methy-mode. I know few are using this, but it is a bug anyway.
+
+------------------------------------------------------------------------
+r327 | lh3lh3 | 2007-10-02 13:05:22 +0100 (Tue, 02 Oct 2007) | 3 lines
+Changed paths:
+   M /branches/lh3/maq/Makefile.generic
+   M /branches/lh3/maq/configure.ac
+   M /branches/lh3/maq/get_pos.c
+
+ * 0.6.0-5
+ * fix a rare bug in get_pos.c
+
+------------------------------------------------------------------------
+r315 | lh3lh3 | 2007-09-26 11:14:17 +0100 (Wed, 26 Sep 2007) | 3 lines
+Changed paths:
+   M /branches/lh3/maq/Makefile.generic
+   M /branches/lh3/maq/configure.ac
+   M /branches/lh3/maq/match.cc
+   M /branches/lh3/maq/match.hh
+   M /branches/lh3/maq/match_aux.cc
+   M /branches/lh3/maq/read.cc
+   M /branches/lh3/maq/read.h
+   M /branches/lh3/maq/sort_mapping.cc
+
+ * 0.6.0-4
+ * make trim-adapter work properly
+
+------------------------------------------------------------------------
+r284 | lh3lh3 | 2007-09-19 15:13:42 +0100 (Wed, 19 Sep 2007) | 4 lines
+Changed paths:
+   M /branches/lh3/maq/Makefile.generic
+   M /branches/lh3/maq/configure.ac
+   M /branches/lh3/maq/fastq2bfq.c
+
+ * 0.6.0-3
+ * 0.6.0-2 is prematured.
+ * change zero quality to 1 (in fastq2bfq)
+
+------------------------------------------------------------------------
+r251 | lh3lh3 | 2007-09-10 13:43:36 +0100 (Mon, 10 Sep 2007) | 6 lines
+Changed paths:
+   M /branches/lh3/maq/Makefile.generic
+   M /branches/lh3/maq/configure.ac
+   M /branches/lh3/maq/match.cc
+   M /branches/lh3/maq/sort_mapping.cc
+
+ * 0.6.0-1
+ * map a read to the position that gives the minimum sum of quality values
+   of mismatched bases. Previously maq first compares the number of mismatches
+   in the first 24bp and then check the sum.
+ * on simulated data, this gives slightly better accuracy.
+
+------------------------------------------------------------------------
+r248 | lh3lh3 | 2007-09-05 13:11:06 +0100 (Wed, 05 Sep 2007) | 2 lines
+Changed paths:
+   M /branches/lh3/maq/ChangeLog
+   M /branches/lh3/maq/FUTURES
+   M /branches/lh3/maq/Makefile.generic
+   M /branches/lh3/maq/NEWS
+   M /branches/lh3/maq/configure.ac
+   M /branches/lh3/maq/maq.pod
+
+Release 0.6.0
+
+------------------------------------------------------------------------
+r247 | lh3lh3 | 2007-09-05 10:24:26 +0100 (Wed, 05 Sep 2007) | 7 lines
+Changed paths:
+   M /branches/lh3/maq/Makefile.generic
+   M /branches/lh3/maq/NEWS
+   M /branches/lh3/maq/configure.ac
+   M /branches/lh3/maq/get_pos.c
+   M /branches/lh3/maq/indel_pe.cc
+   M /branches/lh3/maq/maq.pod
+   M /branches/lh3/maq/maqmap.c
+   M /branches/lh3/maq/rmdup.cc
+
+ * 0.5.1-24
+ * output number of 0- and 1-mismatch hits in mapview
+ * when '-p' is flagged with assemble, abnormal pairs will be discarded, instead
+   of being assigned a quality zero
+ * fix a bug in rmdup which may causes segmentation fault in rare cases
+ * add more documentations
+
+------------------------------------------------------------------------
+r244 | lh3lh3 | 2007-08-29 17:07:08 +0100 (Wed, 29 Aug 2007) | 3 lines
+Changed paths:
+   M /branches/lh3/maq/Makefile.generic
+   M /branches/lh3/maq/configure.ac
+   M /branches/lh3/maq/match.hh
+   M /branches/lh3/maq/sort_mapping.cc
+
+ * 0.5.1-23
+ * revert some codes from 0.5.1-6
+
+------------------------------------------------------------------------
+r243 | lh3lh3 | 2007-08-29 16:43:52 +0100 (Wed, 29 Aug 2007) | 4 lines
+Changed paths:
+   M /branches/lh3/maq/ChangeLog
+   M /branches/lh3/maq/Makefile.generic
+   M /branches/lh3/maq/configure.ac
+   M /branches/lh3/maq/maq.pod
+   M /branches/lh3/maq/simulate.c
+   M /branches/lh3/maq/sort_mapping.cc
+
+ * 0.5.1-22
+ * remove debugging codes from simulate.c
+ * fix two trivial/potential bugs in sort_mapping.c 
+
+------------------------------------------------------------------------
+r242 | lh3lh3 | 2007-08-29 10:53:29 +0100 (Wed, 29 Aug 2007) | 5 lines
+Changed paths:
+   M /branches/lh3/maq/Makefile.generic
+   M /branches/lh3/maq/configure.ac
+   M /branches/lh3/maq/indel_pe.cc
+   M /branches/lh3/maq/simulate.c
+
+ * 0.5.1-21
+ * fix a bug in calculating the average insert size (caused by latest modifications)
+ * simulate now generates reads on both strand (previously read1 from forward,
+   and read2 always from reverse strand)
+
+------------------------------------------------------------------------
+r241 | lh3lh3 | 2007-08-28 13:49:52 +0100 (Tue, 28 Aug 2007) | 3 lines
+Changed paths:
+   M /branches/lh3/maq/Makefile.generic
+   M /branches/lh3/maq/configure.ac
+   M /branches/lh3/maq/get_pos.c
+   M /branches/lh3/maq/maqmap.c
+   M /branches/lh3/maq/simulate.c
+
+ * 0.5.1-20
+ * fix problems caused by previous revision
+
+------------------------------------------------------------------------
+r240 | lh3lh3 | 2007-08-28 10:53:18 +0100 (Tue, 28 Aug 2007) | 7 lines
+Changed paths:
+   M /branches/lh3/maq/Makefile.am
+   M /branches/lh3/maq/Makefile.generic
+   M /branches/lh3/maq/configure.ac
+   M /branches/lh3/maq/get_pos.c
+   M /branches/lh3/maq/indel_pe.cc
+   M /branches/lh3/maq/main.c
+   M /branches/lh3/maq/main.h
+   M /branches/lh3/maq/maq.pod
+   M /branches/lh3/maq/maqmap.h
+   A /branches/lh3/maq/rmdup.cc
+   D /branches/lh3/maq/rmpair.cc
+   M /branches/lh3/maq/simulate.c
+   M /branches/lh3/maq/sort_mapping.cc
+
+ * 0.5.1-19
+ * in maqmap1_t, dist now shows the insert size.
+ * rmdup is rewritten. it now handles abnormal pairs.
+ * after Smith-Waterman, reads without indels will also be saved, though not used at later step
+ * simulate is able to generate different read lengths from the length in the fqc_t
+ * this revision has not been thoroughly tested.
+
+------------------------------------------------------------------------
+r238 | lh3lh3 | 2007-08-23 10:21:48 +0100 (Thu, 23 Aug 2007) | 2 lines
+Changed paths:
+   M /branches/lh3/maq/maq.pod
+
+for changes after 0.5.1
+
+------------------------------------------------------------------------
+r235 | lh3lh3 | 2007-08-22 09:09:04 +0100 (Wed, 22 Aug 2007) | 7 lines
+Changed paths:
+   M /branches/lh3/maq/Makefile.generic
+   M /branches/lh3/maq/aux_utils.c
+   M /branches/lh3/maq/configure.ac
+   M /branches/lh3/maq/indel_pe.cc
+   M /branches/lh3/maq/match.cc
+   M /branches/lh3/maq/rmpair.cc
+   M /branches/lh3/maq/simulate.c
+   M /branches/lh3/maq/sort_mapping.cc
+
+ * 0.5.1-18
+ * output version number in 'map'
+ * detect duplicated read names in 'rmdup'
+ * in attempt to use another filter
+ * initiate Smith-Waterman alignment for Q20 reads (not Q30)
+ * generate unique read names in 'simulate'
+
+------------------------------------------------------------------------
+r234 | lh3lh3 | 2007-08-20 09:49:23 +0100 (Mon, 20 Aug 2007) | 4 lines
+Changed paths:
+   M /branches/lh3/maq/Makefile.generic
+   M /branches/lh3/maq/configure.ac
+   M /branches/lh3/maq/indel_pe.cc
+   M /branches/lh3/maq/merge.cc
+
+ * 0.5.1-17
+ * mapmerge: allow to dump .map to stdout
+ * indel_pe: check boundaries before alignment
+
+------------------------------------------------------------------------
+r233 | lh3lh3 | 2007-08-13 20:36:50 +0100 (Mon, 13 Aug 2007) | 3 lines
+Changed paths:
+   M /branches/lh3/maq/Makefile.generic
+   M /branches/lh3/maq/configure.ac
+   M /branches/lh3/maq/read.cc
+
+ * 0.5.1-16
+ * fix a bug in adapter trimming
+
+------------------------------------------------------------------------
+r232 | lh3lh3 | 2007-08-10 23:05:48 +0100 (Fri, 10 Aug 2007) | 4 lines
+Changed paths:
+   M /branches/lh3/maq/Makefile.generic
+   M /branches/lh3/maq/configure.ac
+   M /branches/lh3/maq/get_pos.c
+   A /branches/lh3/maq/indel_call.cc
+
+ * 0.5.1-15
+ * indelpe: indel calling from PE reads
+ * better combine indelsoa and indelpe to give better results (future plan)
+
+------------------------------------------------------------------------
+r231 | lh3lh3 | 2007-08-10 21:27:32 +0100 (Fri, 10 Aug 2007) | 2 lines
+Changed paths:
+   M /branches/lh3/maq/Makefile.am
+   M /branches/lh3/maq/Makefile.generic
+   M /branches/lh3/maq/assemble.h
+   A /branches/lh3/maq/get_pos.c (from /branches/lh3/maq/get_pos.cc:230)
+   D /branches/lh3/maq/get_pos.cc
+   M /branches/lh3/maq/main.c
+   M /branches/lh3/maq/main.h
+
+rename get_pos.cc->get_pos.c
+
+------------------------------------------------------------------------
+r230 | lh3lh3 | 2007-08-10 20:27:35 +0100 (Fri, 10 Aug 2007) | 4 lines
+Changed paths:
+   M /branches/lh3/maq/Makefile.generic
+   M /branches/lh3/maq/assemble.h
+   M /branches/lh3/maq/bfa.c
+   M /branches/lh3/maq/configure.ac
+   M /branches/lh3/maq/get_pos.cc
+   M /branches/lh3/maq/indel_pe.cc
+
+ * 0.5.1-14
+ * fix a minor bug in indel_pe.cc
+ * prepare to rename get_pos.cc
+
+------------------------------------------------------------------------
+r229 | lh3lh3 | 2007-08-10 14:02:35 +0100 (Fri, 10 Aug 2007) | 4 lines
+Changed paths:
+   M /branches/lh3/maq/Makefile.generic
+   M /branches/lh3/maq/configure.ac
+   M /branches/lh3/maq/get_pos.cc
+   M /branches/lh3/maq/indel_pe.cc
+   M /branches/lh3/maq/match.hh
+   M /branches/lh3/maq/match_aux.cc
+   M /branches/lh3/maq/sort_mapping.cc
+
+ * 0.5.1-13
+ * indel_pe seems to work properly
+ * need to write someting to pull out all the indel sites
+
+------------------------------------------------------------------------
+r228 | lh3lh3 | 2007-08-09 23:27:47 +0100 (Thu, 09 Aug 2007) | 3 lines
+Changed paths:
+   M /branches/lh3/maq/Makefile.generic
+   M /branches/lh3/maq/configure.ac
+   M /branches/lh3/maq/indel_pe.cc
+   M /branches/lh3/maq/match.hh
+   M /branches/lh3/maq/sort_mapping.cc
+
+ * 0.5.1.-12
+ * the core part of indelpe works. more work need to be done, though
+
+------------------------------------------------------------------------
+r227 | lh3lh3 | 2007-08-09 14:30:38 +0100 (Thu, 09 Aug 2007) | 6 lines
+Changed paths:
+   M /branches/lh3/maq/ChangeLog
+   M /branches/lh3/maq/Makefile.generic
+   M /branches/lh3/maq/configure.ac
+   M /branches/lh3/maq/indel_pe.cc
+   M /branches/lh3/maq/maqmap.h
+   M /branches/lh3/maq/match.cc
+   M /branches/lh3/maq/read.cc
+   M /branches/lh3/maq/rmpair.cc
+   M /branches/lh3/maq/simulate.c
+   M /branches/lh3/maq/sort_mapping.cc
+
+ * 0.5.1-11
+ * in methylation alignment mode, change all C to T. this is the only right way.
+ * a little change in calculating mapping qualities. should not matter much for high-quality reads
+ * write more codes for the indel detector
+ * this revision probably cannot work!
+
+------------------------------------------------------------------------
+r226 | lh3lh3 | 2007-08-08 16:41:24 +0100 (Wed, 08 Aug 2007) | 5 lines
+Changed paths:
+   M /branches/lh3/maq/Makefile.am
+   M /branches/lh3/maq/Makefile.generic
+   M /branches/lh3/maq/configure.ac
+   A /branches/lh3/maq/indel_pe.cc
+   M /branches/lh3/maq/match.cc
+   M /branches/lh3/maq/match.hh
+   M /branches/lh3/maq/rmpair.cc
+   M /branches/lh3/maq/scripts/maq.pl
+   M /branches/lh3/maq/sort_mapping.cc
+   A /branches/lh3/maq/stdaln.c
+   A /branches/lh3/maq/stdaln.h
+
+ * 0.5.1-10
+ * rmdup: fix a bug
+ * easyrun: allow to filter adapter at the command-line
+ * prepare to add indel detector for PE reads. just started.
+
+------------------------------------------------------------------------
+r225 | lh3lh3 | 2007-08-07 16:09:30 +0100 (Tue, 07 Aug 2007) | 3 lines
+Changed paths:
+   M /branches/lh3/maq/Makefile.generic
+   M /branches/lh3/maq/configure.ac
+   M /branches/lh3/maq/match.cc
+   M /branches/lh3/maq/read.cc
+   M /branches/lh3/maq/read.h
+
+ * 0.5.1-9
+ * more sophisticated 3'-adapter trimmer
+
+------------------------------------------------------------------------
+r224 | lh3lh3 | 2007-08-06 23:29:29 +0100 (Mon, 06 Aug 2007) | 3 lines
+Changed paths:
+   M /branches/lh3/maq/Makefile.generic
+   M /branches/lh3/maq/configure.ac
+   M /branches/lh3/maq/match.cc
+   M /branches/lh3/maq/match.hh
+   M /branches/lh3/maq/match_aux.cc
+   M /branches/lh3/maq/read.cc
+   M /branches/lh3/maq/read.h
+
+ * 0.5.1-8
+ * alignment for methylated data
+
+------------------------------------------------------------------------
+r223 | lh3lh3 | 2007-08-06 00:20:36 +0100 (Mon, 06 Aug 2007) | 3 lines
+Changed paths:
+   M /branches/lh3/maq/Makefile.generic
+   M /branches/lh3/maq/configure.ac
+   M /branches/lh3/maq/match.cc
+   M /branches/lh3/maq/read.cc
+
+ * 0.5.1-7
+ * fix bug in auto_trim(), but this does not work well...
+
+------------------------------------------------------------------------
+r222 | lh3lh3 | 2007-08-05 17:11:23 +0100 (Sun, 05 Aug 2007) | 2 lines
+Changed paths:
+   M /branches/lh3/maq/Makefile.generic
+   M /branches/lh3/maq/configure.ac
+   M /branches/lh3/maq/match.cc
+
+0.5.1-6: trivial changes
+
+------------------------------------------------------------------------
+r221 | lh3lh3 | 2007-08-04 22:57:40 +0100 (Sat, 04 Aug 2007) | 5 lines
+Changed paths:
+   M /branches/lh3/maq/Makefile.generic
+   M /branches/lh3/maq/assemble.cc
+   M /branches/lh3/maq/assemble.h
+   M /branches/lh3/maq/assopt.c
+   M /branches/lh3/maq/configure.ac
+   M /branches/lh3/maq/get_pos.cc
+   M /branches/lh3/maq/mapcheck.cc
+   M /branches/lh3/maq/maq.pod
+   M /branches/lh3/maq/maqmap.c
+   M /branches/lh3/maq/maqmap.h
+   M /branches/lh3/maq/match.cc
+   M /branches/lh3/maq/match.hh
+   M /branches/lh3/maq/match_aux.cc
+   M /branches/lh3/maq/pileup.cc
+   M /branches/lh3/maq/sort_mapping.cc
+
+ * 0.5.1-5
+ * discard reads that give large sum of errors. For real data, this helps A LOT!
+ * maqstat is now disfunctional...
+ * allow to adjust MAF in assemble
+
+------------------------------------------------------------------------
+r220 | lh3lh3 | 2007-08-04 16:30:12 +0100 (Sat, 04 Aug 2007) | 3 lines
+Changed paths:
+   M /branches/lh3/maq/Makefile.generic
+   M /branches/lh3/maq/configure.ac
+   M /branches/lh3/maq/match.cc
+   M /branches/lh3/maq/sort_mapping.cc
+
+ * 0.5.1-4
+ * fix a bug caused by the operator precedence
+
+------------------------------------------------------------------------
+r218 | lh3lh3 | 2007-08-04 14:53:43 +0100 (Sat, 04 Aug 2007) | 7 lines
+Changed paths:
+   M /branches/lh3/maq/Makefile.generic
+   M /branches/lh3/maq/configure.ac
+   M /branches/lh3/maq/match.cc
+   M /branches/lh3/maq/match.hh
+   M /branches/lh3/maq/sort_mapping.cc
+
+ * 0.5.1-3
+ * reduce unnecessary memory usage (a bit)
+ * fix a subtle and minor bug in calculating paired end mapping qualities
+ * hash word in a more efficient way, especially for long reads
+ * now the mapping quality seems to be underestimated...
+ * at least on bacteria, the new code is giving better alignments
+
+------------------------------------------------------------------------
+r217 | lh3lh3 | 2007-08-04 00:38:41 +0100 (Sat, 04 Aug 2007) | 6 lines
+Changed paths:
+   M /branches/lh3/maq/Makefile.generic
+   M /branches/lh3/maq/configure.ac
+   M /branches/lh3/maq/match.cc
+   M /branches/lh3/maq/match.hh
+   M /branches/lh3/maq/match_aux.cc
+   M /branches/lh3/maq/rmpair.cc
+   M /branches/lh3/maq/simulate.c
+   M /branches/lh3/maq/sort_mapping.cc
+
+ * 0.5.1-2
+ * simulate.c: fixed a bug for the reverse read
+ * simulate.c: added forgotten gzclose()
+ * align long but low-quality reads
+ * mapping quality is overestimated a bit
+
+------------------------------------------------------------------------
+r216 | lh3lh3 | 2007-08-03 22:50:40 +0100 (Fri, 03 Aug 2007) | 3 lines
+Changed paths:
+   M /branches/lh3/maq/Makefile.generic
+   M /branches/lh3/maq/configure.ac
+   M /branches/lh3/maq/rmpair.cc
+
+ * 0.5.1-1
+ * fix a minor bug in rmpair.cc
+
+------------------------------------------------------------------------
+r212 | lh3lh3 | 2007-07-31 11:19:16 +0100 (Tue, 31 Jul 2007) | 2 lines
+Changed paths:
+   M /branches/lh3/maq/FUTURES
+   M /branches/lh3/maq/Makefile.am
+   M /branches/lh3/maq/Makefile.generic
+   M /branches/lh3/maq/NEWS
+   M /branches/lh3/maq/configure.ac
+   M /branches/lh3/maq/maq.pod
+   M /branches/lh3/maq/match.cc
+
+Release 0.5.1
+
+------------------------------------------------------------------------
+r211 | lh3lh3 | 2007-07-31 09:12:07 +0100 (Tue, 31 Jul 2007) | 6 lines
+Changed paths:
+   M /branches/lh3/maq/ChangeLog
+   M /branches/lh3/maq/Makefile.generic
+   M /branches/lh3/maq/configure.ac
+   M /branches/lh3/maq/main.c
+   M /branches/lh3/maq/mapcheck.cc
+   M /branches/lh3/maq/maq.pod
+   M /branches/lh3/maq/match.cc
+   M /branches/lh3/maq/rmpair.cc
+
+ * 0.5.0-14 (the following also shows changes in 0.5.0-13)
+ * change the way the final mapping quality is determined in "assemble"
+ * output clean up
+ * better POD
+ * prepare to release 0.5.1
+
+------------------------------------------------------------------------
+r210 | lh3lh3 | 2007-07-30 17:18:49 +0100 (Mon, 30 Jul 2007) | 3 lines
+Changed paths:
+   M /branches/lh3/maq/ChangeLog
+   M /branches/lh3/maq/configure.ac
+   M /branches/lh3/maq/get_pos.cc
+   M /branches/lh3/maq/maq.pod
+
+ * 0.5.0-13
+ * later... I am catching bus...
+
+------------------------------------------------------------------------
+r209 | lh3lh3 | 2007-07-30 10:31:57 +0100 (Mon, 30 Jul 2007) | 2 lines
+Changed paths:
+   M /branches/lh3/maq/maq.pod
+
+better documentations
+
+------------------------------------------------------------------------
+r207 | lh3lh3 | 2007-07-29 23:32:33 +0100 (Sun, 29 Jul 2007) | 2 lines
+Changed paths:
+   M /branches/lh3/maq/Makefile.generic
+   M /branches/lh3/maq/main.c
+   A /branches/lh3/maq/maq.pod
+
+add POD manual
+
+------------------------------------------------------------------------
+r206 | lh3lh3 | 2007-07-29 16:19:38 +0100 (Sun, 29 Jul 2007) | 3 lines
+Changed paths:
+   M /branches/lh3/maq/configure.ac
+   M /branches/lh3/maq/main.c
+   M /branches/lh3/maq/main.h
+   M /branches/lh3/maq/match.cc
+   M /branches/lh3/maq/scripts/maq.pl
+   M /branches/lh3/maq/simulate.c
+
+ * 0.5.0-12
+ * dump fastq statistics into a separate data file.
+
+------------------------------------------------------------------------
+r205 | lh3lh3 | 2007-07-27 13:39:10 +0100 (Fri, 27 Jul 2007) | 3 lines
+Changed paths:
+   M /branches/lh3/maq/configure.ac
+   M /branches/lh3/maq/match.cc
+   M /branches/lh3/maq/read.cc
+   M /branches/lh3/maq/read.h
+   M /branches/lh3/maq/scripts/maq.pl
+
+ * 0.5.0-11
+ * automatically trim all reads (not the default option)
+
+------------------------------------------------------------------------
+r204 | lh3lh3 | 2007-07-27 08:47:59 +0100 (Fri, 27 Jul 2007) | 3 lines
+Changed paths:
+   M /branches/lh3/maq/configure.ac
+   M /branches/lh3/maq/fasta2bfa.c
+
+ * 0.5.0-10
+ * fix bug in fakemut
+
+------------------------------------------------------------------------
+r202 | lh3lh3 | 2007-07-26 10:27:52 +0100 (Thu, 26 Jul 2007) | 3 lines
+Changed paths:
+   M /branches/lh3/maq/configure.ac
+   M /branches/lh3/maq/match.cc
+   M /branches/lh3/maq/simulate.c
+
+ * 0.5.0-9
+ * fix a bug in "map".
+
+------------------------------------------------------------------------
+r201 | lh3lh3 | 2007-07-25 12:54:43 +0100 (Wed, 25 Jul 2007) | 7 lines
+Changed paths:
+   M /branches/lh3/maq/configure.ac
+   M /branches/lh3/maq/main.c
+   M /branches/lh3/maq/main.h
+   M /branches/lh3/maq/match.cc
+   M /branches/lh3/maq/match_aux.cc
+   M /branches/lh3/maq/simulate.c
+   M /branches/lh3/maq/sort_mapping.cc
+
+ * 0.5.0-8
+ * match.cc: fix a bug which will cause tandem repetitive pairs lost
+ * change the default minimum insert size to 0
+ * sort_mapping.cc: fix a bug in calculating paired mapping qualities. However,
+   decide to make it more conservative at last.
+ * simulate.c: add codes to evaluate mappings based on simulated reads
+
+------------------------------------------------------------------------
+r199 | lh3lh3 | 2007-07-23 17:17:55 +0100 (Mon, 23 Jul 2007) | 4 lines
+Changed paths:
+   M /branches/lh3/maq/configure.ac
+   M /branches/lh3/maq/main.c
+   M /branches/lh3/maq/match.cc
+   M /branches/lh3/maq/match_aux.cc
+
+ * 0.5.0-7
+ * improve help
+ * change default paired end distance to [60,250]
+
+------------------------------------------------------------------------
+r198 | lh3lh3 | 2007-07-23 16:45:49 +0100 (Mon, 23 Jul 2007) | 6 lines
+Changed paths:
+   M /branches/lh3/maq/Makefile.am
+   M /branches/lh3/maq/Makefile.generic
+   M /branches/lh3/maq/assemble.cc
+   M /branches/lh3/maq/configure.ac
+   A /branches/lh3/maq/genran.c
+   A /branches/lh3/maq/genran.h
+   M /branches/lh3/maq/main.c
+   M /branches/lh3/maq/main.h
+   A /branches/lh3/maq/rmpair.cc
+   M /branches/lh3/maq/scripts/maq_eval.pl
+   M /branches/lh3/maq/simulate.c
+   A /branches/lh3/maq/submap.c
+
+ * 0.5.0-6
+ * It seems that I forgot to add files at the last check-in
+ * add rmpair.cc: remove pairs with the exact coordinates
+ * add submap.c: extract a submap. Note that the resultant file is slightly different in teh format.
+ * finish simulate.c: simulate paired reads
+
+------------------------------------------------------------------------
+r188 | lh3lh3 | 2007-07-19 12:29:51 +0100 (Thu, 19 Jul 2007) | 3 lines
+Changed paths:
+   M /branches/lh3/maq/assemble.cc
+   M /branches/lh3/maq/assemble.h
+   M /branches/lh3/maq/aux_utils.c
+   M /branches/lh3/maq/configure.ac
+   M /branches/lh3/maq/subsnp.cc
+
+ * 0.5.0-4
+ * distinguish het1 and het2
+
+------------------------------------------------------------------------
+r187 | lh3lh3 | 2007-07-19 00:39:08 +0100 (Thu, 19 Jul 2007) | 3 lines
+Changed paths:
+   M /branches/lh3/maq/assemble.cc
+   M /branches/lh3/maq/assemble.h
+   M /branches/lh3/maq/assopt.c
+   M /branches/lh3/maq/configure.ac
+   M /branches/lh3/maq/get_pos.cc
+   M /branches/lh3/maq/main.c
+   M /branches/lh3/maq/main.h
+   M /branches/lh3/maq/mapcheck.cc
+   M /branches/lh3/maq/pileup.cc
+   M /branches/lh3/maq/stdhash.hh
+
+ * 0.5.0-3
+ * add a few trivial things. little improvement, though
+
+------------------------------------------------------------------------
+r185 | lh3lh3 | 2007-07-18 11:20:51 +0100 (Wed, 18 Jul 2007) | 4 lines
+Changed paths:
+   M /branches/lh3/maq/Makefile.am
+   M /branches/lh3/maq/Makefile.generic
+   M /branches/lh3/maq/configure.ac
+   M /branches/lh3/maq/main.h
+   M /branches/lh3/maq/maqmap.c
+
+ * 0.5.0-2
+ * write D codes as C/C++ codes
+ * have not test it yet
+
+------------------------------------------------------------------------
+r183 | lh3lh3 | 2007-07-18 00:05:47 +0100 (Wed, 18 Jul 2007) | 3 lines
+Changed paths:
+   M /branches/lh3/maq/configure.ac
+   M /branches/lh3/maq/maqmap.c
+   M /branches/lh3/maq/match_aux.cc
+
+ * 0.5.0-1
+ * avoid using maqmap_t::n_mapped_reads
+
+------------------------------------------------------------------------
+r170 | lh3lh3 | 2007-07-14 17:45:40 +0100 (Sat, 14 Jul 2007) | 2 lines
+Changed paths:
+   M /branches/lh3/maq/NEWS
+
+change to r171
+
+------------------------------------------------------------------------
+r169 | lh3lh3 | 2007-07-14 17:44:42 +0100 (Sat, 14 Jul 2007) | 2 lines
+Changed paths:
+   M /branches/lh3/maq/ChangeLog
+   M /branches/lh3/maq/Makefile.am
+   M /branches/lh3/maq/NEWS
+   M /branches/lh3/maq/configure.ac
+   M /branches/lh3/maq/main.c
+
+MAQ Release 0.5.0
+
+------------------------------------------------------------------------
+r167 | lh3lh3 | 2007-07-13 15:02:44 +0100 (Fri, 13 Jul 2007) | 3 lines
+Changed paths:
+   M /branches/lh3/maq/Makefile.am
+   M /branches/lh3/maq/altchr.cc
+   M /branches/lh3/maq/configure.ac
+
+ * fix a bug in altchr.cc
+ * 0.4.3-13
+
+------------------------------------------------------------------------
+r166 | lh3lh3 | 2007-07-13 10:09:00 +0100 (Fri, 13 Jul 2007) | 3 lines
+Changed paths:
+   M /branches/lh3/maq/Makefile.am
+   M /branches/lh3/maq/Makefile.generic
+   A /branches/lh3/maq/altchr.cc
+   M /branches/lh3/maq/configure.ac
+   M /branches/lh3/maq/const.c
+   M /branches/lh3/maq/const.h
+   M /branches/lh3/maq/main.c
+   M /branches/lh3/maq/main.h
+
+ * 0.4.3-12
+ * add altchr.cc
+
+------------------------------------------------------------------------
+r165 | lh3lh3 | 2007-07-12 15:30:32 +0100 (Thu, 12 Jul 2007) | 2 lines
+Changed paths:
+   M /branches/lh3/maq/scripts/maq.pl
+
+allow to trim reads on the command line.
+
+------------------------------------------------------------------------
+r164 | lh3lh3 | 2007-07-12 14:47:20 +0100 (Thu, 12 Jul 2007) | 6 lines
+Changed paths:
+   M /branches/lh3/maq/configure.ac
+   M /branches/lh3/maq/maqmap.c
+   M /branches/lh3/maq/maqmap_conv.c
+   D /branches/lh3/maq/scripts/eval_snp.pl
+   M /branches/lh3/maq/scripts/maq.pl
+   A /branches/lh3/maq/scripts/maq_eval.pl (from /branches/lh3/maq/scripts/eval_snp.pl:160)
+   M /branches/lh3/maq/scripts/maq_plot.pl
+
+ * 0.4.3-11
+ * format check in maqmap.c and maqmap_conv.c
+ * rename eval_snp.pl as maq_eval.pl
+ * allow to change xtics in maq_plot.pl
+ * improve maq.pl
+
+------------------------------------------------------------------------
+r163 | lh3lh3 | 2007-07-11 23:23:15 +0100 (Wed, 11 Jul 2007) | 7 lines
+Changed paths:
+   M /branches/lh3/maq/configure.ac
+   M /branches/lh3/maq/main.c
+   M /branches/lh3/maq/main.h
+   M /branches/lh3/maq/maqmap.c
+   M /branches/lh3/maq/maqmap.h
+   M /branches/lh3/maq/maqmap_conv.c
+   M /branches/lh3/maq/match.cc
+   M /branches/lh3/maq/match_aux.cc
+   M /branches/lh3/maq/merge.cc
+   M /branches/lh3/maq/sort_mapping.cc
+
+ * 0.4.3-10
+ * move mapview to maqmap.c. it is a good example
+ * fix a bug in mapmerge, which is caused by the new maqmap interface
+ * run valgrind on a couple of commands: map, mapmerge, indelsoa, assemble,
+   pileup, mapcheck, mapview and mapass2maq
+	   
+
+------------------------------------------------------------------------
+r162 | lh3lh3 | 2007-07-11 22:27:31 +0100 (Wed, 11 Jul 2007) | 5 lines
+Changed paths:
+   M /branches/lh3/maq/Makefile.am
+   M /branches/lh3/maq/Makefile.generic
+   M /branches/lh3/maq/assemble.cc
+   M /branches/lh3/maq/assemble.h
+   M /branches/lh3/maq/configure.ac
+   M /branches/lh3/maq/get_pos.cc
+   M /branches/lh3/maq/indel_soa.cc
+   M /branches/lh3/maq/main.c
+   M /branches/lh3/maq/main.h
+   M /branches/lh3/maq/mapcheck.cc
+   A /branches/lh3/maq/maqmap.c
+   A /branches/lh3/maq/maqmap.h
+   A /branches/lh3/maq/maqmap_conv.c
+   M /branches/lh3/maq/match.cc
+   M /branches/lh3/maq/match.hh
+   M /branches/lh3/maq/match_aux.cc
+   M /branches/lh3/maq/merge.cc
+   M /branches/lh3/maq/pair_stat.cc
+   M /branches/lh3/maq/pileup.cc
+   M /branches/lh3/maq/sort_mapping.cc
+
+ * 0.4.3-9
+ * new interface to .map format. read names will be stored.
+ * match seemingly generates correct result
+ * other functions need thorough testing
+
+------------------------------------------------------------------------
+r161 | lh3lh3 | 2007-07-11 13:43:49 +0100 (Wed, 11 Jul 2007) | 3 lines
+Changed paths:
+   M /branches/lh3/maq/INSTALL
+   M /branches/lh3/maq/Makefile.am
+   M /branches/lh3/maq/Makefile.generic
+   M /branches/lh3/maq/README
+   M /branches/lh3/maq/assemble.cc
+   M /branches/lh3/maq/aux_utils.c
+   M /branches/lh3/maq/configure.ac
+   M /branches/lh3/maq/fasta2bfa.c
+   M /branches/lh3/maq/fastq2bfq.c
+   M /branches/lh3/maq/indel_soa.cc
+   M /branches/lh3/maq/main.c
+   M /branches/lh3/maq/mapcheck.cc
+   M /branches/lh3/maq/match.cc
+   M /branches/lh3/maq/match_aux.cc
+   M /branches/lh3/maq/merge.cc
+   M /branches/lh3/maq/pair_stat.cc
+   M /branches/lh3/maq/pileup.cc
+   M /branches/lh3/maq/rbcc.cc
+   M /branches/lh3/maq/read.cc
+   D /branches/lh3/maq/scripts/mapass2.pl
+   D /branches/lh3/maq/scripts/mapass2_plot.pl
+   A /branches/lh3/maq/scripts/maq.pl (from /branches/lh3/maq/scripts/mapass2.pl:160)
+   A /branches/lh3/maq/scripts/maq_plot.pl (from /branches/lh3/maq/scripts/mapass2_plot.pl:160)
+   M /branches/lh3/maq/subsnp.cc
+
+ * rename mapass2 as maq
+ * 0.4.3-8
+
+------------------------------------------------------------------------
+r159 | lh3lh3 | 2007-07-11 13:26:43 +0100 (Wed, 11 Jul 2007) | 9 lines
+Changed paths:
+   A /branches/lh3/maq (from /branches/lh3/mapass2:158)
+
+Mapass2 is renamed as "maq", which stands for Mapping and
+Assembly with Qualities. It is pronounced in the same way
+as "Mac", the Apple's operating system.
+
+The mapass2 will be stopped and all the new development will
+happen in /branches/lh3/maq. The current version of mapass2 at
+this branching point is: 0.4.3-7. Today is 11 July 2007.
+
+
+------------------------------------------------------------------------
+r158 | lh3lh3 | 2007-07-10 21:39:12 +0100 (Tue, 10 Jul 2007) | 4 lines
+Changed paths:
+   M /branches/lh3/mapass2/configure.ac
+   M /branches/lh3/mapass2/indel_soa.cc
+   M /branches/lh3/mapass2/scripts/mapass2.pl
+
+ * 0.4.3-7
+ * improve indel detection (only works for homozygous indels!)
+ * mapass2.pl: filter out SNPs falling in indels regions
+
+------------------------------------------------------------------------
+r157 | lh3lh3 | 2007-07-10 19:34:22 +0100 (Tue, 10 Jul 2007) | 3 lines
+Changed paths:
+   M /branches/lh3/mapass2/Makefile.am
+   M /branches/lh3/mapass2/Makefile.generic
+   M /branches/lh3/mapass2/configure.ac
+   A /branches/lh3/mapass2/indel_soa.cc
+   M /branches/lh3/mapass2/main.c
+   M /branches/lh3/mapass2/main.h
+   M /branches/lh3/mapass2/pair_stat.cc
+
+ * 0.4.3-5
+ * state-of-art indel detector (will be improved later)
+
+------------------------------------------------------------------------
+r156 | lh3lh3 | 2007-07-09 23:53:07 +0100 (Mon, 09 Jul 2007) | 4 lines
+Changed paths:
+   M /branches/lh3/mapass2/configure.ac
+   M /branches/lh3/mapass2/fasta2bfa.c
+   M /branches/lh3/mapass2/scripts/mapass2.pl
+
+ * 0.4.3-5
+ * mapass2.pl: bugfix in SNPfilter
+ * fake quality in "fakemut"
+
+------------------------------------------------------------------------
+r155 | lh3lh3 | 2007-07-09 18:08:00 +0100 (Mon, 09 Jul 2007) | 4 lines
+Changed paths:
+   M /branches/lh3/mapass2/configure.ac
+   M /branches/lh3/mapass2/fasta2bfa.c
+   M /branches/lh3/mapass2/main.h
+   M /branches/lh3/mapass2/pair_stat.cc
+
+ * 0.4.3-4
+ * pair_stat.cc: also output depth
+ * fasta2bfa.c: fake indels in the reference
+
+------------------------------------------------------------------------
+r154 | lh3lh3 | 2007-07-09 11:30:52 +0100 (Mon, 09 Jul 2007) | 4 lines
+Changed paths:
+   M /branches/lh3/mapass2/configure.ac
+   M /branches/lh3/mapass2/pair_stat.cc
+   M /branches/lh3/mapass2/scripts/mapass2.pl
+
+ * 0.4.3-3
+ * pair_stat.cc: skip "N" regions.
+ * mapass2.pl: add usage for "SNPfilter"
+
+------------------------------------------------------------------------
+r153 | lh3lh3 | 2007-07-08 23:50:10 +0100 (Sun, 08 Jul 2007) | 2 lines
+Changed paths:
+   M /branches/lh3/mapass2/scripts/mapass2.pl
+
+filter SNPs
+
+------------------------------------------------------------------------
+r152 | lh3lh3 | 2007-07-08 21:58:21 +0100 (Sun, 08 Jul 2007) | 7 lines
+Changed paths:
+   M /branches/lh3/mapass2/aux_utils.c
+   M /branches/lh3/mapass2/configure.ac
+   M /branches/lh3/mapass2/main.c
+   M /branches/lh3/mapass2/main.h
+   M /branches/lh3/mapass2/pair_stat.cc
+   A /branches/lh3/mapass2/scripts/eval_snp.pl
+   M /branches/lh3/mapass2/scripts/mapass2_plot.pl
+
+ * 0.4.3-2
+ * add eval_snp.pl
+ * mapass2_plot.pl: add depth plot
+ * pair_stat.cc: pick up regions that are not covered by pairs
+ * aux_utils.c: output alternative depth
+ * not finished, though
+
+------------------------------------------------------------------------
+r151 | lh3lh3 | 2007-07-06 15:56:18 +0100 (Fri, 06 Jul 2007) | 6 lines
+Changed paths:
+   M /branches/lh3/mapass2/Makefile.am
+   M /branches/lh3/mapass2/Makefile.generic
+   M /branches/lh3/mapass2/configure.ac
+   M /branches/lh3/mapass2/main.c
+   M /branches/lh3/mapass2/main.h
+   A /branches/lh3/mapass2/pair_stat.cc
+   M /branches/lh3/mapass2/scripts/mapass2.pl
+   A /branches/lh3/mapass2/scripts/mapass2_plot.pl
+   A /branches/lh3/mapass2/simulate.c
+
+ * 0.4.3-1
+ * add pair_stat.cc: statistics on paired end data
+ * add mapass2_plot.pl: plot utilities
+ * mapass2.pl: use find -follow
+ * add simulate.c: unfinished
+
+------------------------------------------------------------------------
+r147 | lh3lh3 | 2007-07-04 16:04:31 +0100 (Wed, 04 Jul 2007) | 2 lines
+Changed paths:
+   M /branches/lh3/mapass2/ChangeLog
+   M /branches/lh3/mapass2/NEWS
+   M /branches/lh3/mapass2/configure.ac
+   M /branches/lh3/mapass2/main.c
+
+Release 0.4.3
+
+------------------------------------------------------------------------
+r146 | lh3lh3 | 2007-07-04 14:27:38 +0100 (Wed, 04 Jul 2007) | 4 lines
+Changed paths:
+   M /branches/lh3/mapass2/scripts/farm-run.pl
+   M /branches/lh3/mapass2/scripts/mapass2.pl
+
+ * mapass2.pl fastq2bfq: add more descriptions
+ * mapass2.pl fastq2bfq: change default number of reads to 1000000
+ * farm-run.pl: for easy-to-use
+
+------------------------------------------------------------------------
+r145 | lh3lh3 | 2007-07-04 13:51:36 +0100 (Wed, 04 Jul 2007) | 4 lines
+Changed paths:
+   M /branches/lh3/mapass2/configure.ac
+   M /branches/lh3/mapass2/sort_mapping.cc
+
+ * outputing all information with "match -N"
+ * 0.4.2-4
+ * prepare to release 0.4.3
+
+------------------------------------------------------------------------
+r144 | lh3lh3 | 2007-07-03 21:52:34 +0100 (Tue, 03 Jul 2007) | 3 lines
+Changed paths:
+   M /branches/lh3/mapass2/configure.ac
+   M /branches/lh3/mapass2/mapcheck.cc
+   M /branches/lh3/mapass2/sort_mapping.cc
+
+ * fix a bug in paired end alignment
+ * 0.4.2-3
+
+------------------------------------------------------------------------
+r143 | lh3lh3 | 2007-06-29 20:24:11 +0100 (Fri, 29 Jun 2007) | 4 lines
+Changed paths:
+   M /branches/lh3/mapass2/assopt.c
+   M /branches/lh3/mapass2/configure.ac
+   M /branches/lh3/mapass2/mapcheck.cc
+   M /branches/lh3/mapass2/match_aux.cc
+
+ * mapstat: output mapping quality histograph
+ * mapcheck: add several command line options and fix two bugs
+ * 0.4.2-2
+
+------------------------------------------------------------------------
+r142 | lh3lh3 | 2007-06-27 23:43:44 +0100 (Wed, 27 Jun 2007) | 4 lines
+Changed paths:
+   M /branches/lh3/mapass2/assemble.cc
+   M /branches/lh3/mapass2/assemble.h
+   M /branches/lh3/mapass2/assopt.c
+   M /branches/lh3/mapass2/configure.ac
+   M /branches/lh3/mapass2/get_pos.cc
+   M /branches/lh3/mapass2/mapcheck.cc
+   M /branches/lh3/mapass2/pileup.cc
+
+ * allow to use single-end mapping qualities
+ * check error dependency in mapcheck (testing)
+ * 0.4.2-1
+
+------------------------------------------------------------------------
+r133 | lh3lh3 | 2007-06-22 14:53:46 +0100 (Fri, 22 Jun 2007) | 2 lines
+Changed paths:
+   M /branches/lh3/mapass2/scripts/mapass2.pl
+
+ * bugfix: fixed for "mapmerge" when multiple read files are given
+
+------------------------------------------------------------------------
+r129 | lh3lh3 | 2007-06-21 16:50:13 +0100 (Thu, 21 Jun 2007) | 2 lines
+Changed paths:
+   M /branches/lh3/mapass2/ChangeLog
+   M /branches/lh3/mapass2/NEWS
+   M /branches/lh3/mapass2/configure.ac
+
+sorry, a trivial error in version. True Release 0.4.2
+
+------------------------------------------------------------------------
+r128 | lh3lh3 | 2007-06-21 16:45:50 +0100 (Thu, 21 Jun 2007) | 2 lines
+Changed paths:
+   M /branches/lh3/mapass2/NEWS
+
+Release 0.4.2
+
+------------------------------------------------------------------------
+r127 | lh3lh3 | 2007-06-21 16:35:35 +0100 (Thu, 21 Jun 2007) | 5 lines
+Changed paths:
+   M /branches/lh3/mapass2/configure.ac
+   M /branches/lh3/mapass2/fasta2bfa.c
+   M /branches/lh3/mapass2/main.c
+   M /branches/lh3/mapass2/match.cc
+   M /branches/lh3/mapass2/match.hh
+   M /branches/lh3/mapass2/match_aux.cc
+   M /branches/lh3/mapass2/scripts/mapass2.pl
+   M /branches/lh3/mapass2/sort_mapping.cc
+
+ * mapass2.pl: split concatenated paired end reads into two files
+ * match command: output read names in stderr
+ * 0.4.1-1
+ * prepare to release 0.4.2
+
+------------------------------------------------------------------------
+r123 | lh3lh3 | 2007-06-17 16:41:14 +0100 (Sun, 17 Jun 2007) | 2 lines
+Changed paths:
+   M /branches/lh3/mapass2/ChangeLog
+   M /branches/lh3/mapass2/NEWS
+   M /branches/lh3/mapass2/configure.ac
+
+Release 0.4.1
+
+------------------------------------------------------------------------
+r122 | lh3lh3 | 2007-06-16 17:22:20 +0100 (Sat, 16 Jun 2007) | 3 lines
+Changed paths:
+   M /branches/lh3/mapass2/configure.ac
+   M /branches/lh3/mapass2/fasta2bfa.c
+   M /branches/lh3/mapass2/main.c
+   M /branches/lh3/mapass2/main.h
+
+ * 0.4.0-6
+ * randomly mutate a sequence, used for evaluation
+
+------------------------------------------------------------------------
+r121 | lh3lh3 | 2007-06-11 16:35:55 +0100 (Mon, 11 Jun 2007) | 4 lines
+Changed paths:
+   M /branches/lh3/mapass2/configure.ac
+   M /branches/lh3/mapass2/match.hh
+   M /branches/lh3/mapass2/scripts/mapass2.pl
+   M /branches/lh3/mapass2/sort_mapping.cc
+
+ * recognize "*.fastq.gz" in mapass2.pl
+ * record single end quality, but for the moment it has not use.
+ * 0.4.0-5
+
+------------------------------------------------------------------------
+r120 | lh3lh3 | 2007-06-04 12:52:58 +0100 (Mon, 04 Jun 2007) | 2 lines
+Changed paths:
+   M /branches/lh3/mapass2/configure.ac
+   M /branches/lh3/mapass2/fastq2bfq.c
+
+fix a bug in sol2sanger. Now it should work properly.
+
+------------------------------------------------------------------------
+r119 | lh3lh3 | 2007-06-02 17:39:58 +0100 (Sat, 02 Jun 2007) | 3 lines
+Changed paths:
+   M /branches/lh3/mapass2/configure.ac
+   M /branches/lh3/mapass2/fastq2bfq.c
+   M /branches/lh3/mapass2/main.c
+   M /branches/lh3/mapass2/main.h
+   M /branches/lh3/mapass2/read.cc
+
+ * add two commands: sol2sanger and bfq2fastq
+ * 0.4.0-3
+
+------------------------------------------------------------------------
+r118 | lh3lh3 | 2007-06-01 17:07:58 +0100 (Fri, 01 Jun 2007) | 5 lines
+Changed paths:
+   M /branches/lh3/mapass2/aux_utils.c
+   M /branches/lh3/mapass2/configure.ac
+   M /branches/lh3/mapass2/mapcheck.cc
+
+ * fix a bug in cns2win: when no chr is given, it should report all chrs.
+ * allow to change minimum quality at the command-line.
+ * in mapcheck, change the default number of mismatches to 4
+ * 0.4.0-2
+
+------------------------------------------------------------------------
+r117 | lh3lh3 | 2007-06-01 13:52:46 +0100 (Fri, 01 Jun 2007) | 3 lines
+Changed paths:
+   M /branches/lh3/mapass2/configure.ac
+   M /branches/lh3/mapass2/mapcheck.cc
+
+ * fix a bug: bases on the reverse strand are not complemented
+ * 0.4.0-1
+
+------------------------------------------------------------------------
+r113 | lh3lh3 | 2007-05-15 21:12:51 +0100 (Tue, 15 May 2007) | 2 lines
+Changed paths:
+   M /branches/lh3/mapass2/ChangeLog
+   M /branches/lh3/mapass2/NEWS
+   M /branches/lh3/mapass2/README
+   M /branches/lh3/mapass2/configure.ac
+   M /branches/lh3/mapass2/main.c
+
+Release 0.4.0
+
+------------------------------------------------------------------------
+r112 | lh3lh3 | 2007-05-15 20:18:47 +0100 (Tue, 15 May 2007) | 6 lines
+Changed paths:
+   M /branches/lh3/mapass2/ChangeLog
+   M /branches/lh3/mapass2/assemble.cc
+   M /branches/lh3/mapass2/assemble.h
+   M /branches/lh3/mapass2/assopt.c
+   M /branches/lh3/mapass2/configure.ac
+   M /branches/lh3/mapass2/get_pos.cc
+   M /branches/lh3/mapass2/mapcheck.cc
+   M /branches/lh3/mapass2/match.cc
+   M /branches/lh3/mapass2/pileup.cc
+   M /branches/lh3/mapass2/read.cc
+   M /branches/lh3/mapass2/scripts/mapass2.pl
+
+ * Use hash to search sequence names
+ * Allow to set a minimum mapping quality when assembling
+ * Print out an example of farm-run.pl config
+ * 0.3.1-7
+ * Prepare to release 0.4.0
+
+------------------------------------------------------------------------
+r111 | lh3lh3 | 2007-05-14 22:54:08 +0100 (Mon, 14 May 2007) | 8 lines
+Changed paths:
+   M /branches/lh3/mapass2/assemble.cc
+   M /branches/lh3/mapass2/configure.ac
+
+ * Hide the alternative model on the command-line. It still works,
+   though, and has an accuracy (when -a -t 0.5) quite similar to the
+   default one.
+
+ * 0.3.1-6
+
+ * Prepare to release 0.4.0
+
+------------------------------------------------------------------------
+r110 | lh3lh3 | 2007-05-14 13:48:28 +0100 (Mon, 14 May 2007) | 10 lines
+Changed paths:
+   M /branches/lh3/mapass2/assemble.cc
+   M /branches/lh3/mapass2/assopt.c
+   M /branches/lh3/mapass2/aux_utils.c
+   M /branches/lh3/mapass2/configure.ac
+
+ * Change the default model to $\theta^k$.
+
+ * Forward and reverse strand should be considered together, not
+   separately. They are indenpendent in some way, but not totally.
+
+ * The revised model can achieve a similar accuracy in comparison to
+   0.3.0.
+
+ * 0.3.1-5
+
+------------------------------------------------------------------------
+r109 | lh3lh3 | 2007-05-13 22:51:15 +0100 (Sun, 13 May 2007) | 9 lines
+Changed paths:
+   M /branches/lh3/mapass2/Makefile.am
+   M /branches/lh3/mapass2/Makefile.generic
+   M /branches/lh3/mapass2/assemble.cc
+   M /branches/lh3/mapass2/assemble.h
+   A /branches/lh3/mapass2/assopt.c
+   M /branches/lh3/mapass2/configure.ac
+   A /branches/lh3/mapass2/get_pos.cc
+   A /branches/lh3/mapass2/mapcheck.cc
+   M /branches/lh3/mapass2/match.hh
+   A /branches/lh3/mapass2/pileup.cc
+
+ * The consensus calling model is changed again. Like always, the
+   performance is worse, but I will still stick to that model.
+   Now I feel quite happy with the theory of current model, which
+   is the first one that satisfies me.
+
+ * Split assemble.cc into several files.
+
+ * 0.3.1-4
+
+------------------------------------------------------------------------
+r108 | lh3lh3 | 2007-05-12 16:04:12 +0100 (Sat, 12 May 2007) | 2 lines
+Changed paths:
+   M /branches/lh3/mapass2/INSTALL
+   A /branches/lh3/mapass2/Makefile.generic
+   D /branches/lh3/mapass2/clean.sh
+   A /branches/lh3/mapass2/cleanup.sh (from /branches/lh3/mapass2/clean.sh:107)
+   M /branches/lh3/mapass2/main.c
+
+Make without "configuration".
+
+------------------------------------------------------------------------
+r107 | lh3lh3 | 2007-05-11 17:21:19 +0100 (Fri, 11 May 2007) | 2 lines
+Changed paths:
+   A /branches/lh3/mapass2/clean.sh
+
+add a script to clean up all unnecessary files
+
+------------------------------------------------------------------------
+r106 | lh3lh3 | 2007-05-11 16:48:52 +0100 (Fri, 11 May 2007) | 4 lines
+Changed paths:
+   M /branches/lh3/mapass2/INSTALL
+   M /branches/lh3/mapass2/Makefile.am
+   M /branches/lh3/mapass2/configure.ac
+
+ * 0.3.1-3
+ * `make install' now works.
+ * INSTALL is updated.
+
+------------------------------------------------------------------------
+r105 | lh3lh3 | 2007-05-11 16:26:44 +0100 (Fri, 11 May 2007) | 3 lines
+Changed paths:
+   M /branches/lh3/mapass2/Makefile.am
+   M /branches/lh3/mapass2/match_aux.cc
+
+now, mapass2 is known to be compiled under:
+i686-linux/x86_64-linux/i386-darwin/i386-Win32/alpha-True64
+
+------------------------------------------------------------------------
+r104 | lh3lh3 | 2007-05-11 16:15:45 +0100 (Fri, 11 May 2007) | 2 lines
+Changed paths:
+   M /branches/lh3/mapass2/fastq2bfq.c
+
+for TRUE64
+
+------------------------------------------------------------------------
+r103 | lh3lh3 | 2007-05-11 15:52:25 +0100 (Fri, 11 May 2007) | 2 lines
+Changed paths:
+   A /branches/lh3/mapass2/README
+
+add README file
+
+------------------------------------------------------------------------
+r102 | lh3lh3 | 2007-05-11 15:48:23 +0100 (Fri, 11 May 2007) | 2 lines
+Changed paths:
+   M /branches/lh3/mapass2/ChangeLog
+   D /branches/lh3/mapass2/Makefile
+   A /branches/lh3/mapass2/Makefile.am
+   D /branches/lh3/mapass2/Makefile.mac
+   A /branches/lh3/mapass2/autogen.sh
+   A /branches/lh3/mapass2/configure.ac
+   M /branches/lh3/mapass2/main.c
+   M /branches/lh3/mapass2/match.cc
+
+use GNU building systems
+
+------------------------------------------------------------------------
+r100 | lh3lh3 | 2007-05-10 11:48:06 +0100 (Thu, 10 May 2007) | 3 lines
+Changed paths:
+   M /branches/lh3/mapass2/match.cc
+   M /branches/lh3/mapass2/match.hh
+   M /branches/lh3/mapass2/match_aux.cc
+   M /branches/lh3/mapass2/sort_mapping.cc
+
+ * 0.3.1-2
+ * alignment can be done in color-space
+
+------------------------------------------------------------------------
+r99 | lh3lh3 | 2007-05-10 10:18:16 +0100 (Thu, 10 May 2007) | 2 lines
+Changed paths:
+   M /branches/lh3/mapass2/Makefile
+   M /branches/lh3/mapass2/aux_utils.c
+
+now SNPs in color-space can be correctly called.
+
+------------------------------------------------------------------------
+r98 | lh3lh3 | 2007-05-10 00:22:27 +0100 (Thu, 10 May 2007) | 3 lines
+Changed paths:
+   M /branches/lh3/mapass2/Makefile
+   M /branches/lh3/mapass2/aux_utils.c
+   M /branches/lh3/mapass2/fasta2bfa.c
+   M /branches/lh3/mapass2/main.c
+   M /branches/lh3/mapass2/main.h
+
+ * convert reference to color-space
+ * testing command for SNP calling in SOLiD
+
+------------------------------------------------------------------------
+r97 | lh3lh3 | 2007-05-09 17:09:50 +0100 (Wed, 09 May 2007) | 2 lines
+Changed paths:
+   A /branches/lh3/mapass2/Makefile.mac
+
+Makefile for Mac OS X: compiling universal binaries.
+
+------------------------------------------------------------------------
+r93 | lh3lh3 | 2007-05-09 13:05:04 +0100 (Wed, 09 May 2007) | 2 lines
+Changed paths:
+   M /branches/lh3/mapass2/ChangeLog
+   M /branches/lh3/mapass2/Makefile
+   M /branches/lh3/mapass2/NEWS
+
+necessary files for release 0.3.1
+
+------------------------------------------------------------------------
+r92 | lh3lh3 | 2007-05-09 10:22:23 +0100 (Wed, 09 May 2007) | 5 lines
+Changed paths:
+   M /branches/lh3/mapass2/Makefile
+   M /branches/lh3/mapass2/NEWS
+   M /branches/lh3/mapass2/assemble.cc
+   M /branches/lh3/mapass2/subsnp.cc
+
+ * 0.3.0-5
+ * pileup: verbose mode
+ * pileup: sub positions
+ * reformat NEWS
+
+------------------------------------------------------------------------
+r91 | lh3lh3 | 2007-05-08 22:58:57 +0100 (Tue, 08 May 2007) | 7 lines
+Changed paths:
+   M /branches/lh3/mapass2/Makefile
+   M /branches/lh3/mapass2/algo.hh
+   M /branches/lh3/mapass2/assemble.cc
+
+ - 0.3.0-4
+ - fix a memory violation in k-small
+ - Modify the consensus calling model. The modified model is more
+   correct in theory, but unfortunately with the same command-line
+   options this new model yields worse results. However, I will
+   use this model. This is my way.
+
+------------------------------------------------------------------------
+r90 | lh3lh3 | 2007-05-08 19:12:47 +0100 (Tue, 08 May 2007) | 3 lines
+Changed paths:
+   M /branches/lh3/mapass2/ChangeLog
+   M /branches/lh3/mapass2/Makefile
+   M /branches/lh3/mapass2/aux_utils.c
+
+ - 0.3.0-3
+ - more options for cns2win
+
+------------------------------------------------------------------------
+r89 | lh3lh3 | 2007-05-04 10:55:48 +0100 (Fri, 04 May 2007) | 3 lines
+Changed paths:
+   M /branches/lh3/mapass2/Makefile
+   M /branches/lh3/mapass2/assemble.cc
+
+ - 0.3.0-2
+ - fix a bug when overflow happens given large genome
+
+------------------------------------------------------------------------
+r88 | lh3lh3 | 2007-05-04 08:51:21 +0100 (Fri, 04 May 2007) | 2 lines
+Changed paths:
+   M /branches/lh3/mapass2/Makefile
+   M /branches/lh3/mapass2/main.c
+   M /branches/lh3/mapass2/main.h
+   M /branches/lh3/mapass2/subsnp.cc
+
+add subpos: extract a demanded subset from .cns
+
+------------------------------------------------------------------------
+r85 | lh3lh3 | 2007-05-03 09:48:47 +0100 (Thu, 03 May 2007) | 2 lines
+Changed paths:
+   M /branches/lh3/mapass2/ChangeLog
+   M /branches/lh3/mapass2/FUTURES
+   M /branches/lh3/mapass2/Makefile
+   M /branches/lh3/mapass2/NEWS
+
+Necessary files for release
+
+------------------------------------------------------------------------
+r84 | lh3lh3 | 2007-05-02 15:31:53 +0100 (Wed, 02 May 2007) | 7 lines
+Changed paths:
+   M /branches/lh3/mapass2/Makefile
+   M /branches/lh3/mapass2/assemble.cc
+   M /branches/lh3/mapass2/aux_utils.c
+   M /branches/lh3/mapass2/main.c
+   M /branches/lh3/mapass2/main.h
+   A /branches/lh3/mapass2/subsnp.cc
+
+
+ - 0.2.1-8
+ - assemble.cc: fix a bug in calculating avg01match
+ - assemble.cc: change default parameters: zita=0.7, max_mm=4
+ - subsnp.cc: extract a subset of snps
+ - cns2win: information in a window
+
+------------------------------------------------------------------------
+r83 | lh3lh3 | 2007-05-02 13:11:57 +0100 (Wed, 02 May 2007) | 5 lines
+Changed paths:
+   M /branches/lh3/mapass2/Makefile
+   M /branches/lh3/mapass2/algo.hh
+   M /branches/lh3/mapass2/assemble.cc
+   M /branches/lh3/mapass2/assemble.h
+   M /branches/lh3/mapass2/aux_utils.c
+   M /branches/lh3/mapass2/scripts/mapass2.pl
+
+ - 0.2.1-7
+ - mapass2.pl: split fastq files and run fastq2bfq in batch
+ - save the median and maximum of mapping qualities at a position
+ - other codes are modified accordingly
+
+------------------------------------------------------------------------
+r82 | lh3lh3 | 2007-04-30 23:37:34 +0100 (Mon, 30 Apr 2007) | 2 lines
+Changed paths:
+   M /branches/lh3/mapass2/Makefile
+   M /branches/lh3/mapass2/assemble.cc
+
+trivial modifications
+
+------------------------------------------------------------------------
+r81 | lh3lh3 | 2007-04-30 21:54:34 +0100 (Mon, 30 Apr 2007) | 5 lines
+Changed paths:
+   M /branches/lh3/mapass2/Makefile
+   M /branches/lh3/mapass2/main.c
+   M /branches/lh3/mapass2/main.h
+   A /branches/lh3/mapass2/rbcc.cc
+   M /branches/lh3/mapass2/scripts/mapass2.pl
+   A /branches/lh3/mapass2/stdhash.hh
+
+
+ - extract main information from dbSNP's chr_rpt.txt
+ - add reference based consensus calling method
+ - add my hash template class
+
+------------------------------------------------------------------------
+r80 | lh3lh3 | 2007-04-30 17:07:05 +0100 (Mon, 30 Apr 2007) | 4 lines
+Changed paths:
+   M /branches/lh3/mapass2/assemble.cc
+   M /branches/lh3/mapass2/scripts/mapass2.pl
+
+
+ - output more information in mapcheck
+ - run 'mapcheck' in mapass2.pl
+
+------------------------------------------------------------------------
+r79 | lh3lh3 | 2007-04-30 15:53:57 +0100 (Mon, 30 Apr 2007) | 7 lines
+Changed paths:
+   M /branches/lh3/mapass2/Makefile
+   M /branches/lh3/mapass2/assemble.cc
+
+Start to use a modified model to call genotypes. The new model
+is quite similar to the old one. It does not yield better results
+than the old. I change to use this new one just because it is
+theoretically meaningful. The old model was designed at the era
+of mapass-1 when only the best three bases can be held in the
+memory.
+
+------------------------------------------------------------------------
+r70 | lh3lh3 | 2007-04-25 16:23:31 +0100 (Wed, 25 Apr 2007) | 2 lines
+Changed paths:
+   M /branches/lh3/mapass2/Makefile
+   M /branches/lh3/mapass2/assemble.cc
+   M /branches/lh3/mapass2/aux_utils.c
+
+do not output b2_ratio and b3_ratio
+
+------------------------------------------------------------------------
+r69 | lh3lh3 | 2007-04-24 21:26:23 +0100 (Tue, 24 Apr 2007) | 2 lines
+Changed paths:
+   M /branches/lh3/mapass2/Makefile
+   M /branches/lh3/mapass2/main.c
+   M /branches/lh3/mapass2/sort_mapping.cc
+
+revert some of old codes to improve the calculation of paired mapping qualities
+
+------------------------------------------------------------------------
+r66 | lh3lh3 | 2007-04-23 23:56:16 +0100 (Mon, 23 Apr 2007) | 2 lines
+Changed paths:
+   M /branches/lh3/mapass2/Makefile
+   M /branches/lh3/mapass2/NEWS
+
+Release 0.2.1
+
+------------------------------------------------------------------------
+r65 | lh3lh3 | 2007-04-23 23:31:26 +0100 (Mon, 23 Apr 2007) | 2 lines
+Changed paths:
+   M /branches/lh3/mapass2/Makefile
+   M /branches/lh3/mapass2/assemble.cc
+   M /branches/lh3/mapass2/main.c
+   M /branches/lh3/mapass2/main.h
+
+add mapcheck command.
+
+------------------------------------------------------------------------
+r64 | lh3lh3 | 2007-04-23 20:00:43 +0100 (Mon, 23 Apr 2007) | 2 lines
+Changed paths:
+   M /branches/lh3/mapass2/Makefile
+   M /branches/lh3/mapass2/assemble.cc
+
+fix a bug in `assemble' when multiple sequences are provided.
+
+------------------------------------------------------------------------
+r59 | lh3lh3 | 2007-04-22 20:22:04 +0100 (Sun, 22 Apr 2007) | 2 lines
+Changed paths:
+   M /branches/lh3/mapass2/ChangeLog
+   M /branches/lh3/mapass2/FUTURES
+   M /branches/lh3/mapass2/INSTALL
+   M /branches/lh3/mapass2/Makefile
+   M /branches/lh3/mapass2/NEWS
+
+Release mapass2-0.2.0
+
+------------------------------------------------------------------------
+r57 | lh3lh3 | 2007-04-22 00:28:15 +0100 (Sun, 22 Apr 2007) | 2 lines
+Changed paths:
+   A /branches/lh3/mapass2/AUTHORS
+   A /branches/lh3/mapass2/COPYING
+   A /branches/lh3/mapass2/ChangeLog
+   A /branches/lh3/mapass2/FUTURES
+   A /branches/lh3/mapass2/INSTALL
+   A /branches/lh3/mapass2/NEWS
+   A /branches/lh3/mapass2/PROBLEMS
+
+necessary files for release
+
+------------------------------------------------------------------------
+r55 | lh3lh3 | 2007-04-21 21:16:28 +0100 (Sat, 21 Apr 2007) | 3 lines
+Changed paths:
+   M /branches/lh3/mapass2/Makefile
+   M /branches/lh3/mapass2/match.cc
+   M /branches/lh3/mapass2/match.hh
+   M /branches/lh3/mapass2/match_aux.cc
+   M /branches/lh3/mapass2/merge.cc
+   M /branches/lh3/mapass2/sort_mapping.cc
+
+ - a few code clean-up, no principal change
+ - 0.1.2-11
+
+------------------------------------------------------------------------
+r54 | lh3lh3 | 2007-04-21 00:59:11 +0100 (Sat, 21 Apr 2007) | 5 lines
+Changed paths:
+   M /branches/lh3/mapass2/Makefile
+   M /branches/lh3/mapass2/assemble.cc
+   M /branches/lh3/mapass2/match.hh
+   M /branches/lh3/mapass2/match_aux.cc
+   M /branches/lh3/mapass2/read.cc
+   M /branches/lh3/mapass2/sort_mapping.cc
+
+ - add back missing read pairs
+ - better model to calculate paired quality
+ - find abnormal reads
+ - 0.1.2-10
+
+------------------------------------------------------------------------
+r53 | lh3lh3 | 2007-04-20 10:45:32 +0100 (Fri, 20 Apr 2007) | 10 lines
+Changed paths:
+   M /branches/lh3/mapass2/Makefile
+   M /branches/lh3/mapass2/assemble.cc
+   M /branches/lh3/mapass2/sort_mapping.cc
+
+Finally, I decide to use the new model to calculate mapping qualities. This new
+model produce 0.6% more FN+FP at the quality around 20, but it is more
+theoretically correct and outperforms the old one at high-quality end. However,
+this new model cannot will overestimate qualities when the reads has 3 or more
+mismatches. To compensate this, my program now discards reads with 3 or more
+mismatches. Surprisingly more or less, this decreases the FP but not increase
+FN. We should align reads with "match -n 3" even if we take this strategy.
+Allowing more mismatches at the alignment stage helps to calculate better
+mapping qualities.
+
+------------------------------------------------------------------------
+r52 | lh3lh3 | 2007-04-19 16:34:58 +0100 (Thu, 19 Apr 2007) | 6 lines
+Changed paths:
+   M /branches/lh3/mapass2/Makefile
+   M /branches/lh3/mapass2/assemble.cc
+   M /branches/lh3/mapass2/assemble.h
+   M /branches/lh3/mapass2/aux_utils.c
+   M /branches/lh3/mapass2/main.c
+   M /branches/lh3/mapass2/main.h
+   M /branches/lh3/mapass2/read.cc
+   M /branches/lh3/mapass2/sort_mapping.cc
+
+ - output additional information in .cns
+ - 'cns2view': check details for all sites
+ - fix a memory violation in assemble.cc
+ - attempt to raise the mapping qualities according to my theory, but fail again. The SNPs
+   are less accurate.
+
+------------------------------------------------------------------------
+r51 | lh3lh3 | 2007-04-19 00:41:48 +0100 (Thu, 19 Apr 2007) | 2 lines
+Changed paths:
+   M /branches/lh3/mapass2/main.c
+   M /branches/lh3/mapass2/main.h
+   M /branches/lh3/mapass2/match_aux.cc
+
+do statistics about the .map file
+
+------------------------------------------------------------------------
+r50 | lh3lh3 | 2007-04-18 22:58:34 +0100 (Wed, 18 Apr 2007) | 3 lines
+Changed paths:
+   M /branches/lh3/mapass2/Makefile
+   M /branches/lh3/mapass2/read.cc
+   M /branches/lh3/mapass2/sort_mapping.cc
+
+ - sort_mapping.cc: back ported from r42
+ - read.cc: change adaptor quality to zero, instead of masking them
+
+------------------------------------------------------------------------
+r49 | lh3lh3 | 2007-04-18 22:28:35 +0100 (Wed, 18 Apr 2007) | 10 lines
+Changed paths:
+   M /branches/lh3/mapass2/Makefile
+   M /branches/lh3/mapass2/read.cc
+   M /branches/lh3/mapass2/scripts/farm-run.pl
+   M /branches/lh3/mapass2/sort_mapping.cc
+
+All the efforts to implement a "correct" model of mapping quality turn out to
+be a complete failure in the end. I still think the current model is correct
+when the genome is fully random. However, this is not the truth. Wrong SNPs
+tend to arise from the regions where similar sequences existing. My previous
+model assumes there is always similar sequences. This is too conservative,
+but in practice it works just fine.
+
+What am I going to do next? Probably revert to the old one. I am so frustrating.
+
+
+------------------------------------------------------------------------
+r48 | lh3lh3 | 2007-04-18 13:57:51 +0100 (Wed, 18 Apr 2007) | 2 lines
+Changed paths:
+   M /branches/lh3/mapass2/match.cc
+
+g++-3.3 was complaining this...
+
+------------------------------------------------------------------------
+r47 | lh3lh3 | 2007-04-18 11:50:45 +0100 (Wed, 18 Apr 2007) | 3 lines
+Changed paths:
+   M /branches/lh3/mapass2/Makefile
+   M /branches/lh3/mapass2/match.cc
+   M /branches/lh3/mapass2/read.cc
+   M /branches/lh3/mapass2/read.h
+
+ - allow mismatches when trimming the adaptor sequence
+ - even a single base-pair match to the adapator will be masked
+
+------------------------------------------------------------------------
+r46 | lh3lh3 | 2007-04-18 00:34:37 +0100 (Wed, 18 Apr 2007) | 3 lines
+Changed paths:
+   M /branches/lh3/mapass2/Makefile
+   M /branches/lh3/mapass2/const.h
+   M /branches/lh3/mapass2/match.cc
+   M /branches/lh3/mapass2/read.cc
+   M /branches/lh3/mapass2/read.h
+
+ - dropping adaptor sequences seemingly works
+ - I think I should allow mismatches to the adaptor
+
+------------------------------------------------------------------------
+r45 | lh3lh3 | 2007-04-17 23:36:07 +0100 (Tue, 17 Apr 2007) | 4 lines
+Changed paths:
+   M /branches/lh3/mapass2/Makefile
+   M /branches/lh3/mapass2/match.cc
+   M /branches/lh3/mapass2/match.hh
+   M /branches/lh3/mapass2/sort_mapping.cc
+
+ - I was wrong in calculating of mapping quality. I fixed it, but I am afraid that
+   we may get more false positives. Anyway, we should stick to the theory, I think.
+ - Prepare to add codes to remove the adaptor sequence.
+
+------------------------------------------------------------------------
+r42 | lh3lh3 | 2007-04-16 17:12:31 +0100 (Mon, 16 Apr 2007) | 8 lines
+Changed paths:
+   M /branches/lh3/mapass2/Makefile
+   M /branches/lh3/mapass2/algo.hh
+   M /branches/lh3/mapass2/assemble.cc
+   A /branches/lh3/mapass2/aux_utils.c
+   M /branches/lh3/mapass2/main.c
+   M /branches/lh3/mapass2/main.h
+   A /branches/lh3/mapass2/scripts
+   A /branches/lh3/mapass2/scripts/farm-run.pl
+   A /branches/lh3/mapass2/scripts/mapass2.pl
+   M /branches/lh3/mapass2/sort_mapping.cc
+
+ - fix a memory leak in assemble.cc
+ - fix a bug in algo_heap_adjust(), which subsequently fails 'mapmerge'.
+ - output a little more statistics from 'match'
+ - add 'cns2snp' and other command to extract information for '.cns' dump
+ - add farm-run.pl, my script to facilitate running large jobs on Sanger's farm.
+ - add mapass2.pl, a pipeline script
+ - 0.1.2-1
+
+------------------------------------------------------------------------
+r37 | lh3lh3 | 2007-04-15 22:45:16 +0100 (Sun, 15 Apr 2007) | 5 lines
+Changed paths:
+   M /branches/lh3/mapass2/Makefile
+   M /branches/lh3/mapass2/match.cc
+
+ - Paired-end data works better, but we need more large-scale test.
+ - For some reason, mapass2 is pretty slow on some reads. I have not figured
+   out the reason.
+ - Prepare to release 0.1.2.
+
+------------------------------------------------------------------------
+r35 | lh3lh3 | 2007-04-15 00:05:56 +0100 (Sun, 15 Apr 2007) | 5 lines
+Changed paths:
+   M /branches/lh3/mapass2/Makefile
+   M /branches/lh3/mapass2/match.cc
+   M /branches/lh3/mapass2/match.hh
+   M /branches/lh3/mapass2/match_aux.cc
+   A /branches/lh3/mapass2/sort_mapping.cc
+
+ - put some codes in match_aux.cc into sort_mapping.cc
+ - mapview can handle large input files
+ - trim_end works again
+ - on S. suis data, this version works fine.
+
+------------------------------------------------------------------------
+r34 | lh3lh3 | 2007-04-14 18:10:47 +0100 (Sat, 14 Apr 2007) | 6 lines
+Changed paths:
+   M /branches/lh3/mapass2/match.cc
+   M /branches/lh3/mapass2/match.hh
+   M /branches/lh3/mapass2/match_aux.cc
+   M /branches/lh3/mapass2/read.cc
+
+ - just read-pair in the correct way...
+ - correct read pair distance
+ - high-resolution pair quality (at the cost of memory, though)
+ - fix a bug where log_n[] always equals to 0
+ - still need more work...
+
+------------------------------------------------------------------------
+r33 | lh3lh3 | 2007-04-13 12:41:16 +0100 (Fri, 13 Apr 2007) | 4 lines
+Changed paths:
+   M /branches/lh3/mapass2/Makefile
+   M /branches/lh3/mapass2/match.cc
+   M /branches/lh3/mapass2/match.hh
+   M /branches/lh3/mapass2/match_aux.cc
+   M /branches/lh3/mapass2/read.cc
+
+ - Paired-end alignment seems to work properly.
+ - The next move is to fine tune the matching program.
+ - version 0.1.1-2
+
+------------------------------------------------------------------------
+r32 | lh3lh3 | 2007-04-12 15:00:18 +0100 (Thu, 12 Apr 2007) | 4 lines
+Changed paths:
+   M /branches/lh3/mapass2/Makefile
+   M /branches/lh3/mapass2/fastq2bfq.c
+   M /branches/lh3/mapass2/match.cc
+   M /branches/lh3/mapass2/match.hh
+   M /branches/lh3/mapass2/match_aux.cc
+   M /branches/lh3/mapass2/read.cc
+   M /branches/lh3/mapass2/read.h
+
+ - Paired reads should be provided in two files.
+ - Automatically find the read length.
+ - Codes for paired alignment have been written partly.
+
+------------------------------------------------------------------------
+r30 | lh3lh3 | 2007-04-11 17:19:05 +0100 (Wed, 11 Apr 2007) | 3 lines
+Changed paths:
+   M /branches/lh3/mapass2/Makefile
+   M /branches/lh3/mapass2/assemble.cc
+
+Mapass2 now works reasonably well for un-paired reads. I will work on paired reads, which
+should not be hard in the current frame-work. I will release this single-end version as 0.1.1. 
+
+------------------------------------------------------------------------
+r29 | lh3lh3 | 2007-04-10 22:04:25 +0100 (Tue, 10 Apr 2007) | 7 lines
+Changed paths:
+   M /branches/lh3/mapass2/Makefile
+   M /branches/lh3/mapass2/algo.hh
+   M /branches/lh3/mapass2/main.c
+   M /branches/lh3/mapass2/main.h
+   M /branches/lh3/mapass2/match.cc
+   M /branches/lh3/mapass2/match.hh
+   M /branches/lh3/mapass2/match_aux.cc
+   A /branches/lh3/mapass2/merge.cc
+
+
+ - Finish "mapmerge" component, which means mapass2 should be able to deal with
+   large-scale data such as chrX data.
+ - fix a bug: lname was added for several times
+ - add heap related functions
+
+
+------------------------------------------------------------------------
+r28 | lh3lh3 | 2007-04-10 16:34:28 +0100 (Tue, 10 Apr 2007) | 2 lines
+Changed paths:
+   A /branches/lh3/mapass2/assemble.h
+
+I forget this header file...
+
+------------------------------------------------------------------------
+r27 | lh3lh3 | 2007-04-10 16:33:46 +0100 (Tue, 10 Apr 2007) | 8 lines
+Changed paths:
+   M /branches/lh3/mapass2/Makefile
+   M /branches/lh3/mapass2/assemble.cc
+   M /branches/lh3/mapass2/match.cc
+   M /branches/lh3/mapass2/match.hh
+   M /branches/lh3/mapass2/match_aux.cc
+
+
+ - output depth in the "pileup" file
+ - print 10-based intervals as statistics
+ - calculate a little more accurate alignment quality
+ - allow to change read-reference difference rate on the command line
+ - lower read qualities if mismatches happen at the end of a read
+ - on S. suis data, mapass2 can yield similar results to mapass(1)
+
+------------------------------------------------------------------------
+r26 | lh3lh3 | 2007-04-10 13:44:54 +0100 (Tue, 10 Apr 2007) | 2 lines
+Changed paths:
+   M /branches/lh3/mapass2/dword.hh
+   M /branches/lh3/mapass2/match.cc
+   M /branches/lh3/mapass2/match.hh
+   M /branches/lh3/mapass2/match_aux.cc
+
+Only hold two index in the memory instead of six. This is a compromise...
+
+------------------------------------------------------------------------
+r25 | lh3lh3 | 2007-04-10 11:11:06 +0100 (Tue, 10 Apr 2007) | 6 lines
+Changed paths:
+   M /branches/lh3/mapass2/Makefile
+   M /branches/lh3/mapass2/assemble.cc
+   M /branches/lh3/mapass2/const.c
+   M /branches/lh3/mapass2/const.h
+   M /branches/lh3/mapass2/match_aux.cc
+
+
+ - fix a bug when a sequence is reversed.
+ - fix a bug for quality mis-calculation
+ - The result looks sensible now, but it is not so accurate as the previous
+   version. Possibly this is due to the reduced resolution of mapping qualities.
+
+------------------------------------------------------------------------
+r24 | lh3lh3 | 2007-04-09 23:31:35 +0100 (Mon, 09 Apr 2007) | 2 lines
+Changed paths:
+   M /branches/lh3/mapass2/Makefile
+   A /branches/lh3/mapass2/assemble.cc
+   M /branches/lh3/mapass2/main.c
+   M /branches/lh3/mapass2/main.h
+   M /branches/lh3/mapass2/match.hh
+   M /branches/lh3/mapass2/match_aux.cc
+
+Add 'pileup' and 'assemble' components. They have not been tested yet.
+
+------------------------------------------------------------------------
+r23 | lh3lh3 | 2007-04-04 15:46:16 +0100 (Wed, 04 Apr 2007) | 5 lines
+Changed paths:
+   M /branches/lh3/mapass2/Makefile
+   M /branches/lh3/mapass2/main.c
+   M /branches/lh3/mapass2/main.h
+   M /branches/lh3/mapass2/match.cc
+   M /branches/lh3/mapass2/match.hh
+   M /branches/lh3/mapass2/match_aux.cc
+   M /branches/lh3/mapass2/read.cc
+
+
+ - fix maximum mismatch to 4
+ - dumping the results is now available
+ - 0.1.0-3
+
+------------------------------------------------------------------------
+r22 | lh3lh3 | 2007-04-04 13:32:00 +0100 (Wed, 04 Apr 2007) | 4 lines
+Changed paths:
+   M /branches/lh3/mapass2/match.cc
+   M /branches/lh3/mapass2/match.hh
+   M /branches/lh3/mapass2/match_aux.cc
+
+'match' is a little bit faster, but is still slower than 'mapass'. This is the best I can do for now.
+I will move forward to dealing with input/output and consensus calling.
+
+
+------------------------------------------------------------------------
+r21 | lh3lh3 | 2007-04-03 23:19:49 +0100 (Tue, 03 Apr 2007) | 5 lines
+Changed paths:
+   M /branches/lh3/mapass2/Makefile
+   M /branches/lh3/mapass2/match.cc
+   M /branches/lh3/mapass2/match_aux.cc
+   M /branches/lh3/mapass2/read.cc
+
+Fix three bugs. Now mapass2 can produce the same results on a small example.
+However, mapass2 is TOO SLOW!!! I am going to improve it tomorrow. Hope I
+can make it... It is so frustrating...
+
+
+------------------------------------------------------------------------
+r18 | lh3lh3 | 2007-04-03 21:08:04 +0100 (Tue, 03 Apr 2007) | 5 lines
+Changed paths:
+   A /branches/lh3/mapass2
+   A /branches/lh3/mapass2/Makefile
+   A /branches/lh3/mapass2/algo.hh
+   A /branches/lh3/mapass2/bfa.c
+   A /branches/lh3/mapass2/bfa.h
+   A /branches/lh3/mapass2/const.c
+   A /branches/lh3/mapass2/const.h
+   A /branches/lh3/mapass2/dword.hh
+   A /branches/lh3/mapass2/fasta2bfa.c
+   A /branches/lh3/mapass2/fastq2bfq.c
+   A /branches/lh3/mapass2/main.c
+   A /branches/lh3/mapass2/main.h
+   A /branches/lh3/mapass2/match.cc
+   A /branches/lh3/mapass2/match.hh
+   A /branches/lh3/mapass2/match_aux.cc
+   A /branches/lh3/mapass2/read.cc
+   A /branches/lh3/mapass2/read.h
+   A /branches/lh3/mapass2/seq.c
+   A /branches/lh3/mapass2/seq.h
+
+ - New code base. Alignment for paired reads.
+ - Streamable alignment file.
+ - Non-paired alignment partially works now.
+
+
+------------------------------------------------------------------------
