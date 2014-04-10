@@ -5,7 +5,7 @@
 #include "assemble.h"
 
 /** fill the rolling buffer */
-inline void assemble_fill_buffer(gzFile fpin, rolling_buf_t *ab)
+static inline void assemble_fill_buffer(gzFile fpin, rolling_buf_t *ab)
 {
 	if (gzeof(fpin) || (ab->is_rounded == 1 && ab->head == ab->tail)) return; // the buffer is full
 	int n_records, n_bytes;
