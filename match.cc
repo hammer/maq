@@ -553,7 +553,7 @@ int ma_match(int argc, char *argv[])
 	}
 	fp_bfa = fopen(argv[optind+1], "r");
 	fp_bfq_l = gzopen(argv[optind+2], "r");
-	fp_bfq_r = (optind < argc)? gzopen(argv[optind+3], "r") : 0;
+	fp_bfq_r = (optind+3 < argc)? gzopen(argv[optind+3], "r") : 0;
 	assert(fp_bfa); assert(fp_bfq_l);
 	fn_out = strdup(argv[optind]);
 	// core
